@@ -9,11 +9,10 @@
 #import "AppDelegate.h"
 
 #import "RomsViewController.h"
-#import "SideViewController.h"
+#import "SwitcherViewController.h"
 #import "EmuViewController.h"
+#import "MBPullDownController.h"
 
-#import "MMDrawerController.h"
-#import "MMDrawerVisualState.h"
 
 @implementation AppDelegate
 
@@ -24,23 +23,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UIViewController * leftSideDrawerViewController = [[SideViewController alloc] init];
     
-    UIViewController * centerViewController = [[RomsViewController alloc] init];
+    SwitcherViewController *switcherViewController = [[SwitcherViewController alloc] init];
     
-    UINavigationController * navigationController = [[UINavigationController alloc] initWithRootViewController:centerViewController];
+    RomsViewController *romsViewController = [[RomsViewController alloc] init];
     
-    MMDrawerController * drawerController = [[MMDrawerController alloc]
-                                             initWithCenterViewController:navigationController
-                                             leftDrawerViewController:leftSideDrawerViewController
-                                             rightDrawerViewController:nil];
-    [drawerController setMaximumLeftDrawerWidth:160.0];
-    [drawerController setDrawerVisualStateBlock:[MMDrawerVisualState parallaxVisualStateBlockWithParallaxFactor:3]];
-    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
-    [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    MBPullDownController *pullDownController = [[MBPullDownController alloc] initWithFrontController:romsViewController backController:switcherViewController];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [self.window setRootViewController:drawerController];
+    [self.window setRootViewController:pullDownController];
     [self.window makeKeyAndVisible];
     return YES;
 }

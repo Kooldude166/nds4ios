@@ -9,9 +9,6 @@
 #import "AppDelegate.h"
 #import "RomsViewController.h"
 #import "EmuViewController.h"
-#import "MMDrawerController.h"
-#import "UIViewController+MMDrawerController.h"
-#import "MMDrawerBarButtonItem.h"
 
 #define DOCUMENTS_PATH() [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 
@@ -48,8 +45,7 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
                                                                                           target:self
                                                                                           action:@selector(reloadRomList)];
-    MMDrawerBarButtonItem * leftDrawerButton = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(toggleSideMenu)];
-    self.navigationItem.leftBarButtonItem = leftDrawerButton;
+
     
     BOOL isDir;
     NSString* batteryDir = [NSString stringWithFormat:@"%@/Battery",DOCUMENTS_PATH()];
@@ -105,7 +101,7 @@
 
 - (void)toggleSideMenu
 {
-    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
