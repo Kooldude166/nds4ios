@@ -12,6 +12,7 @@
 #import "RomsViewController.h"
 #import "EmuViewController.h"
 #import "FileExplorerViewController.h"
+#import "MBPullDownController.h"
 
 @interface SwitcherViewController ()
 
@@ -32,7 +33,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    fullWidth = false;
+    open = false;
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,37 +42,38 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)currentGame:(id)sender
+- (IBAction)switcher:(id)sender
 {
-    [[AppDelegate sharedInstance] bringBackEmuVC];
-}
-
-- (IBAction)roms:(id)sender
-{
-    RomsViewController *romsVC = [[RomsViewController alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:romsVC];
-}
-
-- (IBAction)fileBrowser:(id)sender
-{
-    FileExplorerViewController *filebrowserVC = [[FileExplorerViewController alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:filebrowserVC];
-}
-
-- (IBAction)settings:(id)sender
-{
-    SettingsViewController *settingsVC = [[SettingsViewController alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:settingsVC];
+    if (switcher.selectedSegmentIndex == 0)
+    {
+        [[AppDelegate sharedInstance] bringBackEmuVC];
+        switcher.selectedSegmentIndex = 1;
+    } else if (switcher.selectedSegmentIndex == 1) {
+        RomsViewController *romsVC = [[RomsViewController alloc] init];
+        [self.pullDownController setFrontController:romsVC];
+    } else if (switcher.selectedSegmentIndex == 2) {
+        FileExplorerViewController *explorer = [[FileExplorerViewController alloc] init];
+        [self presentViewController:explorer animated:YES completion:^{
+            switcher.selectedSegmentIndex = 1;
+        }];
+    } else if (switcher.selectedSegmentIndex == 3) {
+        SettingsViewController *settingsVC = [[SettingsViewController alloc] init];
+        [self presentViewController:settingsVC animated:YES completion:^{
+            switcher.selectedSegmentIndex = 1;
+        }];
+    }
 }
 
 - (IBAction)credits:(id)sender
 {
-    if (fullWidth == false)
+    if (open == false)
     {
-        fullWidth = true;
-    } else if (fullWidth == true)
+        [self.pullDownController setOpenBottomOffset:44.f animated:YES];
+        open = true;
+    } else if (open == true)
     {
-        fullWidth = false;
+        [self.pullDownController setOpenBottomOffset:440.f animated:YES];
+        open = false;
     }
 }
 

@@ -34,7 +34,7 @@ static NSInteger const kContainerViewTag = -1000001;
 
 @interface UIScrollView (MBPullDownControllerHitTest)
 
-//+ (void)_MB_SwizzleHitTestForUIScrollView;
++ (void)_MB_SwizzleHitTestForUIScrollView;
 
 @end
 
@@ -334,7 +334,7 @@ static NSInteger const kContainerViewTag = -1000001;
 + (void)updateInstanceCount:(NSInteger)update {
 	static NSInteger count = 0;
 	if ((count == 0 && update == 1) || (count == 1 && update == -1)) {
-		//[UIScrollView _MB_SwizzleHitTestForUIScrollView];
+		[UIScrollView _MB_SwizzleHitTestForUIScrollView];
 	}
 	count = MAX(0, count + update);
 }
@@ -455,10 +455,11 @@ static NSInteger const kContainerViewTag = -1000001;
 
 @implementation UIScrollView (MBPullDownControllerHitTest)
 
-/*+ (void)_MB_SwizzleHitTestForUIScrollView {
++ (void)_MB_SwizzleHitTestForUIScrollView {
+	// Based on http://www.mikeash.com/pyblog/friday-qa-2010-01-29-method-replacement-for-fun-and-profit.html
 	Class class = [UIScrollView class];
-    SEL originalSelector = @selector(_MB_PullDownControllerHitTest:withEvent:);
-    SEL overrideSelector = @selector(hitTest:withEvent:);
+    SEL originalSelector = @selector(hitTest:withEvent:);
+    SEL overrideSelector = @selector(_MB_PullDownControllerHitTest:withEvent:);
     Method originalMethod = class_getInstanceMethod(class, originalSelector);
     Method overrideMethod = class_getInstanceMethod(class, overrideSelector);
 	IMP overrideImp = method_getImplementation(overrideMethod);
@@ -470,14 +471,16 @@ static NSInteger const kContainerViewTag = -1000001;
     } else {
 		method_exchangeImplementations(originalMethod, overrideMethod);
     }
-}*/
+}
 
-/*- (UIView *)_MB_PullDownControllerHitTest:(CGPoint)point withEvent:(UIEvent *)event {
+- (UIView *)_MB_PullDownControllerHitTest:(CGPoint)point withEvent:(UIEvent *)event {
+	// Don't capture touches above the scrollView content aria (touch trhough to the view below),
+	// if the scroll view is part of a pull down controller
 	if (point.y <= 0.f && self.superview.tag == kContainerViewTag) {
 		return nil;
 	}
 	return [self _MB_PullDownControllerHitTest:point withEvent:event];
-}*/
+}
 
 @end
 

@@ -363,15 +363,13 @@
 				CE34A128173F769200C51EA1 /* nullJit.h */,
 				CE2EE5F5173F66E300786468 /* AppDelegate.h */,
 				CE2EE5F6173F66E300786468 /* AppDelegate.m */,
-				DF8674E31768B13F000AB689 /* FileExplorerViewController.h */,
-				DF8674E41768B13F000AB689 /* FileExplorerViewController.m */,
-				DF8674E51768B13F000AB689 /* FileExplorerViewController.xib */,
 				CE2EE5F7173F66E300786468 /* emu.cpp */,
 				CE2EE5F8173F66E300786468 /* emu.h */,
 				D338B30117470D4000932C39 /* Roms List */,
 				D338B30217470D4A00932C39 /* GL */,
 				D338B30017470D3A00932C39 /* Emu */,
 				D338B2FF17470D3100932C39 /* UIButton+CTM */,
+				D529F9501773FE6F00FBFE13 /* file explorer */,
 				D338B2FE17470D2800932C39 /* Settings */,
 				D338B2FD17470D1B00932C39 /* switcher */,
 				D55C4E821773ED65001E13F2 /* pulldown */,
@@ -714,6 +712,16 @@
 				CEB43C41173FCA3F00055F91 /* GLProgram.m */,
 			);
 			name = GL;
+			sourceTree = "<group>";
+		};
+		D529F9501773FE6F00FBFE13 /* file explorer */ = {
+			isa = PBXGroup;
+			children = (
+				DF8674E31768B13F000AB689 /* FileExplorerViewController.h */,
+				DF8674E41768B13F000AB689 /* FileExplorerViewController.m */,
+				DF8674E51768B13F000AB689 /* FileExplorerViewController.xib */,
+			);
+			name = "file explorer";
 			sourceTree = "<group>";
 		};
 		D55C4E821773ED65001E13F2 /* pulldown */ = {

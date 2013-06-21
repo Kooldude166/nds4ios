@@ -11,8 +11,8 @@
 @interface SwitcherViewController : UIViewController
 {
     IBOutlet UIButton *creditsButton;
-    BOOL fullWidth;
+    IBOutlet UISegmentedControl *switcher;
+    BOOL open;
 }
-
 
 @end
