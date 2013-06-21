@@ -46,18 +46,15 @@ IMPORTANT: Make sure your working directory is devoid of spaces. Otherwise, bad 
 To-do
 ------------------------
 * Clean up and refactor code, remove the ugly hacks used (see nds4ios-Prefix and android/log.h)
-* JIT/Dynarec (very hard to achieve this using the clang compiler)
+* JIT/Dynarec (very hard to achieve this using the clang compiler, in progress)
 * OpenGL ES rendering
 * Sound
 * Save states
 * Native iPad UI
-* Properly fix 768h scaling bug (in progress)
-* UI overhaul (in progress)
 * New file chooser (in progress)
 * Option to hide the onscreen controls entirely (in progress)
-* New gesture based D-Pad (not current button based) (in progress)
-* Use of cmake to generate Xcode project
 * Change buttons to allow for button sliding.
+* Use of cmake to generate Xcode project
 * Much more.
 
 Contributors
