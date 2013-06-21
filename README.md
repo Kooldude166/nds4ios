@@ -40,7 +40,7 @@ IMPORTANT: Make sure your working directory is devoid of spaces. Otherwise, bad 
 </div>
 <!-- MacBuildServer Install Button -->
 
-
+8. 4th option: install it from the aXw repo if you're jailbroken: [http://cydia.angelxwind.net](http://cydia.angelxwind.net)
 
 
 To-do
