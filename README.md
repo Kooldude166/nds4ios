@@ -1,4 +1,4 @@
-nds4ios
+nds4ios - iOS 7 Only
 =======
 
 nds4ios is a port of nds4droid to iOS, which is based on DeSmuME.
