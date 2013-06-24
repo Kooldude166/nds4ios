@@ -64,6 +64,12 @@
     }
 }
 
+- (IBAction)add:(id)sender
+{
+    UIAlertView *addAlert = [[UIAlertView alloc] initWithTitle:@"Soon" message:@"Soon you will be able to input a URL here and nds4ios will download the file at that URL. But today is not the day." delegate:nil cancelButtonTitle:@"Okay..." otherButtonTitles:nil, nil];
+    [addAlert show];
+}
+
 - (IBAction)credits:(id)sender
 {
     if (open == false)
@@ -72,7 +78,7 @@
         open = true;
     } else if (open == true)
     {
-        [self.pullDownController setOpenBottomOffset:440.f animated:YES];
+        [self.pullDownController setOpenBottomOffset:352.f animated:YES];
         open = false;
     }
 }

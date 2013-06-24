@@ -15,7 +15,7 @@
 
 
 static CGFloat const kDefaultClosedTopOffset = 44.f;
-static CGFloat const kDefaultOpenBottomOffset = 440.f;
+static CGFloat const kDefaultOpenBottomOffset = 352.f;
 static CGFloat const kDefaultOpenDragOffset = NAN;
 static CGFloat const kDefaultCloseDragOffset = NAN;
 static CGFloat const kDefaultOpenDragOffsetPercentage = .2;
@@ -23,6 +23,7 @@ static CGFloat const kDefaultCloseDragOffsetPercentage = .05;
 
 static NSInteger const kContainerViewTag = -1000001;
 
+#define IS_WIDESCREEN ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 
 @interface MBPullDownController ()
 
@@ -68,7 +69,12 @@ static NSInteger const kContainerViewTag = -1000001;
 - (void)sharedInitialization {
 	_pullToToggleEnabled = YES;
 	_closedTopOffset = kDefaultClosedTopOffset;
-	_openBottomOffset = kDefaultOpenBottomOffset;
+    if (IS_WIDESCREEN) {
+        _openBottomOffset = kDefaultOpenBottomOffset + 88;
+    } else {
+        _openBottomOffset = kDefaultOpenBottomOffset;
+    }
+	
 	_openDragOffset = kDefaultOpenDragOffset;
 	_closeDragOffset = kDefaultCloseDragOffset;
 	_openDragOffsetPercentage = kDefaultOpenDragOffsetPercentage;
@@ -139,7 +145,12 @@ static NSInteger const kContainerViewTag = -1000001;
 
 - (void)setOpenBottomOffset:(CGFloat)openBottomOffset animated:(BOOL)animated {
 	if (_openBottomOffset != openBottomOffset) {
-		_openBottomOffset = openBottomOffset;
+        if (IS_WIDESCREEN) {
+            _openBottomOffset = openBottomOffset + 88;
+        } else {
+            _openBottomOffset = openBottomOffset;
+        }
+        
 		if (self.open) {
 			[self setOpen:YES animated:animated];
 		}
