@@ -51,6 +51,27 @@ IMPORTANT: Make sure your working directory is devoid of spaces. Otherwise, bad 
 
 1. Install it from the aXw repo if you're jailbroken: [http://cydia.angelxwind.net](http://cydia.angelxwind.net)
 
+How To Load ROMs
+------------------------
+##### Since this apparently needs explaining
+
+### Option 1
+1. Plug your device into your computer and launch iTunes.
+2. Go to your iDevice's info page, then the apps tab.
+3. drag and drop .nds files that you have (preferably ones you legally own the actual game cartridge for) into the iTunes file sharing box for nds4ios.
+4. Kill nds4ios from the app switcher if it's backgrounded, and launch it again to see changes.
+
+### Option 2
+1. If you're jailbroken, grab one of the many download tweaks available for Mobile Safari or Chrome for iOS, or grab one of the many web browsers available with download managers built in, such as [Cobium](https://itunes.apple.com/us/app/cobium-simple-browsing/id502426780?mt=8) (This is totally not a shameless plug).
+2. With the new browser or tweak, download a rom, preferably one you own the actual cartridge for.
+3. Using iFile or similar too, move the .nds file to the nds4ios directory, into the documents folder.
+4. Kill nds4ios from the app switcher if it's backgrounded, and launch it again to see changes.
+
+### Option 3 (coming soon)
+1. In nds4ios, press the + button in the upper right hand corner.
+2. Enter a URL that DIRECTLY links to a rom that preferably you own the actual cartridge for.
+3. Hit OK, and nds4ios will automatically download and place it into the correct directory. This will probably not work for sites such as c**lr*m or similar redis sites, but will instead work better for files hosted on your own private server.
+4. No need to kill and restart nds4ios, it will automatically reload.
 
 To-do
 ------------------------
