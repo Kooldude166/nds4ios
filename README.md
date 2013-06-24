@@ -1,4 +1,4 @@
-nds4ios - iOS 7 Only
+nds4ios - iOS 6 + 7
 =======
 
 nds4ios is a port of nds4droid to iOS, which is based on DeSmuME.
@@ -9,11 +9,15 @@ http://nds4ios.angelxwind.net/
 
 [nds4droid](http://jeffq.com/blog/nds4droid/) 
 
+iOS 5 allowed but untested.
 
 Build Instructions
 ------------------------
 
 IMPORTANT: Make sure your working directory is devoid of spaces. Otherwise, bad things will happen.
+
+### Option 1
+
 
 1.  Open Terminal and go to your working directory;
 
@@ -28,11 +32,14 @@ IMPORTANT: Make sure your working directory is devoid of spaces. Otherwise, bad 
 
 5. Open "nds4ios.xcodeproj", connect your device, select it on Xcode and click the "Run" button (or Command + R). Don't build it for the iOS Simulator. IMPORTANT: Make sure you change your running scheme to Release first. Otherwise you will get errors on compile!
 
-6. Alternatively, run
+#### Option 1a
+1. Alternatively, run
     <code>xcodebuild -configuration Release</code>
    from Terminal and then copy the resulting *.app bundle to your /Applications directory on your device.
 
-7. 3rd option: click the button below from your device or desktop:
+### Option 2
+
+1. Click the button below from your device or desktop:
 
 <!-- MacBuildServer Install Button -->
 <div class="macbuildserver-block">
@@ -40,16 +47,20 @@ IMPORTANT: Make sure your working directory is devoid of spaces. Otherwise, bad 
 </div>
 <!-- MacBuildServer Install Button -->
 
-8. 4th option: install it from the aXw repo if you're jailbroken: [http://cydia.angelxwind.net](http://cydia.angelxwind.net)
+### Option 3
+
+1. Install it from the aXw repo if you're jailbroken: [http://cydia.angelxwind.net](http://cydia.angelxwind.net)
 
 
 To-do
 ------------------------
+###### We'll get to these, really!
 * Clean up and refactor code, remove the ugly hacks used (see nds4ios-Prefix and android/log.h)
 * JIT/Dynarec (very hard to achieve this using the clang compiler, in progress)
 * OpenGL ES rendering
 * Sound
 * Save states
+* Fix loading game saves on some games
 * Native iPad UI
 * New file chooser (in progress)
 * Option to hide the onscreen controls entirely (in progress)
@@ -59,6 +70,9 @@ To-do
 
 Contributors
 ------------------------
+###### We stand on the shoulders of these people
+* [The DeSmuME Guys](http://desmume.org/)
+* [The nds4droid Guy](http://jeffq.com/blog/nds4droid/)
 * [rock88](http://rock88dev.blogspot.com/)
 * [angelXwind](http://angelxwind.net/)
 * [inb4ohnoes](http://brian.weareflame.co/)
