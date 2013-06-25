@@ -39,7 +39,7 @@ IMPORTANT: Make sure your working directory is devoid of spaces. Otherwise, bad 
 
 ### Option 2
 
-1. Click the button below from your device or desktop:
+1. Click the button below from your device or desktop (THIS IS NOT WORKING DUE TO XCODE 5 CHANGES):
 
 <!-- MacBuildServer Install Button -->
 <div class="macbuildserver-block">
@@ -55,23 +55,25 @@ How To Load ROMs
 ------------------------
 ##### Since this apparently needs explaining
 
-### Option 1
+### Option 1 (Preferred Option)
+1. In nds4ios, press the + button in the upper right hand corner.
+2. Download a ROM package of a ROM that you own the actual game cartridge for from a site such as CoolROM. It will come in a zip file. You do not have to have any sort of download manager for this, Safari will download zip files.
+3. Tap the "Open in..." button in the top left hand corner, and select nds4ios.
+4. nds4ios will automatically unzip the file, delete the readme, and refresh itself. Your ROM should show up in the list. Magic!
+
+### Option 2
 1. Plug your device into your computer and launch iTunes.
 2. Go to your iDevice's info page, then the apps tab.
 3. drag and drop .nds files that you have (preferably ones you legally own the actual game cartridge for) into the iTunes file sharing box for nds4ios.
 4. Kill nds4ios from the app switcher if it's backgrounded, and launch it again to see changes.
 
-### Option 2
+### Option 3
 1. If you're jailbroken, grab one of the many download tweaks available for Mobile Safari or Chrome for iOS, or grab one of the many web browsers available with download managers built in, such as [Cobium](https://itunes.apple.com/us/app/cobium-simple-browsing/id502426780?mt=8) (This is totally not a shameless plug).
 2. With the new browser or tweak, download a rom, preferably one you own the actual cartridge for.
 3. Using iFile or similar too, move the .nds file to the nds4ios directory, into the documents folder.
 4. Kill nds4ios from the app switcher if it's backgrounded, and launch it again to see changes.
 
-### Option 3 (coming soon)
-1. In nds4ios, press the + button in the upper right hand corner.
-2. Enter a URL that DIRECTLY links to a rom that preferably you own the actual cartridge for.
-3. Hit OK, and nds4ios will automatically download and place it into the correct directory. This will probably not work for sites such as c**lr*m or similar redis sites, but will instead work better for files hosted on your own private server.
-4. No need to kill and restart nds4ios, it will automatically reload.
+
 
 To-do
 ------------------------
@@ -80,10 +82,9 @@ To-do
 * JIT/Dynarec (very hard to achieve this using the clang compiler, in progress)
 * OpenGL ES rendering
 * Sound
-* Save states
 * Fix loading game saves on some games
+* Ability to set the folder the rom chooser reads from
 * Native iPad UI
-* New file chooser (in progress)
 * Option to hide the onscreen controls entirely (in progress)
 * Change buttons to allow for button sliding.
 * Use of cmake to generate Xcode project
