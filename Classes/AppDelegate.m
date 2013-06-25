@@ -12,9 +12,7 @@
 #import "SwitcherViewController.h"
 #import "EmuViewController.h"
 #import "MBPullDownController.h"
-
-
-
+#import "ZipArchive.h"
 
 @implementation AppDelegate
 
@@ -35,6 +33,34 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window setRootViewController:pullDownController];
     [self.window makeKeyAndVisible];
+    return YES;
+}
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    if (url != nil && [url isFileURL]) {\
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+        
+        NSString *importedPath = [url path];
+        
+        NSString *zipFilePath = importedPath;
+        NSString *output = documentsDirectory;
+        
+        ZipArchive* za = [[ZipArchive alloc] init];
+        
+        if( [za UnzipOpenFile:zipFilePath] ) {
+            if( [za UnzipFileTo:output overWrite:YES] != NO ) {
+                //unzip data success
+                //do something
+            }
+            
+            [za UnzipCloseFile];
+        }
+        
+        NSFileManager *fileManager = [[NSFileManager alloc] init];
+        [fileManager removeItemAtPath:[documentsDirectory stringByAppendingPathComponent:@"Inbox"] error:NULL];
+        [fileManager removeItemAtPath:[documentsDirectory stringByAppendingPathComponent:@"readme.html"] error:NULL];
+    }
     return YES;
 }
 

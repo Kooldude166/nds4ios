@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63027F13177951B400CB0BB4 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 63027F09177951B400CB0BB4 /* ioapi.c */; };
+		63027F14177951B400CB0BB4 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 63027F0B177951B400CB0BB4 /* mztools.c */; };
+		63027F15177951B400CB0BB4 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 63027F0D177951B400CB0BB4 /* unzip.c */; };
+		63027F16177951B400CB0BB4 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 63027F0F177951B400CB0BB4 /* zip.c */; };
+		63027F17177951B400CB0BB4 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63027F12177951B400CB0BB4 /* ZipArchive.mm */; };
+		6341965D177969E600103F34 /* DocWatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6341965C177969E600103F34 /* DocWatchHelper.m */; };
 		BF0E1D701763F9B800528BA5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0E1D6F1763F9B800528BA5 /* Default-568h@2x.png */; };
 		BF0E1D731763FA3D00528BA5 /* UIScreen+Widescreen.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0E1D721763FA3D00528BA5 /* UIScreen+Widescreen.m */; };
 		CE2EE5EE173F663B00786468 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE5EC173F663B00786468 /* main.m */; };
@@ -126,6 +132,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63027F08177951B400CB0BB4 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		63027F09177951B400CB0BB4 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		63027F0A177951B400CB0BB4 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		63027F0B177951B400CB0BB4 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		63027F0C177951B400CB0BB4 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		63027F0D177951B400CB0BB4 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		63027F0E177951B400CB0BB4 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		63027F0F177951B400CB0BB4 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		63027F10177951B400CB0BB4 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		63027F11177951B400CB0BB4 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		63027F12177951B400CB0BB4 /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZipArchive.mm; sourceTree = "<group>"; };
+		6341965B177969E600103F34 /* DocWatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocWatchHelper.h; sourceTree = "<group>"; };
+		6341965C177969E600103F34 /* DocWatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocWatchHelper.m; sourceTree = "<group>"; };
 		BF0E1D6F1763F9B800528BA5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BF0E1D711763FA3D00528BA5 /* UIScreen+Widescreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Widescreen.h"; sourceTree = "<group>"; };
 		BF0E1D721763FA3D00528BA5 /* UIScreen+Widescreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Widescreen.m"; sourceTree = "<group>"; };
@@ -351,6 +370,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63027F07177951B400CB0BB4 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				63027F08177951B400CB0BB4 /* crypt.h */,
+				63027F09177951B400CB0BB4 /* ioapi.c */,
+				63027F0A177951B400CB0BB4 /* ioapi.h */,
+				63027F0B177951B400CB0BB4 /* mztools.c */,
+				63027F0C177951B400CB0BB4 /* mztools.h */,
+				63027F0D177951B400CB0BB4 /* unzip.c */,
+				63027F0E177951B400CB0BB4 /* unzip.h */,
+				63027F0F177951B400CB0BB4 /* zip.c */,
+				63027F10177951B400CB0BB4 /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
+		63027F18177951B700CB0BB4 /* Unzip */ = {
+			isa = PBXGroup;
+			children = (
+				63027F07177951B400CB0BB4 /* minizip */,
+				63027F11177951B400CB0BB4 /* ZipArchive.h */,
+				63027F12177951B400CB0BB4 /* ZipArchive.mm */,
+			);
+			name = Unzip;
+			sourceTree = "<group>";
+		};
+		6341965E177969E900103F34 /* Auto Update */ = {
+			isa = PBXGroup;
+			children = (
+				6341965B177969E600103F34 /* DocWatchHelper.h */,
+				6341965C177969E600103F34 /* DocWatchHelper.m */,
+			);
+			name = "Auto Update";
+			sourceTree = "<group>";
+		};
 		CE2EE5F4173F66D100786468 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,6 +427,8 @@
 				D338B2FE17470D2800932C39 /* Settings */,
 				D338B2FD17470D1B00932C39 /* switcher */,
 				D55C4E821773ED65001E13F2 /* pulldown */,
+				6341965E177969E900103F34 /* Auto Update */,
+				63027F18177951B700CB0BB4 /* Unzip */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -627,6 +683,7 @@
 				CEC742FA16776248006D193E /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		CEC742FA16776248006D193E /* Products */ = {
 			isa = PBXGroup;
@@ -802,6 +859,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63027F17177951B400CB0BB4 /* ZipArchive.mm in Sources */,
 				CE2EE5EE173F663B00786468 /* main.m in Sources */,
 				CE2EE5FD173F66E300786468 /* AppDelegate.m in Sources */,
 				CE2EE5FE173F66E300786468 /* emu.cpp in Sources */,
@@ -820,17 +878,21 @@
 				CE2EE626173F6D6300786468 /* slot2_piano.cpp in Sources */,
 				CE2EE627173F6D6300786468 /* slot2_rumblepak.cpp in Sources */,
 				CE2EE630173F6DB600786468 /* crc.cpp in Sources */,
+				63027F16177951B400CB0BB4 /* zip.c in Sources */,
 				CE2EE631173F6DB600786468 /* decrypt.cpp in Sources */,
 				CE2EE632173F6DB600786468 /* header.cpp in Sources */,
 				CE2EE649173F6DF900786468 /* cache.cpp in Sources */,
 				CE2EE64A173F6DF900786468 /* directory.cpp in Sources */,
 				CE2EE64B173F6DF900786468 /* disc.cpp in Sources */,
 				CE2EE64C173F6DF900786468 /* fatdir.cpp in Sources */,
+				63027F14177951B400CB0BB4 /* mztools.c in Sources */,
 				CE2EE64D173F6DF900786468 /* fatfile.cpp in Sources */,
 				CE2EE64E173F6DF900786468 /* file_allocation_table.cpp in Sources */,
 				CE2EE64F173F6DF900786468 /* filetime.cpp in Sources */,
 				CE2EE650173F6DF900786468 /* libfat_public_api.cpp in Sources */,
+				6341965D177969E600103F34 /* DocWatchHelper.m in Sources */,
 				CE2EE651173F6DF900786468 /* libfat.cpp in Sources */,
+				63027F15177951B400CB0BB4 /* unzip.c in Sources */,
 				CE2EE652173F6DF900786468 /* lock.cpp in Sources */,
 				CE2EE653173F6DF900786468 /* partition.cpp in Sources */,
 				CE2EE65B173F6E0900786468 /* tinystr.cpp in Sources */,
@@ -868,6 +930,7 @@
 				CE34A107173F722C00C51EA1 /* debug.cpp in Sources */,
 				CE34A108173F722C00C51EA1 /* Disassembler.cpp in Sources */,
 				CE34A109173F722C00C51EA1 /* driver.cpp in Sources */,
+				63027F13177951B400CB0BB4 /* ioapi.c in Sources */,
 				CE34A10A173F722C00C51EA1 /* emufile.cpp in Sources */,
 				CE34A10B173F722C00C51EA1 /* FIFO.cpp in Sources */,
 				CE34A10C173F722C00C51EA1 /* firmware.cpp in Sources */,

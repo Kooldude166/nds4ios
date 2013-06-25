@@ -10,6 +10,8 @@
 
 @interface SettingsViewController ()
 
+- (IBAction)SP_pressed:(id)sender;
+
 @end
 
 @implementation SettingsViewController
@@ -26,7 +28,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"shiftPad"])
+        shiftPad.on = true;
+    else
+        shiftPad.on = false;
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,4 +46,15 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)SP_pressed:(id)sender {
+    
+    if (shiftPad.on)
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"shiftPad"];
+    else
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"shiftPad"];
+}
+- (void)viewDidUnload {
+    shiftPad = nil;
+    [super viewDidUnload];
+}
 @end

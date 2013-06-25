@@ -66,8 +66,19 @@
 
 - (IBAction)add:(id)sender
 {
-    UIAlertView *addAlert = [[UIAlertView alloc] initWithTitle:@"Soon" message:@"Soon you will be able to input a URL here and nds4ios will download the file at that URL. But today is not the day." delegate:nil cancelButtonTitle:@"Okay..." otherButtonTitles:nil, nil];
-    [addAlert show];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showedROMAlert"]) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
+    }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Will Launch Safari", @"")
+                                                        message:NSLocalizedString(@"Download the ROM you want, and then 'Open In...' nds4ios", @"")
+                                                       delegate:self
+                                              cancelButtonTitle:NSLocalizedString(@"Open Safari", @"")
+                                              otherButtonTitles:nil];
+        [alert show];
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"showedROMAlert"];
+    }
 }
 
 - (IBAction)credits:(id)sender
