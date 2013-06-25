@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface EmuViewController : UIViewController <UIActionSheetDelegate>
-
+{
+    BOOL showControls;
+}
 - (id)initWithRom:(NSString*)rom;
 
 @end

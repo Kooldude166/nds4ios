@@ -138,10 +138,17 @@ typedef enum : NSInteger {
     [self performSelector:@selector(emuLoop) withObject:nil];
 }
 
--(void)viewWillAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"shiftPad"])
         [self.buttonsArray makeObjectsPerformSelector:@selector(shift)];
+    
+    /*if ([[NSUserDefaults standardUserDefaults] boolForKey:@"onScreenControl"] == YES)
+    {
+        NSLog(@"Yes");
+    } else {
+        showControls = NO;
+    }*/
 }
 
 - (void)didReceiveMemoryWarning
@@ -300,6 +307,22 @@ typedef enum : NSInteger {
     
     UIButton *buttonRT = [UIButton buttonWithId:BUTTON_R atCenter:CGPointMake(self.view.frame.size.width - 20, 70)];
     [self.view addSubview:buttonRT];
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"onScreenControl"] == NO)
+    {
+        buttonUp.alpha = 0;
+        buttonDown.alpha = 0;
+        buttonLeft.alpha = 0;
+        buttonRight.alpha = 0;
+        buttonY.alpha = 0;
+        buttonX.alpha = 0;
+        buttonB.alpha = 0;
+        buttonA.alpha = 0;
+        buttonSelect.alpha = 0;
+        buttonStart.alpha = 0;
+        buttonLT.alpha = 0;
+        buttonRT.alpha = 0;
+    }
     
     self.buttonsArray = @[buttonUp,buttonDown,buttonLeft,buttonRight,
                           buttonY,buttonX,buttonB,buttonA,

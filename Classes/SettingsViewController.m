@@ -33,6 +33,12 @@
         shiftPad.on = true;
     else
         shiftPad.on = false;
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"onScreenControl"]) {
+        onScreenControl.on = true;
+    } else {
+        onScreenControl.on = false;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,6 +59,17 @@
     else
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"shiftPad"];
 }
+
+- (IBAction)onScreenControlPressed:(id)sender
+{
+    if (onScreenControl.on)
+    {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"onScreenControl"];
+    } else {
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"onScreenControl"];
+    }
+}
+
 - (void)viewDidUnload {
     shiftPad = nil;
     [super viewDidUnload];

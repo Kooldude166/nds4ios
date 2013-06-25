@@ -81,6 +81,8 @@ static NSInteger const kContainerViewTag = -1000001;
 	_closeDragOffsetPercentage = kDefaultCloseDragOffsetPercentage;
 	_backgroundView = [MBPullDownControllerBackgroundView new];
 	[[self class] updateInstanceCount:1];
+    //hide status bar for this app
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
 }
 
 - (void)viewDidLoad {

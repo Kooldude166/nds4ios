@@ -80,6 +80,7 @@
 {
     [super viewWillAppear:animated];
     [self reloadRomList];
+    [self.view becomeFirstResponder];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
