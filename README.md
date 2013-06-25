@@ -39,7 +39,7 @@ IMPORTANT: Make sure your working directory is devoid of spaces. Otherwise, bad 
 
 ### Option 2
 
-1. Click the button below from your device or desktop (THIS IS NOT WORKING DUE TO XCODE 5 CHANGES):
+1. Click the button below from your device or desktop (EARLIER COMMIT DID NOT FIX ISSUE. STILL BROKEN):
 
 <!-- MacBuildServer Install Button -->
 <div class="macbuildserver-block">
