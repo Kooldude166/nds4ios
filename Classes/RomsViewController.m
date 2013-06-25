@@ -75,7 +75,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    //[self.navigationController setNavigationBarHidden:NO animated:animated];
+    [self reloadRomList];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -122,7 +122,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [self.romsArray objectAtIndex:indexPath.row];
+    NSString *filename = [self.romsArray objectAtIndex:indexPath.row];
+    cell.textLabel.text =[filename stringByDeletingPathExtension];
     
     return cell;
 }
