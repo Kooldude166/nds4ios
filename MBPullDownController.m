@@ -14,7 +14,7 @@
 #include <math.h>
 
 
-static CGFloat const kDefaultClosedTopOffset = 44.f;
+static CGFloat const kDefaultClosedTopOffset = 60.f;
 static CGFloat const kDefaultOpenBottomOffset = 352.f;
 static CGFloat const kDefaultOpenDragOffset = NAN;
 static CGFloat const kDefaultCloseDragOffset = NAN;
