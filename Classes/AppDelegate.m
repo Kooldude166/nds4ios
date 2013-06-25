@@ -59,6 +59,7 @@
         
         NSFileManager *fileManager = [[NSFileManager alloc] init];
         [fileManager removeItemAtPath:[documentsDirectory stringByAppendingPathComponent:@"Inbox"] error:NULL];
+        [fileManager removeItemAtPath:[documentsDirectory stringByAppendingPathComponent:@"readme.html"] error:NULL];
     }
     return YES;
 }

@@ -670,6 +670,7 @@
 				CEC742FA16776248006D193E /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		CEC742FA16776248006D193E /* Products */ = {
 			isa = PBXGroup;
