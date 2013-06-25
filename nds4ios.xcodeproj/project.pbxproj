@@ -12,6 +12,7 @@
 		63027F15177951B400CB0BB4 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 63027F0D177951B400CB0BB4 /* unzip.c */; };
 		63027F16177951B400CB0BB4 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 63027F0F177951B400CB0BB4 /* zip.c */; };
 		63027F17177951B400CB0BB4 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63027F12177951B400CB0BB4 /* ZipArchive.mm */; };
+		6341965D177969E600103F34 /* DocWatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6341965C177969E600103F34 /* DocWatchHelper.m */; };
 		BF0E1D701763F9B800528BA5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0E1D6F1763F9B800528BA5 /* Default-568h@2x.png */; };
 		BF0E1D731763FA3D00528BA5 /* UIScreen+Widescreen.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0E1D721763FA3D00528BA5 /* UIScreen+Widescreen.m */; };
 		CE2EE5EE173F663B00786468 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE5EC173F663B00786468 /* main.m */; };
@@ -142,6 +143,8 @@
 		63027F10177951B400CB0BB4 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
 		63027F11177951B400CB0BB4 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
 		63027F12177951B400CB0BB4 /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZipArchive.mm; sourceTree = "<group>"; };
+		6341965B177969E600103F34 /* DocWatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocWatchHelper.h; sourceTree = "<group>"; };
+		6341965C177969E600103F34 /* DocWatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocWatchHelper.m; sourceTree = "<group>"; };
 		BF0E1D6F1763F9B800528BA5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BF0E1D711763FA3D00528BA5 /* UIScreen+Widescreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Widescreen.h"; sourceTree = "<group>"; };
 		BF0E1D721763FA3D00528BA5 /* UIScreen+Widescreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Widescreen.m"; sourceTree = "<group>"; };
@@ -393,6 +396,15 @@
 			name = Unzip;
 			sourceTree = "<group>";
 		};
+		6341965E177969E900103F34 /* Auto Update */ = {
+			isa = PBXGroup;
+			children = (
+				6341965B177969E600103F34 /* DocWatchHelper.h */,
+				6341965C177969E600103F34 /* DocWatchHelper.m */,
+			);
+			name = "Auto Update";
+			sourceTree = "<group>";
+		};
 		CE2EE5F4173F66D100786468 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,6 +427,8 @@
 				D338B2FE17470D2800932C39 /* Settings */,
 				D338B2FD17470D1B00932C39 /* switcher */,
 				D55C4E821773ED65001E13F2 /* pulldown */,
+				6341965E177969E900103F34 /* Auto Update */,
+				63027F18177951B700CB0BB4 /* Unzip */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -660,7 +674,6 @@
 		CEC742EE16776248006D193E = {
 			isa = PBXGroup;
 			children = (
-				63027F18177951B700CB0BB4 /* Unzip */,
 				BF0E1D6F1763F9B800528BA5 /* Default-568h@2x.png */,
 				D326847B17497DB1000D4ED6 /* UI */,
 				CE2EE60C173F6C1E00786468 /* nds4droid-code */,
@@ -877,6 +890,7 @@
 				CE2EE64E173F6DF900786468 /* file_allocation_table.cpp in Sources */,
 				CE2EE64F173F6DF900786468 /* filetime.cpp in Sources */,
 				CE2EE650173F6DF900786468 /* libfat_public_api.cpp in Sources */,
+				6341965D177969E600103F34 /* DocWatchHelper.m in Sources */,
 				CE2EE651173F6DF900786468 /* libfat.cpp in Sources */,
 				63027F15177951B400CB0BB4 /* unzip.c in Sources */,
 				CE2EE652173F6DF900786468 /* lock.cpp in Sources */,

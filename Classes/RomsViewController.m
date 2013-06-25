@@ -9,12 +9,14 @@
 #import "AppDelegate.h"
 #import "RomsViewController.h"
 #import "EmuViewController.h"
+#import "DocWatchHelper.h"
 
 #define DOCUMENTS_PATH() [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 
 @interface RomsViewController ()
 
 @property (nonatomic,retain) NSMutableArray* romsArray;
+@property (strong, nonatomic) DocWatchHelper *docWatchHelper;
 
 @end
 
@@ -45,8 +47,6 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
                                                                                           target:self
                                                                                           action:@selector(reloadRomList)];
-
-    
     BOOL isDir;
     NSString* batteryDir = [NSString stringWithFormat:@"%@/Battery",DOCUMENTS_PATH()];
     NSFileManager* fm = [NSFileManager defaultManager];
@@ -57,7 +57,11 @@
     
     [self reloadRomList];
     
-
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    
+    self.docWatchHelper = [DocWatchHelper watcherForPath:documentsDirectory];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadRomList) name:kDocumentChanged object:self.docWatchHelper];
 }
 
 - (void)viewDidUnload
