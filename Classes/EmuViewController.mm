@@ -133,13 +133,15 @@ typedef enum : NSInteger {
     
     [self addButtons];
     
-    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"buttonPosition"] == RSTButtonPositionBottom) {
-        [self.buttonsArray makeObjectsPerformSelector:@selector(shift)]; // Don't call shiftButtons: or else that'll switch the user's preference
-    }
-    
     [self initRom];
     
     [self performSelector:@selector(emuLoop) withObject:nil];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"shiftPad"])
+        [self.buttonsArray makeObjectsPerformSelector:@selector(shift)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -298,11 +300,6 @@ typedef enum : NSInteger {
     
     UIButton *buttonRT = [UIButton buttonWithId:BUTTON_R atCenter:CGPointMake(self.view.frame.size.width - 20, 70)];
     [self.view addSubview:buttonRT];
-    
-    UIButton* buttonShift = [UIButton buttonWithId:(BUTTON_ID)-1 atCenter:CGPointMake(290, 20)];
-    [buttonShift addTarget:self action:@selector(shiftButtons:) forControlEvents:UIControlEventTouchUpInside];
-    [buttonShift setTitle:@"Shift Pad" forState:UIControlStateNormal];
-    [self.view addSubview:buttonShift];
     
     self.buttonsArray = @[buttonUp,buttonDown,buttonLeft,buttonRight,
                           buttonY,buttonX,buttonB,buttonA,

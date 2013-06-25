@@ -100,3 +100,4 @@ Contributors
 * maczydeco
 * [W.MS](http://github.com/w-ms/)
 * rileytestut
+* dchavezlive
