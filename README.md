@@ -39,7 +39,7 @@ IMPORTANT: Make sure your working directory is devoid of spaces. Otherwise, bad 
 
 ### Option 2
 
-1. MacBuildServer is having problems with XCode 5 so we've removed the button for now. Please compile nds4ios yourself of download an official release!
+1. MacBuildServer is having problems with XCode 5 so we've removed the button for now. Please compile nds4ios yourself or download an official release!
 
 <!-- MacBuildServer Install Button 
 <div class="macbuildserver-block">
@@ -101,4 +101,4 @@ Contributors
 * maczydeco
 * [W.MS](http://github.com/w-ms/)
 * rileytestut
-* dchavezlive
+* [dchavezlive](http://dchavez.net)
