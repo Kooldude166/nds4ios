@@ -143,12 +143,10 @@ typedef enum : NSInteger {
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"shiftPad"])
         [self.buttonsArray makeObjectsPerformSelector:@selector(shift)];
     
-    /*if ([[NSUserDefaults standardUserDefaults] boolForKey:@"onScreenControl"] == YES)
-    {
-        NSLog(@"Yes");
-    } else {
-        showControls = NO;
-    }*/
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"onScreenControl"] == NO)
+        [self hideControls];
+    else
+        [self showControls];
 }
 
 - (void)didReceiveMemoryWarning
@@ -266,63 +264,79 @@ typedef enum : NSInteger {
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 }
 
+- (void)showControls
+{
+    buttonUp.alpha = 1;
+    buttonDown.alpha = 1;
+    buttonLeft.alpha = 1;
+    buttonRight.alpha = 1;
+    buttonY.alpha = 1;
+    buttonX.alpha = 1;
+    buttonB.alpha = 1;
+    buttonA.alpha = 1;
+    buttonSelect.alpha = 1;
+    buttonStart.alpha = 1;
+    buttonLT.alpha = 1;
+    buttonRT.alpha = 1;
+}
+
+- (void)hideControls
+{
+    buttonUp.alpha = .1;
+    buttonDown.alpha = .1;
+    buttonLeft.alpha = .1;
+    buttonRight.alpha = .1;
+    buttonY.alpha = .1;
+    buttonX.alpha = .1;
+    buttonB.alpha = .1;
+    buttonA.alpha = .1;
+    buttonSelect.alpha = .1;
+    buttonStart.alpha = .1;
+    buttonLT.alpha = .1;
+    buttonRT.alpha = .1;
+}
+
 - (void)addButtons
 {
-    UIButton* buttonUp = [UIButton buttonWithId:BUTTON_UP atCenter:CGPointMake(60, 132)];
+    buttonUp = [UIButton buttonWithId:BUTTON_UP atCenter:CGPointMake(60, 132)];
     [self.view addSubview:buttonUp];
     
-    UIButton* buttonDown = [UIButton buttonWithId:BUTTON_DOWN atCenter:CGPointMake(60, 211)];
+    buttonDown = [UIButton buttonWithId:BUTTON_DOWN atCenter:CGPointMake(60, 211)];
     [self.view addSubview:buttonDown];
     
-    UIButton* buttonLeft = [UIButton buttonWithId:BUTTON_LEFT atCenter:CGPointMake(20, 172)];
+    buttonLeft = [UIButton buttonWithId:BUTTON_LEFT atCenter:CGPointMake(20, 172)];
     [self.view addSubview:buttonLeft];
     
-    UIButton* buttonRight = [UIButton buttonWithId:BUTTON_RIGHT atCenter:CGPointMake(100, 172)];
+    buttonRight = [UIButton buttonWithId:BUTTON_RIGHT atCenter:CGPointMake(100, 172)];
     [self.view addSubview:buttonRight];
     
-    UIButton* buttonY = [UIButton buttonWithId:BUTTON_Y atCenter:CGPointMake(219, 173)];
+    buttonY = [UIButton buttonWithId:BUTTON_Y atCenter:CGPointMake(219, 173)];
     [self.view addSubview:buttonY];
     
-    UIButton* buttonX = [UIButton buttonWithId:BUTTON_X atCenter:CGPointMake(259, 132)];
+    buttonX = [UIButton buttonWithId:BUTTON_X atCenter:CGPointMake(259, 132)];
     [self.view addSubview:buttonX];
     
-    UIButton* buttonB = [UIButton buttonWithId:BUTTON_B atCenter:CGPointMake(259, 211)];
+    buttonB = [UIButton buttonWithId:BUTTON_B atCenter:CGPointMake(259, 211)];
     [self.view addSubview:buttonB];
     
-    UIButton* buttonA = [UIButton buttonWithId:BUTTON_A atCenter:CGPointMake(299, 173)];
+    buttonA = [UIButton buttonWithId:BUTTON_A atCenter:CGPointMake(299, 173)];
     [self.view addSubview:buttonA];
     
-    UIButton* buttonSelect = [UIButton buttonWithId:BUTTON_SELECT atCenter:CGPointMake(132, 228)];
+    buttonSelect = [UIButton buttonWithId:BUTTON_SELECT atCenter:CGPointMake(132, 228)];
     [self.view addSubview:buttonSelect];
     
-    UIButton* buttonStart = [UIButton buttonWithId:BUTTON_START atCenter:CGPointMake(186, 228)];
+    buttonStart = [UIButton buttonWithId:BUTTON_START atCenter:CGPointMake(186, 228)];
     [self.view addSubview:buttonStart];
     
-    UIButton* buttonExit = [UIButton buttonWithId:(BUTTON_ID)-1 atCenter:CGPointMake(160, 20)];
+    buttonExit = [UIButton buttonWithId:(BUTTON_ID)-1 atCenter:CGPointMake(160, 20)];
     [buttonExit addTarget:self action:@selector(buttonExitDown:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:buttonExit];
     
-    UIButton *buttonLT = [UIButton buttonWithId:BUTTON_L atCenter:CGPointMake(20, 70)];
+    buttonLT = [UIButton buttonWithId:BUTTON_L atCenter:CGPointMake(20, 70)];
     [self.view addSubview:buttonLT];
     
-    UIButton *buttonRT = [UIButton buttonWithId:BUTTON_R atCenter:CGPointMake(self.view.frame.size.width - 20, 70)];
+    buttonRT = [UIButton buttonWithId:BUTTON_R atCenter:CGPointMake(self.view.frame.size.width - 20, 70)];
     [self.view addSubview:buttonRT];
-    
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"onScreenControl"] == NO)
-    {
-        buttonUp.alpha = 0;
-        buttonDown.alpha = 0;
-        buttonLeft.alpha = 0;
-        buttonRight.alpha = 0;
-        buttonY.alpha = 0;
-        buttonX.alpha = 0;
-        buttonB.alpha = 0;
-        buttonA.alpha = 0;
-        buttonSelect.alpha = 0;
-        buttonStart.alpha = 0;
-        buttonLT.alpha = 0;
-        buttonRT.alpha = 0;
-    }
     
     self.buttonsArray = @[buttonUp,buttonDown,buttonLeft,buttonRight,
                           buttonY,buttonX,buttonB,buttonA,

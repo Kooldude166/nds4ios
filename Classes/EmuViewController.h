@@ -10,7 +10,20 @@
 
 @interface EmuViewController : UIViewController <UIActionSheetDelegate>
 {
-    BOOL showControls;
+    // Controls
+    UIButton* buttonUp;
+    UIButton* buttonDown;
+    UIButton* buttonLeft;
+    UIButton* buttonRight;
+    UIButton* buttonY;
+    UIButton* buttonX;
+    UIButton* buttonB;
+    UIButton* buttonA;
+    UIButton* buttonSelect;
+    UIButton* buttonStart;
+    UIButton* buttonExit;
+    UIButton *buttonLT;
+    UIButton *buttonRT;
 }
 - (id)initWithRom:(NSString*)rom;
 
