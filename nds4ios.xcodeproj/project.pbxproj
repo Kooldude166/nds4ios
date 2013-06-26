@@ -127,8 +127,6 @@
 		D55C4E851773ED80001E13F2 /* MBPullDownController.m in Sources */ = {isa = PBXBuildFile; fileRef = D55C4E841773ED80001E13F2 /* MBPullDownController.m */; };
 		D5BE18971773F00E0029E61F /* SwitcherBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BE18961773F00E0029E61F /* SwitcherBackground@2x.png */; };
 		D5BE18991773F0510029E61F /* SwitcherBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BE18981773F0510029E61F /* SwitcherBackground.png */; };
-		DF8674E61768B13F000AB689 /* FileExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8674E41768B13F000AB689 /* FileExplorerViewController.m */; };
-		DF8674E71768B13F000AB689 /* FileExplorerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF8674E51768B13F000AB689 /* FileExplorerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -347,9 +345,6 @@
 		D55C4E841773ED80001E13F2 /* MBPullDownController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPullDownController.m; sourceTree = "<group>"; };
 		D5BE18961773F00E0029E61F /* SwitcherBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwitcherBackground@2x.png"; sourceTree = "<group>"; };
 		D5BE18981773F0510029E61F /* SwitcherBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwitcherBackground.png; sourceTree = "<group>"; };
-		DF8674E31768B13F000AB689 /* FileExplorerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileExplorerViewController.h; path = Classes/FileExplorerViewController.h; sourceTree = "<group>"; };
-		DF8674E41768B13F000AB689 /* FileExplorerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileExplorerViewController.m; path = Classes/FileExplorerViewController.m; sourceTree = "<group>"; };
-		DF8674E51768B13F000AB689 /* FileExplorerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FileExplorerViewController.xib; path = Classes/FileExplorerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,7 +418,6 @@
 				D338B30217470D4A00932C39 /* GL */,
 				D338B30017470D3A00932C39 /* Emu */,
 				D338B2FF17470D3100932C39 /* UIButton+CTM */,
-				D529F9501773FE6F00FBFE13 /* file explorer */,
 				D338B2FE17470D2800932C39 /* Settings */,
 				D338B2FD17470D1B00932C39 /* switcher */,
 				D55C4E821773ED65001E13F2 /* pulldown */,
@@ -771,16 +765,6 @@
 			name = GL;
 			sourceTree = "<group>";
 		};
-		D529F9501773FE6F00FBFE13 /* file explorer */ = {
-			isa = PBXGroup;
-			children = (
-				DF8674E31768B13F000AB689 /* FileExplorerViewController.h */,
-				DF8674E41768B13F000AB689 /* FileExplorerViewController.m */,
-				DF8674E51768B13F000AB689 /* FileExplorerViewController.xib */,
-			);
-			name = "file explorer";
-			sourceTree = "<group>";
-		};
 		D55C4E821773ED65001E13F2 /* pulldown */ = {
 			isa = PBXGroup;
 			children = (
@@ -848,7 +832,6 @@
 				D326847E17497DBC000D4ED6 /* nds4ios.png in Resources */,
 				D326847F17497DBC000D4ED6 /* nds4ios@2x.png in Resources */,
 				BF0E1D701763F9B800528BA5 /* Default-568h@2x.png in Resources */,
-				DF8674E71768B13F000AB689 /* FileExplorerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -964,7 +947,6 @@
 				D38CBCAE1745CF9C0074C554 /* SettingsViewController.m in Sources */,
 				D38CBCB01745CF9C0074C554 /* SwitcherViewController.m in Sources */,
 				BF0E1D731763FA3D00528BA5 /* UIScreen+Widescreen.m in Sources */,
-				DF8674E61768B13F000AB689 /* FileExplorerViewController.m in Sources */,
 				D55C4E851773ED80001E13F2 /* MBPullDownController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

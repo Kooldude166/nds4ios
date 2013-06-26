@@ -11,7 +11,7 @@
 @interface SettingsViewController : UIViewController
 {
     
-    IBOutlet UISwitch *shiftPad;
+    IBOutlet UISwitch *shiftPad, *onScreenControl;
 }
 
 @end

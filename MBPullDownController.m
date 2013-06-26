@@ -14,7 +14,7 @@
 #include <math.h>
 
 
-static CGFloat const kDefaultClosedTopOffset = 44.f;
+static CGFloat const kDefaultClosedTopOffset = 60.f;
 static CGFloat const kDefaultOpenBottomOffset = 352.f;
 static CGFloat const kDefaultOpenDragOffset = NAN;
 static CGFloat const kDefaultCloseDragOffset = NAN;
@@ -81,6 +81,8 @@ static NSInteger const kContainerViewTag = -1000001;
 	_closeDragOffsetPercentage = kDefaultCloseDragOffsetPercentage;
 	_backgroundView = [MBPullDownControllerBackgroundView new];
 	[[self class] updateInstanceCount:1];
+    //hide status bar for this app
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
 }
 
 - (void)viewDidLoad {

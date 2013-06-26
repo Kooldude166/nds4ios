@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SwitcherViewController : UIViewController
+@interface SwitcherViewController : UIViewController <UIAlertViewDelegate>
 {
     IBOutlet UIButton *creditsButton;
     IBOutlet UISegmentedControl *switcher;
+    IBOutlet UILabel *titleLabel;
+    IBOutlet UIButton *addButton;
     BOOL open;
 }
 

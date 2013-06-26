@@ -11,7 +11,6 @@
 #import "SettingsViewController.h"
 #import "RomsViewController.h"
 #import "EmuViewController.h"
-#import "FileExplorerViewController.h"
 #import "MBPullDownController.h"
 
 @interface SwitcherViewController ()
@@ -36,6 +35,12 @@
     open = false;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    titleLabel.font = [UIFont systemFontOfSize:23];
+    addButton.titleLabel.font = [UIFont systemFontOfSize:25];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -52,11 +57,6 @@
         RomsViewController *romsVC = [[RomsViewController alloc] init];
         [self.pullDownController setFrontController:romsVC];
     } else if (switcher.selectedSegmentIndex == 2) {
-        FileExplorerViewController *explorer = [[FileExplorerViewController alloc] init];
-        [self presentViewController:explorer animated:YES completion:^{
-            switcher.selectedSegmentIndex = 1;
-        }];
-    } else if (switcher.selectedSegmentIndex == 3) {
         SettingsViewController *settingsVC = [[SettingsViewController alloc] init];
         [self presentViewController:settingsVC animated:YES completion:^{
             switcher.selectedSegmentIndex = 1;
@@ -70,14 +70,22 @@
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
     }
     else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Will Launch Safari", @"")
-                                                        message:NSLocalizedString(@"Download the ROM you want, and then 'Open In...' nds4ios", @"")
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Hey You! Yes, You!", @"")
+                                                        message:NSLocalizedString(@"This opens Safari. Simply download the ROM you want, and then 'Open In...' nds4ios. Everything else will be taken care of.", @"")
                                                        delegate:self
-                                              cancelButtonTitle:NSLocalizedString(@"Open Safari", @"")
+                                              cancelButtonTitle:NSLocalizedString(@"Ok", @"")
                                               otherButtonTitles:nil];
         [alert show];
         
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"showedROMAlert"];
+    }
+}
+
+#pragma mark - UIAlertView delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
     }
 }
 
@@ -93,5 +101,4 @@
         open = false;
     }
 }
-
 @end
