@@ -150,12 +150,6 @@ typedef enum : NSInteger {
         [self showControls];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    NSLog(@"drawing?");
-#warning this is not completely implemented
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
