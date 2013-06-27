@@ -9,8 +9,9 @@
 #import "AppDelegate.h"
 
 #import "EmuViewController.h"
-#import "UIButton+CTM.h"
+#import "UIScreen+Widescreen.h"
 #import "GLProgram.h"
+
 
 #import <GLKit/GLKit.h>
 #import <OpenGLES/ES2/gl.h>
@@ -135,15 +136,13 @@ typedef enum : NSInteger {
     
     [self initRom];
     
-    [self performSelector:@selector(emuLoop) withObject:nil];
-    
-    [dPad addTarget:self action:@selector(dPadButtonChanged:) forControlEvents:UIControlEventValueChanged];
+    [self performSelector:@selector(emuLoop) withObject:nil];    
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"shiftPad"])
-        [self.buttonsArray makeObjectsPerformSelector:@selector(shift)];
+        [self shiftButtons];
     
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"onScreenControl"] == NO)
         [self hideControls];
@@ -153,10 +152,6 @@ typedef enum : NSInteger {
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    dPad = [[DPadControl alloc] initWithFrame:CGRectMake(30, 100, 150, 125)];
-    dPad.backgroundColor = [UIColor clearColor];
-    dPad.userInteractionEnabled = YES;
-    [self.view addSubview:dPad];
     NSLog(@"drawing?");
 #warning this is not completely implemented
 }
@@ -278,91 +273,99 @@ typedef enum : NSInteger {
 
 - (void)showControls
 {
-    buttonUp.alpha = 1;
-    buttonDown.alpha = 1;
-    buttonLeft.alpha = 1;
-    buttonRight.alpha = 1;
-    buttonY.alpha = 1;
-    buttonX.alpha = 1;
-    buttonB.alpha = 1;
-    buttonA.alpha = 1;
-    buttonSelect.alpha = 1;
-    buttonStart.alpha = 1;
-    buttonLT.alpha = 1;
-    buttonRT.alpha = 1;
+    for (UIControl *button in buttonsArray) {
+        button.alpha = 1;
+    }
 }
 
 - (void)hideControls
 {
-    buttonUp.alpha = .1;
-    buttonDown.alpha = .1;
-    buttonLeft.alpha = .1;
-    buttonRight.alpha = .1;
-    buttonY.alpha = .1;
-    buttonX.alpha = .1;
-    buttonB.alpha = .1;
-    buttonA.alpha = .1;
-    buttonSelect.alpha = .1;
-    buttonStart.alpha = .1;
-    buttonLT.alpha = .1;
-    buttonRT.alpha = .1;
+    for (UIControl *button in buttonsArray) {
+        button.alpha = .1;
+    }
 }
 
-- (void)dPadButtonChanged:(DPadControl*)sender
+- (UIButton*)buttonWithId:(BUTTON_ID)_buttonId atCenter:(CGPoint)center
 {
-    NSAssert([sender isKindOfClass:[DPadControl class]], @"sender must be a d-pad");
-    UIControlState state = sender.state;
+    NSArray* array = @[@"Right",@"Left",@"Down",@"Up",@"Select",@"Start",@"B",@"A",@"Y",@"X",@"L",@"R"];
     
-    if (state & DPadStateUp) {
-        NSLog(@"something");
+    UIButton* button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button setTitle:array[_buttonId] forState:UIControlStateNormal];
+    
+    if (_buttonId == BUTTON_START || _buttonId == BUTTON_SELECT) {
+        button.frame = CGRectMake(0, 0, 50, 25);
+    } else {
+        button.frame = CGRectMake(0, 0, 40, 40);
     }
+    button.center = center;
+    
+    button.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:10.0f];
+    button.alpha = 0.6f;
+    button.tag = _buttonId;
+    
+    [button addTarget:self action:@selector(onButtonUp:) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(onButtonDown:) forControlEvents:UIControlEventTouchDown];
+    
+    return button;
 }
 
 - (void)addButtons
 {
-    buttonUp = [UIButton buttonWithId:BUTTON_UP atCenter:CGPointMake(60, 132)];
-    [self.view addSubview:buttonUp];
+    buttonDPad = [[DPadControl alloc] initWithFrame:CGRectMake(0, 112, 120, 120)];
+    buttonDPad.deadZone = CGSizeMake(40, 40);
+    [buttonDPad addTarget:self action:@selector(onDPad:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:buttonDPad];
     
-    buttonDown = [UIButton buttonWithId:BUTTON_DOWN atCenter:CGPointMake(60, 211)];
-    [self.view addSubview:buttonDown];
-    
-    buttonLeft = [UIButton buttonWithId:BUTTON_LEFT atCenter:CGPointMake(20, 172)];
-    [self.view addSubview:buttonLeft];
-    
-    buttonRight = [UIButton buttonWithId:BUTTON_RIGHT atCenter:CGPointMake(100, 172)];
-    [self.view addSubview:buttonRight];
-    
-    buttonY = [UIButton buttonWithId:BUTTON_Y atCenter:CGPointMake(219, 173)];
+    buttonY = [self buttonWithId:BUTTON_Y atCenter:CGPointMake(219, 173)];
     [self.view addSubview:buttonY];
     
-    buttonX = [UIButton buttonWithId:BUTTON_X atCenter:CGPointMake(259, 132)];
+    buttonX = [self buttonWithId:BUTTON_X atCenter:CGPointMake(259, 132)];
     [self.view addSubview:buttonX];
     
-    buttonB = [UIButton buttonWithId:BUTTON_B atCenter:CGPointMake(259, 211)];
+    buttonB = [self buttonWithId:BUTTON_B atCenter:CGPointMake(259, 211)];
     [self.view addSubview:buttonB];
     
-    buttonA = [UIButton buttonWithId:BUTTON_A atCenter:CGPointMake(299, 173)];
+    buttonA = [self buttonWithId:BUTTON_A atCenter:CGPointMake(299, 173)];
     [self.view addSubview:buttonA];
     
-    buttonSelect = [UIButton buttonWithId:BUTTON_SELECT atCenter:CGPointMake(132, 228)];
+    buttonSelect = [self buttonWithId:BUTTON_SELECT atCenter:CGPointMake(132, 228)];
     [self.view addSubview:buttonSelect];
     
-    buttonStart = [UIButton buttonWithId:BUTTON_START atCenter:CGPointMake(186, 228)];
+    buttonStart = [self buttonWithId:BUTTON_START atCenter:CGPointMake(186, 228)];
     [self.view addSubview:buttonStart];
     
-    buttonExit = [UIButton buttonWithId:(BUTTON_ID)-1 atCenter:CGPointMake(160, 20)];
+    buttonExit = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [buttonExit setTitle:@"Close" forState:UIControlStateNormal];
+    buttonExit.frame = CGRectMake(0, 0, 50, 25);
+    buttonExit.center = CGPointMake(160, 20);
     [buttonExit addTarget:self action:@selector(buttonExitDown:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:buttonExit];
     
-    buttonLT = [UIButton buttonWithId:BUTTON_L atCenter:CGPointMake(20, 70)];
+    buttonLT = [self buttonWithId:BUTTON_L atCenter:CGPointMake(20, 70)];
     [self.view addSubview:buttonLT];
     
-    buttonRT = [UIButton buttonWithId:BUTTON_R atCenter:CGPointMake(self.view.frame.size.width - 20, 70)];
+    buttonRT = [self buttonWithId:BUTTON_R atCenter:CGPointMake(self.view.frame.size.width - 20, 70)];
     [self.view addSubview:buttonRT];
     
-    self.buttonsArray = @[buttonUp,buttonDown,buttonLeft,buttonRight,
+    self.buttonsArray = @[buttonDPad,
                           buttonY,buttonX,buttonB,buttonA,
                           buttonSelect,buttonStart, buttonRT, buttonLT];
+}
+
+- (void)onButtonUp:(UIControl*)sender
+{
+    EMU_buttonUp((BUTTON_ID)sender.tag);
+}
+
+- (void)onButtonDown:(UIControl*)sender
+{
+    EMU_buttonDown((BUTTON_ID)sender.tag);
+}
+
+- (void)onDPad:(DPadControl*)sender
+{
+    UIControlState state = sender.state;
+    EMU_setDPad(state & DPadStateUp, state & DPadStateDown, state & DPadStateLeft, state & DPadStateRight);
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -398,17 +401,17 @@ typedef enum : NSInteger {
     EMU_touchScreenRelease();
 }
 
-- (void)shiftButtons:(id)sender
+
+- (void)shiftButtons
 {
-    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"buttonPosition"] == RSTButtonPositionBottom) {
-        [[NSUserDefaults standardUserDefaults] setInteger:RSTButtonPositionTop forKey:@"buttonPosition"];
+    BOOL isWidescreen = [[UIScreen mainScreen] isWidescreen];
+    for (UIControl *button in buttonsArray) {
+        if (button.center.y < 240.0f) {
+            button.center = CGPointMake(button.center.x, button.center.y + 240.0f + (88.0f * isWidescreen));
+        } else {
+            button.center = CGPointMake(button.center.x, button.center.y - 240.0f - (88.0f * isWidescreen));
+        }
     }
-    else {
-        [[NSUserDefaults standardUserDefaults] setInteger:RSTButtonPositionBottom forKey:@"buttonPosition"];
-    }
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [self.buttonsArray makeObjectsPerformSelector:@selector(shift)];
 }
 
 - (void)buttonExitDown:(id)sender

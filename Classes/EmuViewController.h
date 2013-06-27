@@ -12,10 +12,7 @@
 @interface EmuViewController : UIViewController <UIActionSheetDelegate>
 {
     // Controls
-    UIButton* buttonUp;
-    UIButton* buttonDown;
-    UIButton* buttonLeft;
-    UIButton* buttonRight;
+    DPadControl *buttonDPad;
     UIButton* buttonY;
     UIButton* buttonX;
     UIButton* buttonB;
@@ -25,10 +22,8 @@
     UIButton* buttonExit;
     UIButton *buttonLT;
     UIButton *buttonRT;
-    
-    //dpad
-    IBOutlet DPadControl *dPad;
 }
+
 - (id)initWithRom:(NSString*)rom;
 
 @end

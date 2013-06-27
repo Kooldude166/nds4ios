@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28E43300177CA70500A146E5 /* DPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E432FE177CA70500A146E5 /* DPad.png */; };
+		28E43301177CA70500A146E5 /* DPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E432FF177CA70500A146E5 /* DPad@2x.png */; };
 		63027F13177951B400CB0BB4 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 63027F09177951B400CB0BB4 /* ioapi.c */; };
 		63027F14177951B400CB0BB4 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 63027F0B177951B400CB0BB4 /* mztools.c */; };
 		63027F15177951B400CB0BB4 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 63027F0D177951B400CB0BB4 /* unzip.c */; };
@@ -119,7 +121,6 @@
 		CE34A127173F758300C51EA1 /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE34A125173F758300C51EA1 /* matrix.cpp */; };
 		CE34A131173F798200C51EA1 /* matrix_impl.c in Sources */ = {isa = PBXBuildFile; fileRef = CE34A12F173F798200C51EA1 /* matrix_impl.c */; settings = {COMPILER_FLAGS = "-marm"; }; };
 		CE34A134173F79F200C51EA1 /* throttle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE34A132173F79F200C51EA1 /* throttle.cpp */; };
-		CE34A137173F86E800C51EA1 /* UIButton+CTM.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE34A136173F86E800C51EA1 /* UIButton+CTM.mm */; };
 		CEB43C42173FCA3F00055F91 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB43C41173FCA3F00055F91 /* GLProgram.m */; };
 		CEB43C45173FD25A00055F91 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB43C43173FD25900055F91 /* GLKit.framework */; };
 		CEB43C46173FD25A00055F91 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB43C44173FD25900055F91 /* OpenGLES.framework */; };
@@ -136,6 +137,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28E432FE177CA70500A146E5 /* DPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DPad.png; sourceTree = "<group>"; };
+		28E432FF177CA70500A146E5 /* DPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DPad@2x.png"; sourceTree = "<group>"; };
 		63027F08177951B400CB0BB4 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
 		63027F09177951B400CB0BB4 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
 		63027F0A177951B400CB0BB4 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
@@ -337,8 +340,6 @@
 		CE34A130173F798200C51EA1 /* matrix_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = matrix_impl.h; path = Classes/matrix_impl.h; sourceTree = SOURCE_ROOT; };
 		CE34A132173F79F200C51EA1 /* throttle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = throttle.cpp; path = Classes/throttle.cpp; sourceTree = SOURCE_ROOT; };
 		CE34A133173F79F200C51EA1 /* throttle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = throttle.h; path = Classes/throttle.h; sourceTree = SOURCE_ROOT; };
-		CE34A135173F86E800C51EA1 /* UIButton+CTM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+CTM.h"; path = "Classes/UIButton+CTM.h"; sourceTree = "<group>"; };
-		CE34A136173F86E800C51EA1 /* UIButton+CTM.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "UIButton+CTM.mm"; path = "Classes/UIButton+CTM.mm"; sourceTree = "<group>"; };
 		CEB43C40173FCA3F00055F91 /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLProgram.h; path = Classes/GLProgram.h; sourceTree = "<group>"; };
 		CEB43C41173FCA3F00055F91 /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLProgram.m; path = Classes/GLProgram.m; sourceTree = "<group>"; };
 		CEB43C43173FD25900055F91 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -442,7 +443,6 @@
 				D338B30117470D4000932C39 /* Roms List */,
 				D338B30217470D4A00932C39 /* GL */,
 				D338B30017470D3A00932C39 /* Emu */,
-				D338B2FF17470D3100932C39 /* UIButton+CTM */,
 				D338B2FE17470D2800932C39 /* Settings */,
 				D338B2FD17470D1B00932C39 /* switcher */,
 				D55C4E821773ED65001E13F2 /* pulldown */,
@@ -755,15 +755,6 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
-		D338B2FF17470D3100932C39 /* UIButton+CTM */ = {
-			isa = PBXGroup;
-			children = (
-				CE34A135173F86E800C51EA1 /* UIButton+CTM.h */,
-				CE34A136173F86E800C51EA1 /* UIButton+CTM.mm */,
-			);
-			name = "UIButton+CTM";
-			sourceTree = "<group>";
-		};
 		D338B30017470D3A00932C39 /* Emu */ = {
 			isa = PBXGroup;
 			children = (
@@ -804,6 +795,8 @@
 		D5E79C44177C6ED60032A3C8 /* DPad */ = {
 			isa = PBXGroup;
 			children = (
+				28E432FE177CA70500A146E5 /* DPad.png */,
+				28E432FF177CA70500A146E5 /* DPad@2x.png */,
 				D5E79C45177C6EE00032A3C8 /* DPadControl.h */,
 				D5E79C46177C6EE00032A3C8 /* DPadControl.m */,
 			);
@@ -861,8 +854,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28E43300177CA70500A146E5 /* DPad.png in Resources */,
 				D5BE18971773F00E0029E61F /* SwitcherBackground@2x.png in Resources */,
 				63BCB761177BE042005F9641 /* sicon.png in Resources */,
+				28E43301177CA70500A146E5 /* DPad@2x.png in Resources */,
 				63BCB760177BE042005F9641 /* sicon-568@2x.png in Resources */,
 				D38CBCAF1745CF9C0074C554 /* SettingsViewController.xib in Resources */,
 				63BCB763177BE042005F9641 /* spotlight.png in Resources */,
@@ -984,7 +979,6 @@
 				CE34A127173F758300C51EA1 /* matrix.cpp in Sources */,
 				CE34A131173F798200C51EA1 /* matrix_impl.c in Sources */,
 				CE34A134173F79F200C51EA1 /* throttle.cpp in Sources */,
-				CE34A137173F86E800C51EA1 /* UIButton+CTM.mm in Sources */,
 				CEB43C42173FCA3F00055F91 /* GLProgram.m in Sources */,
 				D38CBCAE1745CF9C0074C554 /* SettingsViewController.m in Sources */,
 				D38CBCB01745CF9C0074C554 /* SwitcherViewController.m in Sources */,

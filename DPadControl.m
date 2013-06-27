@@ -16,6 +16,10 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        backgroundView = [[UIImageView alloc] initWithFrame:self.bounds];
+        backgroundView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+        backgroundView.image = [UIImage imageNamed:@"DPad"];
+        [self addSubview:backgroundView];
     }
     return self;
 }
