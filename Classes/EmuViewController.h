@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DPadControl.h"
 
 @interface EmuViewController : UIViewController <UIActionSheetDelegate>
 {
@@ -24,6 +25,9 @@
     UIButton* buttonExit;
     UIButton *buttonLT;
     UIButton *buttonRT;
+    
+    //dpad
+    IBOutlet DPadControl *dPad;
 }
 - (id)initWithRom:(NSString*)rom;
 

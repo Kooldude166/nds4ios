@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>E3FD30B2-CD81-4C40-8DE0-6332BA8C9B4E</string>
+	<string>2A3883B9-D209-41C5-B128-0BFD790D8D41</string>
 	<key>IDESourceControlProjectName</key>
 	<string>nds4ios</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>836749A5-D641-4233-9165-2D1EC8523207</key>
-		<string>https://github.com/dchavezlive/nds4ios.git</string>
+		<key>DBC70012-DF48-45E1-AC2D-1B9DB461A2A5</key>
+		<string>https://github.com/angelXwind/nds4ios.git</string>
 		<key>DF97D4CD-D2F0-4120-BA41-0D4B51DEAA2B</key>
 		<string>git://git.code.sf.net/p/nds4droid/code</string>
 	</dict>
@@ -17,27 +17,19 @@
 	<string>nds4ios.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>836749A5-D641-4233-9165-2D1EC8523207</key>
+		<key>DBC70012-DF48-45E1-AC2D-1B9DB461A2A5</key>
 		<string>../..</string>
 		<key>DF97D4CD-D2F0-4120-BA41-0D4B51DEAA2B</key>
 		<string>../../nds4droid-code</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/dchavezlive/nds4ios.git</string>
+	<string>https://github.com/angelXwind/nds4ios.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>836749A5-D641-4233-9165-2D1EC8523207</string>
+	<string>DBC70012-DF48-45E1-AC2D-1B9DB461A2A5</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>836749A5-D641-4233-9165-2D1EC8523207</string>
-			<key>IDESourceControlWCCName</key>
-			<string>nds4ios</string>
-		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
@@ -45,6 +37,14 @@
 			<string>DF97D4CD-D2F0-4120-BA41-0D4B51DEAA2B</string>
 			<key>IDESourceControlWCCName</key>
 			<string>nds4droid-code</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DBC70012-DF48-45E1-AC2D-1B9DB461A2A5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>nds4ios</string>
 		</dict>
 	</array>
 </dict>

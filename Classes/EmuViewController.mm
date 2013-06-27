@@ -136,6 +136,8 @@ typedef enum : NSInteger {
     [self initRom];
     
     [self performSelector:@selector(emuLoop) withObject:nil];
+    
+    [dPad addTarget:self action:@selector(dPadButtonChanged:) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -147,6 +149,16 @@ typedef enum : NSInteger {
         [self hideControls];
     else
         [self showControls];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    dPad = [[DPadControl alloc] initWithFrame:CGRectMake(30, 100, 150, 125)];
+    dPad.backgroundColor = [UIColor clearColor];
+    dPad.userInteractionEnabled = YES;
+    [self.view addSubview:dPad];
+    NSLog(@"drawing?");
+#warning this is not completely implemented
 }
 
 - (void)didReceiveMemoryWarning
@@ -294,6 +306,16 @@ typedef enum : NSInteger {
     buttonStart.alpha = .1;
     buttonLT.alpha = .1;
     buttonRT.alpha = .1;
+}
+
+- (void)dPadButtonChanged:(DPadControl*)sender
+{
+    NSAssert([sender isKindOfClass:[DPadControl class]], @"sender must be a d-pad");
+    UIControlState state = sender.state;
+    
+    if (state & DPadStateUp) {
+        NSLog(@"something");
+    }
 }
 
 - (void)addButtons
