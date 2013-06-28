@@ -7,14 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DPadControl.h"
 
 @interface EmuViewController : UIViewController <UIActionSheetDelegate>
 {
     // Controls
-    UIButton* buttonUp;
-    UIButton* buttonDown;
-    UIButton* buttonLeft;
-    UIButton* buttonRight;
+    DPadControl *buttonDPad;
     UIButton* buttonY;
     UIButton* buttonX;
     UIButton* buttonB;
@@ -25,6 +23,7 @@
     UIButton *buttonLT;
     UIButton *buttonRT;
 }
+
 - (id)initWithRom:(NSString*)rom;
 
 @end

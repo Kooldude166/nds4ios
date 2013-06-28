@@ -11,6 +11,8 @@ http://nds4ios.angelxwind.net/
 
 iOS 5 allowed but untested.
 
+Icon credit: [ILSD3MON](https://www.facebook.com/aaronjames.aranda.5)
+
 Build Instructions
 ------------------------
 

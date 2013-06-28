@@ -515,4 +515,12 @@ void EMU_buttonUp(BUTTON_ID button)
     NDS_setPad(all_button, false, false);
 }
 
+void EMU_setDPad(BOOL up, BOOL down, BOOL left, BOOL right)
+{
+    _b[BUTTON_UP] = !!up;
+    _b[BUTTON_DOWN] = !!down;
+    _b[BUTTON_LEFT] = !!left;
+    _b[BUTTON_RIGHT] = !!right;
+    NDS_setPad(all_button, false, false);
+}
 
