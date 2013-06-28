@@ -143,6 +143,8 @@ typedef enum : NSInteger {
 {
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"shiftPad"])
         [self shiftButtons];
+    else
+        [self unshiftButtons];
     
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"onScreenControl"] == NO)
         [self hideControls];
@@ -394,6 +396,15 @@ typedef enum : NSInteger {
     EMU_touchScreenRelease();
 }
 
+- (void)unshiftButtons
+{
+    buttonSelect.center = CGPointMake(buttonSelect.center.x, 228);
+    buttonStart.center = CGPointMake(buttonStart.center.x, 228);
+    buttonRT.center = CGPointMake(buttonRT.center.x, 70);
+    buttonLT.center = CGPointMake(buttonLT.center.x, 70);
+    buttonDPad.center = CGPointMake(buttonDPad.center.x, 112+60);
+    buttonABXYPad.center = CGPointMake(buttonABXYPad.center.x, 112+60);
+}
 
 - (void)shiftButtons
 {
