@@ -524,11 +524,11 @@ void EMU_setDPad(BOOL up, BOOL down, BOOL left, BOOL right)
     NDS_setPad(all_button, false, false);
 }
 
-void EMU_setABXYPad(BOOL x, BOOL b, BOOL y, BOOL a)
+void EMU_setABXY(BOOL a, BOOL b, BOOL x, BOOL y)
 {
-    _b[BUTTON_X] = !!x;
-    _b[BUTTON_B] = !!b;
-    _b[BUTTON_Y] = !!y;
     _b[BUTTON_A] = !!a;
+    _b[BUTTON_B] = !!b;
+    _b[BUTTON_X] = !!x;
+    _b[BUTTON_Y] = !!y;
     NDS_setPad(all_button, false, false);
 }

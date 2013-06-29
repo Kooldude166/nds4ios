@@ -9,14 +9,13 @@
 /* Begin PBXBuildFile section */
 		28E43300177CA70500A146E5 /* DPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E432FE177CA70500A146E5 /* DPad.png */; };
 		28E43301177CA70500A146E5 /* DPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E432FF177CA70500A146E5 /* DPad@2x.png */; };
-		8B4EF073177D74A80013D660 /* ABXYPadControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF072177D74A80013D660 /* ABXYPadControl.m */; };
 		8B4EF076177D74D80013D660 /* DocWatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF075177D74D80013D660 /* DocWatchHelper.m */; };
 		8B4EF079177D74FA0013D660 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF078177D74FA0013D660 /* ZipArchive.mm */; };
 		8B4EF083177D751C0013D660 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF07B177D751C0013D660 /* ioapi.c */; };
 		8B4EF084177D751C0013D660 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF07D177D751C0013D660 /* mztools.c */; };
 		8B4EF085177D751C0013D660 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF07F177D751C0013D660 /* unzip.c */; };
 		8B4EF086177D751C0013D660 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF081177D751C0013D660 /* zip.c */; };
-		8B4EF08A177D75520013D660 /* DPadControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF089177D75520013D660 /* DPadControl.m */; };
+		8B4EF08A177D75520013D660 /* ButtonPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF089177D75520013D660 /* ButtonPad.m */; };
 		8B4EF08D177D75710013D660 /* MBPullDownController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF08C177D75710013D660 /* MBPullDownController.m */; };
 		8B4EF090177D75940013D660 /* UIScreen+Widescreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF08F177D75940013D660 /* UIScreen+Widescreen.m */; };
 		8B4EF09B177D80C80013D660 /* ABXYPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B4EF099177D80C80013D660 /* ABXYPad.png */; };
@@ -139,8 +138,6 @@
 /* Begin PBXFileReference section */
 		28E432FE177CA70500A146E5 /* DPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DPad.png; sourceTree = "<group>"; };
 		28E432FF177CA70500A146E5 /* DPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DPad@2x.png"; sourceTree = "<group>"; };
-		8B4EF071177D74A80013D660 /* ABXYPadControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABXYPadControl.h; path = Classes/ABXYPadControl.h; sourceTree = "<group>"; };
-		8B4EF072177D74A80013D660 /* ABXYPadControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABXYPadControl.m; path = Classes/ABXYPadControl.m; sourceTree = "<group>"; };
 		8B4EF074177D74D80013D660 /* DocWatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocWatchHelper.h; path = Classes/DocWatchHelper.h; sourceTree = "<group>"; };
 		8B4EF075177D74D80013D660 /* DocWatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocWatchHelper.m; path = Classes/DocWatchHelper.m; sourceTree = "<group>"; };
 		8B4EF077177D74FA0013D660 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = Classes/ZipArchive.h; sourceTree = "<group>"; };
@@ -154,8 +151,8 @@
 		8B4EF080177D751C0013D660 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = Classes/minizip/unzip.h; sourceTree = "<group>"; };
 		8B4EF081177D751C0013D660 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = zip.c; path = Classes/minizip/zip.c; sourceTree = "<group>"; };
 		8B4EF082177D751C0013D660 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zip.h; path = Classes/minizip/zip.h; sourceTree = "<group>"; };
-		8B4EF088177D75520013D660 /* DPadControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPadControl.h; path = Classes/DPadControl.h; sourceTree = "<group>"; };
-		8B4EF089177D75520013D660 /* DPadControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPadControl.m; path = Classes/DPadControl.m; sourceTree = "<group>"; };
+		8B4EF088177D75520013D660 /* ButtonPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = ButtonPad.h; path = Classes/ButtonPad.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8B4EF089177D75520013D660 /* ButtonPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = ButtonPad.m; path = Classes/ButtonPad.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8B4EF08B177D75710013D660 /* MBPullDownController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBPullDownController.h; path = Classes/MBPullDownController.h; sourceTree = "<group>"; };
 		8B4EF08C177D75710013D660 /* MBPullDownController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBPullDownController.m; path = Classes/MBPullDownController.m; sourceTree = "<group>"; };
 		8B4EF08E177D75940013D660 /* UIScreen+Widescreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScreen+Widescreen.h"; path = "Classes/UIScreen+Widescreen.h"; sourceTree = "<group>"; };
@@ -170,8 +167,8 @@
 		CE2EE5F6173F66E300786468 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		CE2EE5F7173F66E300786468 /* emu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = emu.cpp; path = Classes/emu.cpp; sourceTree = SOURCE_ROOT; };
 		CE2EE5F8173F66E300786468 /* emu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = emu.h; path = Classes/emu.h; sourceTree = SOURCE_ROOT; };
-		CE2EE5F9173F66E300786468 /* EmuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmuViewController.h; path = Classes/EmuViewController.h; sourceTree = SOURCE_ROOT; };
-		CE2EE5FA173F66E300786468 /* EmuViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EmuViewController.mm; path = Classes/EmuViewController.mm; sourceTree = SOURCE_ROOT; };
+		CE2EE5F9173F66E300786468 /* EmuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = EmuViewController.h; path = Classes/EmuViewController.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CE2EE5FA173F66E300786468 /* EmuViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; name = EmuViewController.mm; path = Classes/EmuViewController.mm; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		CE2EE5FB173F66E300786468 /* RomsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RomsViewController.h; path = Classes/RomsViewController.h; sourceTree = SOURCE_ROOT; };
 		CE2EE5FC173F66E300786468 /* RomsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RomsViewController.m; path = Classes/RomsViewController.m; sourceTree = SOURCE_ROOT; };
 		CE2EE603173F6BBA00786468 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -408,17 +405,6 @@
 				D511B057177E559F009DC4A4 /* nds4ios.png */,
 			);
 			name = Icons;
-			sourceTree = "<group>";
-		};
-		8B4EF06D177D74420013D660 /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-				8B4EF099177D80C80013D660 /* ABXYPad.png */,
-				8B4EF09A177D80C80013D660 /* ABXYPad@2x.png */,
-				8B4EF071177D74A80013D660 /* ABXYPadControl.h */,
-				8B4EF072177D74A80013D660 /* ABXYPadControl.m */,
-			);
-			name = Buttons;
 			sourceTree = "<group>";
 		};
 		8B4EF087177D75290013D660 /* minizip */ = {
@@ -767,8 +753,7 @@
 		D338B30017470D3A00932C39 /* Emu */ = {
 			isa = PBXGroup;
 			children = (
-				8B4EF06D177D74420013D660 /* Buttons */,
-				D5E79C44177C6ED60032A3C8 /* DPad */,
+				D5E79C44177C6ED60032A3C8 /* ButtonPad */,
 				CE2EE5F9173F66E300786468 /* EmuViewController.h */,
 				CE2EE5FA173F66E300786468 /* EmuViewController.mm */,
 			);
@@ -802,15 +787,17 @@
 			name = pulldown;
 			sourceTree = "<group>";
 		};
-		D5E79C44177C6ED60032A3C8 /* DPad */ = {
+		D5E79C44177C6ED60032A3C8 /* ButtonPad */ = {
 			isa = PBXGroup;
 			children = (
+				8B4EF099177D80C80013D660 /* ABXYPad.png */,
+				8B4EF09A177D80C80013D660 /* ABXYPad@2x.png */,
 				28E432FE177CA70500A146E5 /* DPad.png */,
 				28E432FF177CA70500A146E5 /* DPad@2x.png */,
-				8B4EF088177D75520013D660 /* DPadControl.h */,
-				8B4EF089177D75520013D660 /* DPadControl.m */,
+				8B4EF088177D75520013D660 /* ButtonPad.h */,
+				8B4EF089177D75520013D660 /* ButtonPad.m */,
 			);
-			name = DPad;
+			name = ButtonPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -936,7 +923,7 @@
 				CE2EE67C173F6E3000786468 /* task.cpp in Sources */,
 				CE2EE67D173F6E3000786468 /* vfat.cpp in Sources */,
 				CE2EE67E173F6E3000786468 /* xstring.cpp in Sources */,
-				8B4EF08A177D75520013D660 /* DPadControl.m in Sources */,
+				8B4EF08A177D75520013D660 /* ButtonPad.m in Sources */,
 				CE2EE699173F706C00786468 /* metaspu.cpp in Sources */,
 				CE2EE6A6173F70A800786468 /* 2xsai.cpp in Sources */,
 				8B4EF090177D75940013D660 /* UIScreen+Widescreen.m in Sources */,
@@ -993,7 +980,6 @@
 				CEB43C42173FCA3F00055F91 /* GLProgram.m in Sources */,
 				D38CBCAE1745CF9C0074C554 /* SettingsViewController.m in Sources */,
 				D38CBCB01745CF9C0074C554 /* SwitcherViewController.m in Sources */,
-				8B4EF073177D74A80013D660 /* ABXYPadControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

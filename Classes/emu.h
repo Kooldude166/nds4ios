@@ -49,7 +49,7 @@ void EMU_closeRom();
 void EMU_buttonDown(BUTTON_ID button);
 void EMU_buttonUp(BUTTON_ID button);
 void EMU_setDPad(BOOL up, BOOL down, BOOL left, BOOL right);
-void EMU_setABXYPad(BOOL x, BOOL b, BOOL y, BOOL a);
+void EMU_setABXY(BOOL a, BOOL b, BOOL x, BOOL y);
 
 #endif /* defined(__nds4ios__emu__) */
 

@@ -1,5 +1,5 @@
 //
-//  DPadControl.h
+//  ButtonPad.h
 //  DPadDemo
 //
 //  Created by Zydeco on 26/6/2013.
@@ -8,19 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum DPadState {
-    DPadStateUp     = 0x00010000,
-    DPadStateDown   = 0x00020000,
-    DPadStateLeft   = 0x00040000,
-    DPadStateRight  = 0x00080000
-} DPadState;
+typedef enum PadState {
+    PadStateUp     = 0x00010000,
+    PadStateDown   = 0x00020000,
+    PadStateLeft   = 0x00040000,
+    PadStateRight  = 0x00080000
+} PadState;
 
-@interface DPadControl : UIControl
+@interface ButtonPad : UIControl
 {
-    UIControlState dPadState;
+    UIControlState padState;
     UIImageView *backgroundView;
 }
 
 @property CGSize deadZone; // dead zone in the middle of the control
+@property UIImage *image;
 
 @end
