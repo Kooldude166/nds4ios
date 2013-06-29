@@ -132,6 +132,7 @@
 						<string key="NSFrame">{{81, 294}, {158, 21}}</string>
 						<reference key="NSSuperview" ref="846602322"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -160,7 +161,7 @@
 								<reference key="IBUINavigationBar" ref="462214179"/>
 								<string key="IBUITitle">Settings</string>
 								<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="689887160">
-									<string key="IBUITitle">Back</string>
+									<string key="IBUITitle">Close</string>
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 									<int key="IBUIStyle">1</int>
 									<reference key="IBUINavigationItem" ref="656397490"/>
