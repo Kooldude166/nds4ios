@@ -108,7 +108,7 @@
 						<reference key="NSNextResponder" ref="846602322"/>
 						<int key="NSvFlags">1316</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{13, 111}, {186, 21}}</string>
+						<string key="NSFrame">{{13, 111}, {118, 21}}</string>
 						<reference key="NSSuperview" ref="846602322"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="99017190"/>
@@ -117,7 +117,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Shift Pad Controls Down</string>
+						<string key="IBUIText">Shift Pad Down</string>
 						<reference key="IBUITextColor" ref="682513120"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
