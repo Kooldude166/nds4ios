@@ -11,7 +11,7 @@ http://nds4ios.angelxwind.net/
 
 iOS 5 allowed but untested.
 
-Icon credit: Michael Zhang
+Icon credit: [Michael (Malvix_) Zhang](https://twitter.com/Malvix_)
 
 Build Instructions
 ------------------------
