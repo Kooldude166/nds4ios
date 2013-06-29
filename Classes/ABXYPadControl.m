@@ -18,7 +18,7 @@
         // Initialization code
         backgroundView = [[UIImageView alloc] initWithFrame:self.bounds];
         backgroundView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-        backgroundView.image = [UIImage imageNamed:@"ABXY"];
+        backgroundView.image = [UIImage imageNamed:@"ABXYPad.png"];
         [self addSubview:backgroundView];
     }
     return self;

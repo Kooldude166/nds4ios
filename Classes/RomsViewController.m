@@ -105,7 +105,7 @@
     
     for (int i = 0; i < contents.count; i++) {
         NSString *filename = [contents objectAtIndex:i];
-        if ([filename hasSuffix:@".nds"]) {
+        if ([[filename lowercaseString] hasSuffix:@".nds"]) {
             NSString* characterIndex = [filename substringWithRange:NSMakeRange(0,1)];
             
             BOOL matched = NO;

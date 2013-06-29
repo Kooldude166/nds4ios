@@ -9,11 +9,6 @@
 /* Begin PBXBuildFile section */
 		28E43300177CA70500A146E5 /* DPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E432FE177CA70500A146E5 /* DPad.png */; };
 		28E43301177CA70500A146E5 /* DPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E432FF177CA70500A146E5 /* DPad@2x.png */; };
-		63BCB760177BE042005F9641 /* sicon-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BCB75B177BE042005F9641 /* sicon-568@2x.png */; };
-		63BCB761177BE042005F9641 /* sicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BCB75C177BE042005F9641 /* sicon.png */; };
-		63BCB762177BE042005F9641 /* sicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BCB75D177BE042005F9641 /* sicon@2x.png */; };
-		63BCB763177BE042005F9641 /* spotlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BCB75E177BE042005F9641 /* spotlight.png */; };
-		63BCB764177BE042005F9641 /* spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BCB75F177BE042005F9641 /* spotlight@2x.png */; };
 		8B4EF073177D74A80013D660 /* ABXYPadControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF072177D74A80013D660 /* ABXYPadControl.m */; };
 		8B4EF076177D74D80013D660 /* DocWatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF075177D74D80013D660 /* DocWatchHelper.m */; };
 		8B4EF079177D74FA0013D660 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF078177D74FA0013D660 /* ZipArchive.mm */; };
@@ -129,12 +124,14 @@
 		CEB43C42173FCA3F00055F91 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB43C41173FCA3F00055F91 /* GLProgram.m */; };
 		CEB43C45173FD25A00055F91 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB43C43173FD25900055F91 /* GLKit.framework */; };
 		CEB43C46173FD25A00055F91 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB43C44173FD25900055F91 /* OpenGLES.framework */; };
-		D326847E17497DBC000D4ED6 /* nds4ios.png in Resources */ = {isa = PBXBuildFile; fileRef = D326847C17497DBC000D4ED6 /* nds4ios.png */; };
-		D326847F17497DBC000D4ED6 /* nds4ios@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D326847D17497DBC000D4ED6 /* nds4ios@2x.png */; };
 		D38CBCAE1745CF9C0074C554 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D38CBCA91745CF9C0074C554 /* SettingsViewController.m */; };
 		D38CBCAF1745CF9C0074C554 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38CBCAA1745CF9C0074C554 /* SettingsViewController.xib */; };
 		D38CBCB01745CF9C0074C554 /* SwitcherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D38CBCAC1745CF9C0074C554 /* SwitcherViewController.m */; };
 		D38CBCB11745CF9C0074C554 /* SwitcherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38CBCAD1745CF9C0074C554 /* SwitcherViewController.xib */; };
+		D511B054177E4FE3009DC4A4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D511B052177E4FE3009DC4A4 /* Icon.png */; };
+		D511B055177E4FE3009DC4A4 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D511B053177E4FE3009DC4A4 /* Icon@2x.png */; };
+		D511B058177E559F009DC4A4 /* nds4ios@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D511B056177E559F009DC4A4 /* nds4ios@2x.png */; };
+		D511B059177E559F009DC4A4 /* nds4ios.png in Resources */ = {isa = PBXBuildFile; fileRef = D511B057177E559F009DC4A4 /* nds4ios.png */; };
 		D5BE18971773F00E0029E61F /* SwitcherBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BE18961773F00E0029E61F /* SwitcherBackground@2x.png */; };
 		D5BE18991773F0510029E61F /* SwitcherBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BE18981773F0510029E61F /* SwitcherBackground.png */; };
 /* End PBXBuildFile section */
@@ -142,11 +139,6 @@
 /* Begin PBXFileReference section */
 		28E432FE177CA70500A146E5 /* DPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DPad.png; sourceTree = "<group>"; };
 		28E432FF177CA70500A146E5 /* DPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DPad@2x.png"; sourceTree = "<group>"; };
-		63BCB75B177BE042005F9641 /* sicon-568@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sicon-568@2x.png"; sourceTree = "<group>"; };
-		63BCB75C177BE042005F9641 /* sicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sicon.png; sourceTree = "<group>"; };
-		63BCB75D177BE042005F9641 /* sicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sicon@2x.png"; sourceTree = "<group>"; };
-		63BCB75E177BE042005F9641 /* spotlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spotlight.png; sourceTree = "<group>"; };
-		63BCB75F177BE042005F9641 /* spotlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spotlight@2x.png"; sourceTree = "<group>"; };
 		8B4EF071177D74A80013D660 /* ABXYPadControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABXYPadControl.h; path = Classes/ABXYPadControl.h; sourceTree = "<group>"; };
 		8B4EF072177D74A80013D660 /* ABXYPadControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABXYPadControl.m; path = Classes/ABXYPadControl.m; sourceTree = "<group>"; };
 		8B4EF074177D74D80013D660 /* DocWatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocWatchHelper.h; path = Classes/DocWatchHelper.h; sourceTree = "<group>"; };
@@ -356,14 +348,16 @@
 		CEB43C43173FD25900055F91 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		CEB43C44173FD25900055F91 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		CEC742F916776248006D193E /* nds4ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nds4ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D326847C17497DBC000D4ED6 /* nds4ios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nds4ios.png; sourceTree = "<group>"; };
-		D326847D17497DBC000D4ED6 /* nds4ios@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nds4ios@2x.png"; sourceTree = "<group>"; };
 		D38CBCA81745CF9C0074C554 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Classes/SettingsViewController.h; sourceTree = "<group>"; };
 		D38CBCA91745CF9C0074C554 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Classes/SettingsViewController.m; sourceTree = "<group>"; };
 		D38CBCAA1745CF9C0074C554 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Classes/SettingsViewController.xib; sourceTree = "<group>"; };
 		D38CBCAB1745CF9C0074C554 /* SwitcherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = SwitcherViewController.h; path = Classes/SwitcherViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		D38CBCAC1745CF9C0074C554 /* SwitcherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = SwitcherViewController.m; path = Classes/SwitcherViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		D38CBCAD1745CF9C0074C554 /* SwitcherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SwitcherViewController.xib; path = Classes/SwitcherViewController.xib; sourceTree = "<group>"; };
+		D511B052177E4FE3009DC4A4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		D511B053177E4FE3009DC4A4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		D511B056177E559F009DC4A4 /* nds4ios@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nds4ios@2x.png"; sourceTree = "<group>"; };
+		D511B057177E559F009DC4A4 /* nds4ios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nds4ios.png; sourceTree = "<group>"; };
 		D5BE18961773F00E0029E61F /* SwitcherBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwitcherBackground@2x.png"; sourceTree = "<group>"; };
 		D5BE18981773F0510029E61F /* SwitcherBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwitcherBackground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -408,11 +402,10 @@
 		63BCB75A177BE020005F9641 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				63BCB75B177BE042005F9641 /* sicon-568@2x.png */,
-				63BCB75C177BE042005F9641 /* sicon.png */,
-				63BCB75D177BE042005F9641 /* sicon@2x.png */,
-				63BCB75E177BE042005F9641 /* spotlight.png */,
-				63BCB75F177BE042005F9641 /* spotlight@2x.png */,
+				D511B052177E4FE3009DC4A4 /* Icon.png */,
+				D511B053177E4FE3009DC4A4 /* Icon@2x.png */,
+				D511B056177E559F009DC4A4 /* nds4ios@2x.png */,
+				D511B057177E559F009DC4A4 /* nds4ios.png */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -745,8 +738,6 @@
 			isa = PBXGroup;
 			children = (
 				63BCB75A177BE020005F9641 /* Icons */,
-				D326847C17497DBC000D4ED6 /* nds4ios.png */,
-				D326847D17497DBC000D4ED6 /* nds4ios@2x.png */,
 				D5BE18961773F00E0029E61F /* SwitcherBackground@2x.png */,
 				D5BE18981773F0510029E61F /* SwitcherBackground.png */,
 			);
@@ -873,22 +864,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D511B059177E559F009DC4A4 /* nds4ios.png in Resources */,
 				28E43300177CA70500A146E5 /* DPad.png in Resources */,
 				D5BE18971773F00E0029E61F /* SwitcherBackground@2x.png in Resources */,
-				63BCB761177BE042005F9641 /* sicon.png in Resources */,
+				D511B054177E4FE3009DC4A4 /* Icon.png in Resources */,
 				28E43301177CA70500A146E5 /* DPad@2x.png in Resources */,
 				8B4EF09C177D80C80013D660 /* ABXYPad@2x.png in Resources */,
-				63BCB760177BE042005F9641 /* sicon-568@2x.png in Resources */,
+				D511B055177E4FE3009DC4A4 /* Icon@2x.png in Resources */,
 				D38CBCAF1745CF9C0074C554 /* SettingsViewController.xib in Resources */,
-				63BCB763177BE042005F9641 /* spotlight.png in Resources */,
 				D5BE18991773F0510029E61F /* SwitcherBackground.png in Resources */,
 				D38CBCB11745CF9C0074C554 /* SwitcherViewController.xib in Resources */,
-				D326847E17497DBC000D4ED6 /* nds4ios.png in Resources */,
-				63BCB762177BE042005F9641 /* sicon@2x.png in Resources */,
-				D326847F17497DBC000D4ED6 /* nds4ios@2x.png in Resources */,
 				BF0E1D701763F9B800528BA5 /* Default-568h@2x.png in Resources */,
 				8B4EF09B177D80C80013D660 /* ABXYPad.png in Resources */,
-				63BCB764177BE042005F9641 /* spotlight@2x.png in Resources */,
+				D511B058177E559F009DC4A4 /* nds4ios@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
