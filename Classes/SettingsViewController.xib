@@ -64,7 +64,7 @@
 							<int key="type">1</int>
 							<double key="pointSize">17</double>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="532992646">
+						<object class="NSFont" key="IBUIFont" id="191588998">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">17</double>
 							<int key="NSfFlags">16</int>
@@ -108,7 +108,7 @@
 						<reference key="NSNextResponder" ref="846602322"/>
 						<int key="NSvFlags">1316</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{13, 111}, {185, 21}}</string>
+						<string key="NSFrame">{{13, 111}, {186, 21}}</string>
 						<reference key="NSSuperview" ref="846602322"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="99017190"/>
@@ -117,12 +117,12 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Shift Pad</string>
+						<string key="IBUIText">Shift Pad Controls Down</string>
 						<reference key="IBUITextColor" ref="682513120"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
 						<reference key="IBUIFontDescription" ref="1067904825"/>
-						<reference key="IBUIFont" ref="532992646"/>
+						<reference key="IBUIFont" ref="191588998"/>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 					</object>
 					<object class="IBUILabel" id="1037606621">
@@ -143,7 +143,7 @@
 						<int key="IBUIBaselineAdjustment">0</int>
 						<int key="IBUITextAlignment">1</int>
 						<reference key="IBUIFontDescription" ref="1067904825"/>
-						<reference key="IBUIFont" ref="532992646"/>
+						<reference key="IBUIFont" ref="191588998"/>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 					</object>
 					<object class="IBUINavigationBar" id="462214179">
