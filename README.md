@@ -80,15 +80,12 @@ How To Load ROMs
 To-do
 ------------------------
 ###### We'll get to these, really!
-* Clean up and refactor code, remove the ugly hacks used (see nds4ios-Prefix and android/log.h)
 * JIT/Dynarec (very hard to achieve this using the clang compiler, in progress)
 * OpenGL ES rendering
 * Sound
 * Fix loading game saves on some games
 * Ability to set the folder the rom chooser reads from
 * Native iPad UI
-* Option to hide the onscreen controls entirely (in progress)
-* Change buttons to allow for button sliding.
 * Use of cmake to generate Xcode project
 * Much more.
 
