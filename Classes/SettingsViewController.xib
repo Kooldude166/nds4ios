@@ -108,7 +108,7 @@
 						<reference key="NSNextResponder" ref="846602322"/>
 						<int key="NSvFlags">1316</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{13, 111}, {186, 21}}</string>
+						<string key="NSFrame">{{13, 111}, {118, 21}}</string>
 						<reference key="NSSuperview" ref="846602322"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="99017190"/>
@@ -117,7 +117,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Shift Pad Controls Down</string>
+						<string key="IBUIText">Shift Pad Down</string>
 						<reference key="IBUITextColor" ref="682513120"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
@@ -132,6 +132,7 @@
 						<string key="NSFrame">{{81, 294}, {158, 21}}</string>
 						<reference key="NSSuperview" ref="846602322"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -160,7 +161,7 @@
 								<reference key="IBUINavigationBar" ref="462214179"/>
 								<string key="IBUITitle">Settings</string>
 								<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="689887160">
-									<string key="IBUITitle">Back</string>
+									<string key="IBUITitle">Close</string>
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 									<int key="IBUIStyle">1</int>
 									<reference key="IBUINavigationItem" ref="656397490"/>
