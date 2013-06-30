@@ -9,8 +9,6 @@ http://nds4ios.angelxwind.net/
 
 [nds4droid](http://jeffq.com/blog/nds4droid/) 
 
-Icon credit: [Michael (Malvix_) Zhang](https://twitter.com/Malvix_)
-
 Build Instructions
 ------------------------
 
