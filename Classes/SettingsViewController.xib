@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
-		<int key="IBDocument.SystemTarget">1280</int>
-		<string key="IBDocument.SystemVersion">12E55</string>
-		<string key="IBDocument.InterfaceBuilderVersion">4457.9</string>
-		<string key="IBDocument.AppKitVersion">1187.39</string>
+		<int key="IBDocument.SystemTarget">1552</int>
+		<string key="IBDocument.SystemVersion">12D78</string>
+		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
+		<string key="IBDocument.AppKitVersion">1187.37</string>
 		<string key="IBDocument.HIToolboxVersion">626.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">3682.9</string>
+			<string key="NS.object.0">2083</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBProxyObject</string>
@@ -43,7 +43,7 @@
 						<reference key="NSNextResponder" ref="846602322"/>
 						<int key="NSvFlags">1316</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{13, 88}, {185, 21}}</string>
+						<string key="NSFrame">{{13, 69}, {185, 21}}</string>
 						<reference key="NSSuperview" ref="846602322"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1068431840"/>
@@ -64,8 +64,8 @@
 							<int key="type">1</int>
 							<double key="pointSize">17</double>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="1043630807">
-							<string key="NSName">HelveticaNeue</string>
+						<object class="NSFont" key="IBUIFont" id="191588998">
+							<string key="NSName">Helvetica</string>
 							<double key="NSSize">17</double>
 							<int key="NSfFlags">16</int>
 						</object>
@@ -75,7 +75,7 @@
 						<reference key="NSNextResponder" ref="846602322"/>
 						<int key="NSvFlags">1316</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{226, 89}, {94, 27}}</string>
+						<string key="NSFrame">{{223, 66}, {94, 27}}</string>
 						<reference key="NSSuperview" ref="846602322"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="113286153"/>
@@ -83,10 +83,6 @@
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
 							<boolean value="NO" key="IBUIIsAccessibilityElement"/>
 						</object>
-						<double key="IBUIInsetFor6xAndEarlier.top">0.0</double>
-						<double key="IBUIInsetFor6xAndEarlier.bottom">0.0</double>
-						<double key="IBUIInsetFor6xAndEarlier.left">40</double>
-						<double key="IBUIInsetFor6xAndEarlier.right">-40</double>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
@@ -96,7 +92,7 @@
 						<reference key="NSNextResponder" ref="846602322"/>
 						<int key="NSvFlags">1316</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{226, 150}, {94, 27}}</string>
+						<string key="NSFrame">{{223, 108}, {94, 27}}</string>
 						<reference key="NSSuperview" ref="846602322"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1037606621"/>
@@ -104,10 +100,6 @@
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
 							<boolean value="NO" key="IBUIIsAccessibilityElement"/>
 						</object>
-						<double key="IBUIInsetFor6xAndEarlier.top">0.0</double>
-						<double key="IBUIInsetFor6xAndEarlier.bottom">0.0</double>
-						<double key="IBUIInsetFor6xAndEarlier.left">40</double>
-						<double key="IBUIInsetFor6xAndEarlier.right">-40</double>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
@@ -116,7 +108,7 @@
 						<reference key="NSNextResponder" ref="846602322"/>
 						<int key="NSvFlags">1316</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{13, 149}, {185, 21}}</string>
+						<string key="NSFrame">{{13, 111}, {118, 21}}</string>
 						<reference key="NSSuperview" ref="846602322"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="99017190"/>
@@ -125,12 +117,12 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Shift Pad</string>
+						<string key="IBUIText">Shift Pad Down</string>
 						<reference key="IBUITextColor" ref="682513120"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
 						<reference key="IBUIFontDescription" ref="1067904825"/>
-						<reference key="IBUIFont" ref="1043630807"/>
+						<reference key="IBUIFont" ref="191588998"/>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 					</object>
 					<object class="IBUILabel" id="1037606621">
@@ -152,7 +144,7 @@
 						<int key="IBUIBaselineAdjustment">0</int>
 						<int key="IBUITextAlignment">1</int>
 						<reference key="IBUIFontDescription" ref="1067904825"/>
-						<reference key="IBUIFont" ref="1043630807"/>
+						<reference key="IBUIFont" ref="191588998"/>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 					</object>
 					<object class="IBUINavigationBar" id="462214179">
@@ -164,7 +156,7 @@
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="717641087"/>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<array class="NSMutableArray" key="IBUIItems">
+						<array key="IBUIItems">
 							<object class="IBUINavigationItem" id="656397490">
 								<reference key="IBUINavigationBar" ref="462214179"/>
 								<string key="IBUITitle">Settings</string>
@@ -204,7 +196,7 @@
 							<string>{568, 320}</string>
 						</array>
 					</object>
-					<string key="IBUITargetRuntime">IBCocoaTouchFramework-SevenAndLater</string>
+					<string key="IBUITargetRuntime">IBCocoaTouchFramework</string>
 					<string key="IBUIDisplayName">Retina 4 Full Screen</string>
 					<int key="IBUIType">2</int>
 				</object>
@@ -288,12 +280,12 @@
 						<string key="id">1</string>
 						<reference key="object" ref="846602322"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="717641087"/>
-							<reference ref="113286153"/>
-							<reference ref="462214179"/>
-							<reference ref="1068431840"/>
-							<reference ref="99017190"/>
 							<reference ref="1037606621"/>
+							<reference ref="462214179"/>
+							<reference ref="717641087"/>
+							<reference ref="1068431840"/>
+							<reference ref="113286153"/>
+							<reference ref="99017190"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -388,25 +380,17 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">SettingsViewController</string>
 					<string key="superclassName">UIViewController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="SP_pressed:">id</string>
-						<string key="close:">id</string>
-						<string key="onScreenControlPressed:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="SP_pressed:">
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">SP_pressed:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">SP_pressed:</string>
+						<object class="IBActionInfo" key="NS.object.0">
 							<string key="name">SP_pressed:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="close:">
-							<string key="name">close:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="onScreenControlPressed:">
-							<string key="name">onScreenControlPressed:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
+					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="onScreenControl">UISwitch</string>
 						<string key="shiftPad">UISwitch</string>
@@ -432,7 +416,7 @@
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.iPhoneOS</string>
-			<real value="1280" key="NS.object.0"/>
+			<real value="1552" key="NS.object.0"/>
 		</object>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.InterfaceBuilder3</string>
@@ -440,6 +424,6 @@
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<string key="IBCocoaTouchPluginVersion">3682.9</string>
+		<string key="IBCocoaTouchPluginVersion">2083</string>
 	</data>
 </archive>

@@ -7,14 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DPadControl.h"
-#import "ABXYPadControl.h"
+#import "ButtonPad.h"
 
 @interface EmuViewController : UIViewController <UIActionSheetDelegate>
 {
     // Controls
-    DPadControl *buttonDPad;
-    ABXYPadControl *buttonABXYPad;
+    ButtonPad *buttonDPad, *buttonABXYPad;
     UIButton* buttonSelect;
     UIButton* buttonStart;
     UIButton* buttonExit;

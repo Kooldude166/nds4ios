@@ -9,19 +9,13 @@
 /* Begin PBXBuildFile section */
 		28E43300177CA70500A146E5 /* DPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E432FE177CA70500A146E5 /* DPad.png */; };
 		28E43301177CA70500A146E5 /* DPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E432FF177CA70500A146E5 /* DPad@2x.png */; };
-		63BCB760177BE042005F9641 /* sicon-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BCB75B177BE042005F9641 /* sicon-568@2x.png */; };
-		63BCB761177BE042005F9641 /* sicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BCB75C177BE042005F9641 /* sicon.png */; };
-		63BCB762177BE042005F9641 /* sicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BCB75D177BE042005F9641 /* sicon@2x.png */; };
-		63BCB763177BE042005F9641 /* spotlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BCB75E177BE042005F9641 /* spotlight.png */; };
-		63BCB764177BE042005F9641 /* spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BCB75F177BE042005F9641 /* spotlight@2x.png */; };
-		8B4EF073177D74A80013D660 /* ABXYPadControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF072177D74A80013D660 /* ABXYPadControl.m */; };
 		8B4EF076177D74D80013D660 /* DocWatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF075177D74D80013D660 /* DocWatchHelper.m */; };
 		8B4EF079177D74FA0013D660 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF078177D74FA0013D660 /* ZipArchive.mm */; };
 		8B4EF083177D751C0013D660 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF07B177D751C0013D660 /* ioapi.c */; };
 		8B4EF084177D751C0013D660 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF07D177D751C0013D660 /* mztools.c */; };
 		8B4EF085177D751C0013D660 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF07F177D751C0013D660 /* unzip.c */; };
 		8B4EF086177D751C0013D660 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF081177D751C0013D660 /* zip.c */; };
-		8B4EF08A177D75520013D660 /* DPadControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF089177D75520013D660 /* DPadControl.m */; };
+		8B4EF08A177D75520013D660 /* ButtonPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF089177D75520013D660 /* ButtonPad.m */; };
 		8B4EF08D177D75710013D660 /* MBPullDownController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF08C177D75710013D660 /* MBPullDownController.m */; };
 		8B4EF090177D75940013D660 /* UIScreen+Widescreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF08F177D75940013D660 /* UIScreen+Widescreen.m */; };
 		8B4EF09B177D80C80013D660 /* ABXYPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B4EF099177D80C80013D660 /* ABXYPad.png */; };
@@ -129,12 +123,14 @@
 		CEB43C42173FCA3F00055F91 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB43C41173FCA3F00055F91 /* GLProgram.m */; };
 		CEB43C45173FD25A00055F91 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB43C43173FD25900055F91 /* GLKit.framework */; };
 		CEB43C46173FD25A00055F91 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB43C44173FD25900055F91 /* OpenGLES.framework */; };
-		D326847E17497DBC000D4ED6 /* nds4ios.png in Resources */ = {isa = PBXBuildFile; fileRef = D326847C17497DBC000D4ED6 /* nds4ios.png */; };
-		D326847F17497DBC000D4ED6 /* nds4ios@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D326847D17497DBC000D4ED6 /* nds4ios@2x.png */; };
 		D38CBCAE1745CF9C0074C554 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D38CBCA91745CF9C0074C554 /* SettingsViewController.m */; };
 		D38CBCAF1745CF9C0074C554 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38CBCAA1745CF9C0074C554 /* SettingsViewController.xib */; };
 		D38CBCB01745CF9C0074C554 /* SwitcherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D38CBCAC1745CF9C0074C554 /* SwitcherViewController.m */; };
 		D38CBCB11745CF9C0074C554 /* SwitcherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38CBCAD1745CF9C0074C554 /* SwitcherViewController.xib */; };
+		D511B054177E4FE3009DC4A4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D511B052177E4FE3009DC4A4 /* Icon.png */; };
+		D511B055177E4FE3009DC4A4 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D511B053177E4FE3009DC4A4 /* Icon@2x.png */; };
+		D511B058177E559F009DC4A4 /* nds4ios@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D511B056177E559F009DC4A4 /* nds4ios@2x.png */; };
+		D511B059177E559F009DC4A4 /* nds4ios.png in Resources */ = {isa = PBXBuildFile; fileRef = D511B057177E559F009DC4A4 /* nds4ios.png */; };
 		D5BE18971773F00E0029E61F /* SwitcherBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BE18961773F00E0029E61F /* SwitcherBackground@2x.png */; };
 		D5BE18991773F0510029E61F /* SwitcherBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BE18981773F0510029E61F /* SwitcherBackground.png */; };
 /* End PBXBuildFile section */
@@ -142,13 +138,6 @@
 /* Begin PBXFileReference section */
 		28E432FE177CA70500A146E5 /* DPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DPad.png; sourceTree = "<group>"; };
 		28E432FF177CA70500A146E5 /* DPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DPad@2x.png"; sourceTree = "<group>"; };
-		63BCB75B177BE042005F9641 /* sicon-568@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sicon-568@2x.png"; sourceTree = "<group>"; };
-		63BCB75C177BE042005F9641 /* sicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sicon.png; sourceTree = "<group>"; };
-		63BCB75D177BE042005F9641 /* sicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sicon@2x.png"; sourceTree = "<group>"; };
-		63BCB75E177BE042005F9641 /* spotlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spotlight.png; sourceTree = "<group>"; };
-		63BCB75F177BE042005F9641 /* spotlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spotlight@2x.png"; sourceTree = "<group>"; };
-		8B4EF071177D74A80013D660 /* ABXYPadControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABXYPadControl.h; path = Classes/ABXYPadControl.h; sourceTree = "<group>"; };
-		8B4EF072177D74A80013D660 /* ABXYPadControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABXYPadControl.m; path = Classes/ABXYPadControl.m; sourceTree = "<group>"; };
 		8B4EF074177D74D80013D660 /* DocWatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocWatchHelper.h; path = Classes/DocWatchHelper.h; sourceTree = "<group>"; };
 		8B4EF075177D74D80013D660 /* DocWatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocWatchHelper.m; path = Classes/DocWatchHelper.m; sourceTree = "<group>"; };
 		8B4EF077177D74FA0013D660 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = Classes/ZipArchive.h; sourceTree = "<group>"; };
@@ -162,8 +151,8 @@
 		8B4EF080177D751C0013D660 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = Classes/minizip/unzip.h; sourceTree = "<group>"; };
 		8B4EF081177D751C0013D660 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = zip.c; path = Classes/minizip/zip.c; sourceTree = "<group>"; };
 		8B4EF082177D751C0013D660 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zip.h; path = Classes/minizip/zip.h; sourceTree = "<group>"; };
-		8B4EF088177D75520013D660 /* DPadControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPadControl.h; path = Classes/DPadControl.h; sourceTree = "<group>"; };
-		8B4EF089177D75520013D660 /* DPadControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPadControl.m; path = Classes/DPadControl.m; sourceTree = "<group>"; };
+		8B4EF088177D75520013D660 /* ButtonPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = ButtonPad.h; path = Classes/ButtonPad.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8B4EF089177D75520013D660 /* ButtonPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = ButtonPad.m; path = Classes/ButtonPad.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8B4EF08B177D75710013D660 /* MBPullDownController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBPullDownController.h; path = Classes/MBPullDownController.h; sourceTree = "<group>"; };
 		8B4EF08C177D75710013D660 /* MBPullDownController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBPullDownController.m; path = Classes/MBPullDownController.m; sourceTree = "<group>"; };
 		8B4EF08E177D75940013D660 /* UIScreen+Widescreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScreen+Widescreen.h"; path = "Classes/UIScreen+Widescreen.h"; sourceTree = "<group>"; };
@@ -178,8 +167,8 @@
 		CE2EE5F6173F66E300786468 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		CE2EE5F7173F66E300786468 /* emu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = emu.cpp; path = Classes/emu.cpp; sourceTree = SOURCE_ROOT; };
 		CE2EE5F8173F66E300786468 /* emu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = emu.h; path = Classes/emu.h; sourceTree = SOURCE_ROOT; };
-		CE2EE5F9173F66E300786468 /* EmuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmuViewController.h; path = Classes/EmuViewController.h; sourceTree = SOURCE_ROOT; };
-		CE2EE5FA173F66E300786468 /* EmuViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EmuViewController.mm; path = Classes/EmuViewController.mm; sourceTree = SOURCE_ROOT; };
+		CE2EE5F9173F66E300786468 /* EmuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = EmuViewController.h; path = Classes/EmuViewController.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CE2EE5FA173F66E300786468 /* EmuViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; name = EmuViewController.mm; path = Classes/EmuViewController.mm; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		CE2EE5FB173F66E300786468 /* RomsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RomsViewController.h; path = Classes/RomsViewController.h; sourceTree = SOURCE_ROOT; };
 		CE2EE5FC173F66E300786468 /* RomsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RomsViewController.m; path = Classes/RomsViewController.m; sourceTree = SOURCE_ROOT; };
 		CE2EE603173F6BBA00786468 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -356,14 +345,16 @@
 		CEB43C43173FD25900055F91 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		CEB43C44173FD25900055F91 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		CEC742F916776248006D193E /* nds4ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nds4ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D326847C17497DBC000D4ED6 /* nds4ios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nds4ios.png; sourceTree = "<group>"; };
-		D326847D17497DBC000D4ED6 /* nds4ios@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nds4ios@2x.png"; sourceTree = "<group>"; };
 		D38CBCA81745CF9C0074C554 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Classes/SettingsViewController.h; sourceTree = "<group>"; };
 		D38CBCA91745CF9C0074C554 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Classes/SettingsViewController.m; sourceTree = "<group>"; };
 		D38CBCAA1745CF9C0074C554 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Classes/SettingsViewController.xib; sourceTree = "<group>"; };
 		D38CBCAB1745CF9C0074C554 /* SwitcherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = SwitcherViewController.h; path = Classes/SwitcherViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		D38CBCAC1745CF9C0074C554 /* SwitcherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = SwitcherViewController.m; path = Classes/SwitcherViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		D38CBCAD1745CF9C0074C554 /* SwitcherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SwitcherViewController.xib; path = Classes/SwitcherViewController.xib; sourceTree = "<group>"; };
+		D511B052177E4FE3009DC4A4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		D511B053177E4FE3009DC4A4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		D511B056177E559F009DC4A4 /* nds4ios@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nds4ios@2x.png"; sourceTree = "<group>"; };
+		D511B057177E559F009DC4A4 /* nds4ios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nds4ios.png; sourceTree = "<group>"; };
 		D5BE18961773F00E0029E61F /* SwitcherBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwitcherBackground@2x.png"; sourceTree = "<group>"; };
 		D5BE18981773F0510029E61F /* SwitcherBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwitcherBackground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -408,24 +399,12 @@
 		63BCB75A177BE020005F9641 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				63BCB75B177BE042005F9641 /* sicon-568@2x.png */,
-				63BCB75C177BE042005F9641 /* sicon.png */,
-				63BCB75D177BE042005F9641 /* sicon@2x.png */,
-				63BCB75E177BE042005F9641 /* spotlight.png */,
-				63BCB75F177BE042005F9641 /* spotlight@2x.png */,
+				D511B052177E4FE3009DC4A4 /* Icon.png */,
+				D511B053177E4FE3009DC4A4 /* Icon@2x.png */,
+				D511B056177E559F009DC4A4 /* nds4ios@2x.png */,
+				D511B057177E559F009DC4A4 /* nds4ios.png */,
 			);
 			name = Icons;
-			sourceTree = "<group>";
-		};
-		8B4EF06D177D74420013D660 /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-				8B4EF099177D80C80013D660 /* ABXYPad.png */,
-				8B4EF09A177D80C80013D660 /* ABXYPad@2x.png */,
-				8B4EF071177D74A80013D660 /* ABXYPadControl.h */,
-				8B4EF072177D74A80013D660 /* ABXYPadControl.m */,
-			);
-			name = Buttons;
 			sourceTree = "<group>";
 		};
 		8B4EF087177D75290013D660 /* minizip */ = {
@@ -745,8 +724,6 @@
 			isa = PBXGroup;
 			children = (
 				63BCB75A177BE020005F9641 /* Icons */,
-				D326847C17497DBC000D4ED6 /* nds4ios.png */,
-				D326847D17497DBC000D4ED6 /* nds4ios@2x.png */,
 				D5BE18961773F00E0029E61F /* SwitcherBackground@2x.png */,
 				D5BE18981773F0510029E61F /* SwitcherBackground.png */,
 			);
@@ -776,8 +753,7 @@
 		D338B30017470D3A00932C39 /* Emu */ = {
 			isa = PBXGroup;
 			children = (
-				8B4EF06D177D74420013D660 /* Buttons */,
-				D5E79C44177C6ED60032A3C8 /* DPad */,
+				D5E79C44177C6ED60032A3C8 /* ButtonPad */,
 				CE2EE5F9173F66E300786468 /* EmuViewController.h */,
 				CE2EE5FA173F66E300786468 /* EmuViewController.mm */,
 			);
@@ -811,15 +787,17 @@
 			name = pulldown;
 			sourceTree = "<group>";
 		};
-		D5E79C44177C6ED60032A3C8 /* DPad */ = {
+		D5E79C44177C6ED60032A3C8 /* ButtonPad */ = {
 			isa = PBXGroup;
 			children = (
+				8B4EF099177D80C80013D660 /* ABXYPad.png */,
+				8B4EF09A177D80C80013D660 /* ABXYPad@2x.png */,
 				28E432FE177CA70500A146E5 /* DPad.png */,
 				28E432FF177CA70500A146E5 /* DPad@2x.png */,
-				8B4EF088177D75520013D660 /* DPadControl.h */,
-				8B4EF089177D75520013D660 /* DPadControl.m */,
+				8B4EF088177D75520013D660 /* ButtonPad.h */,
+				8B4EF089177D75520013D660 /* ButtonPad.m */,
 			);
-			name = DPad;
+			name = ButtonPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -873,22 +851,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D511B059177E559F009DC4A4 /* nds4ios.png in Resources */,
 				28E43300177CA70500A146E5 /* DPad.png in Resources */,
 				D5BE18971773F00E0029E61F /* SwitcherBackground@2x.png in Resources */,
-				63BCB761177BE042005F9641 /* sicon.png in Resources */,
+				D511B054177E4FE3009DC4A4 /* Icon.png in Resources */,
 				28E43301177CA70500A146E5 /* DPad@2x.png in Resources */,
 				8B4EF09C177D80C80013D660 /* ABXYPad@2x.png in Resources */,
-				63BCB760177BE042005F9641 /* sicon-568@2x.png in Resources */,
+				D511B055177E4FE3009DC4A4 /* Icon@2x.png in Resources */,
 				D38CBCAF1745CF9C0074C554 /* SettingsViewController.xib in Resources */,
-				63BCB763177BE042005F9641 /* spotlight.png in Resources */,
 				D5BE18991773F0510029E61F /* SwitcherBackground.png in Resources */,
 				D38CBCB11745CF9C0074C554 /* SwitcherViewController.xib in Resources */,
-				D326847E17497DBC000D4ED6 /* nds4ios.png in Resources */,
-				63BCB762177BE042005F9641 /* sicon@2x.png in Resources */,
-				D326847F17497DBC000D4ED6 /* nds4ios@2x.png in Resources */,
 				BF0E1D701763F9B800528BA5 /* Default-568h@2x.png in Resources */,
 				8B4EF09B177D80C80013D660 /* ABXYPad.png in Resources */,
-				63BCB764177BE042005F9641 /* spotlight@2x.png in Resources */,
+				D511B058177E559F009DC4A4 /* nds4ios@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -948,7 +923,7 @@
 				CE2EE67C173F6E3000786468 /* task.cpp in Sources */,
 				CE2EE67D173F6E3000786468 /* vfat.cpp in Sources */,
 				CE2EE67E173F6E3000786468 /* xstring.cpp in Sources */,
-				8B4EF08A177D75520013D660 /* DPadControl.m in Sources */,
+				8B4EF08A177D75520013D660 /* ButtonPad.m in Sources */,
 				CE2EE699173F706C00786468 /* metaspu.cpp in Sources */,
 				CE2EE6A6173F70A800786468 /* 2xsai.cpp in Sources */,
 				8B4EF090177D75940013D660 /* UIScreen+Widescreen.m in Sources */,
@@ -1005,7 +980,6 @@
 				CEB43C42173FCA3F00055F91 /* GLProgram.m in Sources */,
 				D38CBCAE1745CF9C0074C554 /* SettingsViewController.m in Sources */,
 				D38CBCB01745CF9C0074C554 /* SwitcherViewController.m in Sources */,
-				8B4EF073177D74A80013D660 /* ABXYPadControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

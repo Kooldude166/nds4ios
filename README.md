@@ -11,7 +11,7 @@ http://nds4ios.angelxwind.net/
 
 iOS 5 allowed but untested.
 
-Icon credit: [ILSD3MON](https://www.facebook.com/aaronjames.aranda.5)
+Icon credit: [Michael (Malvix_) Zhang](https://twitter.com/Malvix_)
 
 Build Instructions
 ------------------------
@@ -41,9 +41,9 @@ IMPORTANT: Make sure your working directory is devoid of spaces. Otherwise, bad 
 
 ### Option 2
 
-1. MacBuildServer is having problems with XCode 5 so we've removed the button for now. Please compile nds4ios yourself or download an official release!
+1. Click the button below to install it right on your device via MacBuildServer.
 
-<!-- MacBuildServer Install Button 
+<!-- MacBuildServer Install Button -->
 <div class="macbuildserver-block">
     <a class="macbuildserver-button" href="http://macbuildserver.com/project/github/build/?xcode_project=nds4ios.xcodeproj&amp;target=nds4ios&amp;repo_url=https%3A%2F%2Fgithub.com%2FangelXwind%2Fnds4ios.git&amp;build_conf=Release" target="_blank"><img src="http://com.macbuildserver.github.s3-website-us-east-1.amazonaws.com/button_up.png"/></a><br/><sup><a href="http://macbuildserver.com/github/opensource/" target="_blank">by MacBuildServer</a></sup>
 </div>
@@ -80,15 +80,12 @@ How To Load ROMs
 To-do
 ------------------------
 ###### We'll get to these, really!
-* Clean up and refactor code, remove the ugly hacks used (see nds4ios-Prefix and android/log.h)
 * JIT/Dynarec (very hard to achieve this using the clang compiler, in progress)
 * OpenGL ES rendering
 * Sound
 * Fix loading game saves on some games
 * Ability to set the folder the rom chooser reads from
 * Native iPad UI
-* Option to hide the onscreen controls entirely (in progress)
-* Change buttons to allow for button sliding.
 * Use of cmake to generate Xcode project
 * Much more.
 

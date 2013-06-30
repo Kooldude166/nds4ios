@@ -307,14 +307,14 @@ typedef enum : NSInteger {
 
 - (void)addButtons
 {
-    buttonDPad = [[DPadControl alloc] initWithFrame:CGRectMake(0, 112, 120, 120)];
-    buttonDPad.deadZone = CGSizeMake(40, 40);
+    buttonDPad = [[ButtonPad alloc] initWithFrame:CGRectMake(0, 112, 120, 120)];
+    buttonDPad.image = [UIImage imageNamed:@"DPad"];
     [buttonDPad addTarget:self action:@selector(onDPad:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:buttonDPad];
     
-    buttonABXYPad = [[ABXYPadControl alloc] initWithFrame:CGRectMake(200, 112, 120, 120)];
-    buttonABXYPad.deadZone = CGSizeMake(40, 40);
-    [buttonABXYPad addTarget:self action:@selector(onABXYPad:) forControlEvents:UIControlEventValueChanged];
+    buttonABXYPad = [[ButtonPad alloc] initWithFrame:CGRectMake(200, 112, 120, 120)];
+    buttonABXYPad.image = [UIImage imageNamed:@"ABXYPad"];
+    [buttonABXYPad addTarget:self action:@selector(onABXY:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:buttonABXYPad];
     
     buttonSelect = [self buttonWithId:BUTTON_SELECT atCenter:CGPointMake(132, 228)];
@@ -351,16 +351,16 @@ typedef enum : NSInteger {
     EMU_buttonDown((BUTTON_ID)sender.tag);
 }
 
-- (void)onDPad:(DPadControl*)sender
+- (void)onDPad:(ButtonPad*)sender
 {
     UIControlState state = sender.state;
-    EMU_setDPad(state & DPadStateUp, state & DPadStateDown, state & DPadStateLeft, state & DPadStateRight);
+    EMU_setDPad(state & PadStateUp, state & PadStateDown, state & PadStateLeft, state & PadStateRight);
 }
 
-- (void)onABXYPad:(ABXYPadControl *)sender
+- (void)onABXY:(ButtonPad *)sender
 {
     UIControlState state = sender.state;
-    EMU_setABXYPad(state & ABXYPadStateX, state & ABXYPadStateB, state & ABXYPadStateY, state & ABXYPadStateA);
+    EMU_setABXY(state & PadStateRight, state & PadStateDown, state & PadStateUp, state & PadStateLeft);
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
