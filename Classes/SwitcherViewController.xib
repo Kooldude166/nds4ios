@@ -59,7 +59,7 @@
 						<reference key="NSNextResponder" ref="260792395"/>
 						<int key="NSvFlags">1316</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{135, 183}, {51, 48}}</string>
+						<string key="NSFrame">{{135, 145}, {51, 48}}</string>
 						<reference key="NSSuperview" ref="260792395"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="57713402"/>
@@ -146,7 +146,7 @@
 						<reference key="NSNextResponder" ref="260792395"/>
 						<int key="NSvFlags">1316</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{40, 239}, {240, 183}}</string>
+						<string key="NSFrame">{{40, 201}, {240, 258}}</string>
 						<reference key="NSSuperview" ref="260792395"/>
 						<reference key="NSWindow"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
@@ -157,8 +157,10 @@
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUIEditable">NO</bool>
-						<string type="base64-UTF8" key="IBUIText">Q3JlYXRlZCBhbmQgbWFuYWdlZCBieToKcm9jazg4CmFuZ2VsWHdpbmQKaW5iNG9obm9lcwptYWN6eWRl
-Y28KVy5NUwpyaWxleXRlc3R1dApkY2hhdmV6bGl2ZQoKVXNlczoKTUJQdWxsRG93bkNvbnRyb2xsZXI</string>
+						<string type="base64-UTF8" key="IBUIText">Q3JlYXRlZCBhbmQgbWFuYWdlZCBieToKcm9jazg4CkthcmVuIFRzYWkgKGFuZ2VsWHdpbmQpCkJyaWFu
+IFR1bmcgKGluYjRvaG5vZXMpCkplc8O6cyBBLiDDgWx2YXJleiAobWFjenlkZWNvKQpXLk1TClJpbGV5
+IFRlc3R1dCAocmlsZXl0ZXN0dXQpCkRhdmlkIENoYXZleiAoZGNoYXZlemxpdmUpCk1pY2hhZWwgWmhh
+bmcgKE1hbHZpeF8pCgpVc2VzOgpNQlB1bGxEb3duQ29udHJvbGxlcg</string>
 						<int key="IBUITextAlignment">1</int>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 							<int key="IBUIAutocapitalizationType">2</int>
@@ -365,12 +367,12 @@ Y28KVy5NUwpyaWxleXRlc3R1dApkY2hhdmV6bGl2ZQoKVXNlczoKTUJQdWxsRG93bkNvbnRyb2xsZXI<
 						<reference key="object" ref="260792395"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="442989419"/>
-							<reference ref="187637206"/>
 							<reference ref="51630233"/>
-							<reference ref="57713402"/>
 							<reference ref="141626444"/>
 							<reference ref="225599620"/>
 							<reference ref="854909782"/>
+							<reference ref="187637206"/>
+							<reference ref="57713402"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
