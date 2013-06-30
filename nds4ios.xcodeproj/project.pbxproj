@@ -20,6 +20,9 @@
 		8B4EF090177D75940013D660 /* UIScreen+Widescreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF08F177D75940013D660 /* UIScreen+Widescreen.m */; };
 		8B4EF09B177D80C80013D660 /* ABXYPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B4EF099177D80C80013D660 /* ABXYPad.png */; };
 		8B4EF09C177D80C80013D660 /* ABXYPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B4EF09A177D80C80013D660 /* ABXYPad@2x.png */; };
+		8B733CD6177FEB0800CBB41F /* Icon-Multitasker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B733CD5177FEB0800CBB41F /* Icon-Multitasker@2x.png */; };
+		8B733CD9177FEB5F00CBB41F /* Icon-Spotlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B733CD7177FEB5F00CBB41F /* Icon-Spotlight.png */; };
+		8B733CDA177FEB5F00CBB41F /* Icon-Spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B733CD8177FEB5F00CBB41F /* Icon-Spotlight@2x.png */; };
 		BF0E1D701763F9B800528BA5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0E1D6F1763F9B800528BA5 /* Default-568h@2x.png */; };
 		CE2EE5EE173F663B00786468 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE5EC173F663B00786468 /* main.m */; };
 		CE2EE5FD173F66E300786468 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE5F6173F66E300786468 /* AppDelegate.m */; };
@@ -159,6 +162,9 @@
 		8B4EF08F177D75940013D660 /* UIScreen+Widescreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScreen+Widescreen.m"; path = "Classes/UIScreen+Widescreen.m"; sourceTree = "<group>"; };
 		8B4EF099177D80C80013D660 /* ABXYPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ABXYPad.png; sourceTree = "<group>"; };
 		8B4EF09A177D80C80013D660 /* ABXYPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ABXYPad@2x.png"; sourceTree = "<group>"; };
+		8B733CD5177FEB0800CBB41F /* Icon-Multitasker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Multitasker@2x.png"; sourceTree = "<group>"; };
+		8B733CD7177FEB5F00CBB41F /* Icon-Spotlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight.png"; sourceTree = "<group>"; };
+		8B733CD8177FEB5F00CBB41F /* Icon-Spotlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight@2x.png"; sourceTree = "<group>"; };
 		BF0E1D6F1763F9B800528BA5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CE2EE5EA173F661D00786468 /* nds4ios-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "nds4ios-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CE2EE5EC173F663B00786468 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Classes/main.m; sourceTree = SOURCE_ROOT; };
@@ -401,6 +407,9 @@
 			children = (
 				D511B052177E4FE3009DC4A4 /* Icon.png */,
 				D511B053177E4FE3009DC4A4 /* Icon@2x.png */,
+				8B733CD5177FEB0800CBB41F /* Icon-Multitasker@2x.png */,
+				8B733CD7177FEB5F00CBB41F /* Icon-Spotlight.png */,
+				8B733CD8177FEB5F00CBB41F /* Icon-Spotlight@2x.png */,
 				D511B056177E559F009DC4A4 /* nds4ios@2x.png */,
 				D511B057177E559F009DC4A4 /* nds4ios.png */,
 			);
@@ -853,9 +862,12 @@
 			files = (
 				D511B059177E559F009DC4A4 /* nds4ios.png in Resources */,
 				28E43300177CA70500A146E5 /* DPad.png in Resources */,
+				8B733CD9177FEB5F00CBB41F /* Icon-Spotlight.png in Resources */,
 				D5BE18971773F00E0029E61F /* SwitcherBackground@2x.png in Resources */,
 				D511B054177E4FE3009DC4A4 /* Icon.png in Resources */,
 				28E43301177CA70500A146E5 /* DPad@2x.png in Resources */,
+				8B733CDA177FEB5F00CBB41F /* Icon-Spotlight@2x.png in Resources */,
+				8B733CD6177FEB0800CBB41F /* Icon-Multitasker@2x.png in Resources */,
 				8B4EF09C177D80C80013D660 /* ABXYPad@2x.png in Resources */,
 				D511B055177E4FE3009DC4A4 /* Icon@2x.png in Resources */,
 				D38CBCAF1745CF9C0074C554 /* SettingsViewController.xib in Resources */,
