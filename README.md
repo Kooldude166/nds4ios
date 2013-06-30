@@ -1,4 +1,4 @@
-nds4ios - iOS 6 + 7
+nds4ios - iOS 5~7
 =======
 
 nds4ios is a port of nds4droid to iOS, which is based on DeSmuME.
@@ -8,8 +8,6 @@ http://nds4ios.angelxwind.net/
 [DeSmuME](http://desmume.org/) 
 
 [nds4droid](http://jeffq.com/blog/nds4droid/) 
-
-iOS 5 allowed but untested.
 
 Icon credit: [Michael (Malvix_) Zhang](https://twitter.com/Malvix_)
 
@@ -92,12 +90,13 @@ To-do
 Contributors
 ------------------------
 ###### We stand on the shoulders of these people
-* [The DeSmuME Guys](http://desmume.org/)
-* [The nds4droid Guy](http://jeffq.com/blog/nds4droid/)
+* [The DeSmuME developers](http://desmume.org/)
+* [Jeffrey Quesnelle (jeffq), the developer of nds4droid](http://jeffq.com/blog/nds4droid/)
 * [rock88](http://rock88dev.blogspot.com/)
-* [angelXwind](http://angelxwind.net/)
-* [inb4ohnoes](http://brian.weareflame.co/)
-* maczydeco
+* [Karen Tsai (angelXwind)](http://angelxwind.net/)
+* [Brian Tung (inb4ohnoes)](http://brian.weareflame.co/)
+* [Jesús A. Álvarez (maczydeco)](http://twitter.com/maczydeco)
 * [W.MS](http://github.com/w-ms/)
-* rileytestut
+* [Riley Tetsut](https://github.com/rileytestut)
 * [dchavezlive](http://dchavez.net)
+* [Michael Zhang (Malvix)](https://twitter.com/Malvix_)
