@@ -10,8 +10,6 @@
 
 @interface SettingsViewController ()
 
-- (IBAction)SP_pressed:(id)sender;
-
 @end
 
 @implementation SettingsViewController
@@ -34,11 +32,10 @@
     else
         shiftPad.on = false;
     
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"onScreenControl"]) {
-        onScreenControl.on = true;
-    } else {
-        onScreenControl.on = false;
-    }
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"hideControls"])
+        hideControls.on = true;
+    else
+        hideControls.on = false;
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,26 +49,23 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)SP_pressed:(id)sender {
-    
+- (IBAction)shiftPadPressed:(id)sender {
     if (shiftPad.on)
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"shiftPad"];
     else
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"shiftPad"];
 }
 
-- (IBAction)onScreenControlPressed:(id)sender
-{
-    if (onScreenControl.on)
-    {
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"onScreenControl"];
-    } else {
-        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"onScreenControl"];
-    }
+- (IBAction)hideControlsPressed:(id)sender {
+    if (hideControls.on)
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hideControls"];
+    else
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"hideControls"];
 }
 
 - (void)viewDidUnload {
     shiftPad = nil;
+    hideControls = nil;
     [super viewDidUnload];
 }
 @end

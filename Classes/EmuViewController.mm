@@ -146,7 +146,7 @@ typedef enum : NSInteger {
     else
         [self unshiftButtons];
     
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"onScreenControl"] == NO)
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"hideControls"])
         [self hideControls];
     else
         [self showControls];

@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController">
             <connections>
-                <outlet property="onScreenControl" destination="63" id="ei9-CU-R6s"/>
+                <outlet property="hideControls" destination="63" id="Taf-T2-kxc"/>
                 <outlet property="shiftPad" destination="82" id="0rs-0K-KKC"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -17,21 +17,14 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="On Screen Control" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="60">
-                    <rect key="frame" x="13" y="69" width="185" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="63">
+                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="63">
                     <rect key="frame" x="238" y="66" width="51" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <accessibility key="accessibilityConfiguration">
                         <bool key="isElement" value="NO"/>
                     </accessibility>
                     <connections>
-                        <action selector="onScreenControlPressed:" destination="-1" eventType="valueChanged" id="wFY-Gg-Xj1"/>
+                        <action selector="hideControlsPressed:" destination="-1" eventType="valueChanged" id="nT1-4E-02S"/>
                     </connections>
                 </switch>
                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="82">
@@ -41,11 +34,18 @@
                         <bool key="isElement" value="NO"/>
                     </accessibility>
                     <connections>
-                        <action selector="SP_pressed:" destination="-1" eventType="valueChanged" id="KZR-2W-ItQ"/>
+                        <action selector="shiftPadPressed:" destination="-1" eventType="valueChanged" id="CmA-Wj-m8O"/>
                     </connections>
                 </switch>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shift Pad Down" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6y4-9N-EeM">
                     <rect key="frame" x="13" y="111" width="115" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hide Controls" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vOW-bk-Ws1">
+                    <rect key="frame" x="13" y="69" width="101" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -80,10 +80,10 @@
         <class className="SettingsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
             <relationships>
-                <relationship kind="action" name="SP_pressed:"/>
                 <relationship kind="action" name="close:"/>
-                <relationship kind="action" name="onScreenControlPressed:"/>
-                <relationship kind="outlet" name="onScreenControl" candidateClass="UISwitch"/>
+                <relationship kind="action" name="hideControlsPressed:"/>
+                <relationship kind="action" name="shiftPadPressed:"/>
+                <relationship kind="outlet" name="hideControls" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="shiftPad" candidateClass="UISwitch"/>
             </relationships>
         </class>
