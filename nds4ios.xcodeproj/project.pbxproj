@@ -126,8 +126,6 @@
 		CEB43C42173FCA3F00055F91 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB43C41173FCA3F00055F91 /* GLProgram.m */; };
 		CEB43C45173FD25A00055F91 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB43C43173FD25900055F91 /* GLKit.framework */; };
 		CEB43C46173FD25A00055F91 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB43C44173FD25900055F91 /* OpenGLES.framework */; };
-		D38CBCAE1745CF9C0074C554 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D38CBCA91745CF9C0074C554 /* SettingsViewController.m */; };
-		D38CBCAF1745CF9C0074C554 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38CBCAA1745CF9C0074C554 /* SettingsViewController.xib */; };
 		D38CBCB01745CF9C0074C554 /* SwitcherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D38CBCAC1745CF9C0074C554 /* SwitcherViewController.m */; };
 		D38CBCB11745CF9C0074C554 /* SwitcherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38CBCAD1745CF9C0074C554 /* SwitcherViewController.xib */; };
 		D511B054177E4FE3009DC4A4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D511B052177E4FE3009DC4A4 /* Icon.png */; };
@@ -351,9 +349,6 @@
 		CEB43C43173FD25900055F91 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		CEB43C44173FD25900055F91 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		CEC742F916776248006D193E /* nds4ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nds4ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D38CBCA81745CF9C0074C554 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Classes/SettingsViewController.h; sourceTree = "<group>"; };
-		D38CBCA91745CF9C0074C554 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Classes/SettingsViewController.m; sourceTree = "<group>"; };
-		D38CBCAA1745CF9C0074C554 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Classes/SettingsViewController.xib; sourceTree = "<group>"; };
 		D38CBCAB1745CF9C0074C554 /* SwitcherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = SwitcherViewController.h; path = Classes/SwitcherViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		D38CBCAC1745CF9C0074C554 /* SwitcherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = SwitcherViewController.m; path = Classes/SwitcherViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		D38CBCAD1745CF9C0074C554 /* SwitcherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SwitcherViewController.xib; path = Classes/SwitcherViewController.xib; sourceTree = "<group>"; };
@@ -752,9 +747,6 @@
 		D338B2FE17470D2800932C39 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				D38CBCA81745CF9C0074C554 /* SettingsViewController.h */,
-				D38CBCA91745CF9C0074C554 /* SettingsViewController.m */,
-				D38CBCAA1745CF9C0074C554 /* SettingsViewController.xib */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -870,7 +862,6 @@
 				8B733CD6177FEB0800CBB41F /* Icon-Multitasker@2x.png in Resources */,
 				8B4EF09C177D80C80013D660 /* ABXYPad@2x.png in Resources */,
 				D511B055177E4FE3009DC4A4 /* Icon@2x.png in Resources */,
-				D38CBCAF1745CF9C0074C554 /* SettingsViewController.xib in Resources */,
 				D5BE18991773F0510029E61F /* SwitcherBackground.png in Resources */,
 				D38CBCB11745CF9C0074C554 /* SwitcherViewController.xib in Resources */,
 				BF0E1D701763F9B800528BA5 /* Default-568h@2x.png in Resources */,
@@ -990,7 +981,6 @@
 				CE34A131173F798200C51EA1 /* matrix_impl.c in Sources */,
 				CE34A134173F79F200C51EA1 /* throttle.cpp in Sources */,
 				CEB43C42173FCA3F00055F91 /* GLProgram.m in Sources */,
-				D38CBCAE1745CF9C0074C554 /* SettingsViewController.m in Sources */,
 				D38CBCB01745CF9C0074C554 /* SwitcherViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
