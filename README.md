@@ -1,5 +1,6 @@
-nds4ios - iOS 5~7
+nds4ios - iOS 5 ~ 7
 =======
+### This is not finished software. Do not open issues complaining about games being slow, we know about it already. 
 
 nds4ios is a port of nds4droid to iOS, which is based on DeSmuME.
 
