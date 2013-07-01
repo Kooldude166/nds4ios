@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SwitcherViewController.h"
-//#import "SettingsViewController.h"
+#import "SettingsViewController.h"
 #import "RomsViewController.h"
 #import "EmuViewController.h"
 #import "MBPullDownController.h"
@@ -57,10 +57,10 @@
         RomsViewController *romsVC = [[RomsViewController alloc] init];
         [self.pullDownController setFrontController:romsVC];
     } else if (switcher.selectedSegmentIndex == 2) {
-        //SettingsViewController *settingsVC = [[SettingsViewController alloc] init];
-        //[self presentViewController:settingsVC animated:YES completion:^{
-            //switcher.selectedSegmentIndex = 1;
-        //}];
+        SettingsViewController *settingsVC = [[SettingsViewController alloc] init];
+        [self presentViewController:settingsVC animated:YES completion:^{
+            switcher.selectedSegmentIndex = 1;
+        }];
     }
 }
 
