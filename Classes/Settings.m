@@ -62,26 +62,6 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-// Everything with the S at the end is for iOS 7
-
-- (IBAction)hideControlsS:(id)sender {
-    if (hideControls.on)
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hideControls"];
-    else
-        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"hideControls"];
-}
-
-- (IBAction)shiftPadS:(id)sender {
-    if (shiftPad.on)
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"shiftPad"];
-    else
-        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"shiftPad"];
-}
-
-- (IBAction)closeWindowS:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 - (void)viewDidUnload {
     hideControls = nil;
     shiftPad = nil;

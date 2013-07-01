@@ -49,26 +49,13 @@
     }
     else
     {
-        if (SYSTEM_VERSION_LESS_THAN(@"7.0"))
-        {
-            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard7" bundle:nil];
             
-            UIViewController *mainViewController = [storyboard instantiateInitialViewController];
+        UIViewController *mainViewController = [storyboard instantiateInitialViewController];
             
-            self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-            self.window.rootViewController = mainViewController;
-            [self.window makeKeyAndVisible];
-        }
-        else
-        {
-            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard7" bundle:nil];
-            
-            UIViewController *mainViewController = [storyboard instantiateInitialViewController];
-            
-            self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-            self.window.rootViewController = mainViewController;
-            [self.window makeKeyAndVisible];
-        }
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.rootViewController = mainViewController;
+        [self.window makeKeyAndVisible];
     }
     
     return YES;
