@@ -430,10 +430,13 @@ typedef enum : NSInteger {
     if (buttonIndex == 0)
     {
         [self killCurrentGame];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isBackgrounded"];
         [[AppDelegate sharedInstance] killVC:self];
         NSLog(@"killed");
         [self dismissViewControllerAnimated:YES completion:nil];
     } else if (buttonIndex == 1) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isBackgrounded"];
+        NSLog(@"%hhd",[[NSUserDefaults standardUserDefaults] boolForKey:@"isBackgrounded"]);
         NSLog(@"backgrounded");
         [self dismissViewControllerAnimated:YES completion:nil];
     }
