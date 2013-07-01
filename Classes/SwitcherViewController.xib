@@ -121,7 +121,7 @@
 					<object class="IBUISegmentedControl" id="352061202">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 76}, {248, 26}}</string>
+						<string key="NSFrame">{{20, 76}, {254, 26}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSNextKeyView" ref="655800088"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -162,11 +162,15 @@
 					<object class="IBUIButton" id="655800088">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{278, 79}, {18, 19}}</string>
+						<string key="NSFrame">{{289, 79}, {18, 19}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSNextKeyView" ref="947030038"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
+						<double key="IBUIInsetFor6xAndEarlier.top">0.0</double>
+						<double key="IBUIInsetFor6xAndEarlier.bottom">0.0</double>
+						<double key="IBUIInsetFor6xAndEarlier.left">8</double>
+						<double key="IBUIInsetFor6xAndEarlier.right">-8</double>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
@@ -353,8 +357,8 @@ WmhhbmcgKE1hbHZpeF8pA</string>
 							<reference ref="947030038"/>
 							<reference ref="191513388"/>
 							<reference ref="236801238"/>
-							<reference ref="655800088"/>
 							<reference ref="352061202"/>
+							<reference ref="655800088"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>

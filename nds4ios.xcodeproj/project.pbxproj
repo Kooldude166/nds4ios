@@ -127,13 +127,15 @@
 		CEB43C45173FD25A00055F91 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB43C43173FD25900055F91 /* GLKit.framework */; };
 		CEB43C46173FD25A00055F91 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB43C44173FD25900055F91 /* OpenGLES.framework */; };
 		D38CBCB01745CF9C0074C554 /* SwitcherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D38CBCAC1745CF9C0074C554 /* SwitcherViewController.m */; };
-		D38CBCB11745CF9C0074C554 /* SwitcherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38CBCAD1745CF9C0074C554 /* SwitcherViewController.xib */; };
 		D511B054177E4FE3009DC4A4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D511B052177E4FE3009DC4A4 /* Icon.png */; };
 		D511B055177E4FE3009DC4A4 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D511B053177E4FE3009DC4A4 /* Icon@2x.png */; };
 		D511B058177E559F009DC4A4 /* nds4ios@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D511B056177E559F009DC4A4 /* nds4ios@2x.png */; };
 		D511B059177E559F009DC4A4 /* nds4ios.png in Resources */ = {isa = PBXBuildFile; fileRef = D511B057177E559F009DC4A4 /* nds4ios.png */; };
+		D58A9114178100B900B80182 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58A9113178100B900B80182 /* SettingsViewController.xib */; };
+		D59451AB17810CD000C83157 /* SwitcherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D59451AA17810CD000C83157 /* SwitcherViewController.xib */; };
 		D5BE18971773F00E0029E61F /* SwitcherBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BE18961773F00E0029E61F /* SwitcherBackground@2x.png */; };
 		D5BE18991773F0510029E61F /* SwitcherBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BE18981773F0510029E61F /* SwitcherBackground.png */; };
+		D5EAC7391780FCB50096D56B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EAC7371780FCB50096D56B /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -350,14 +352,17 @@
 		CEB43C44173FD25900055F91 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		CEC742F916776248006D193E /* nds4ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nds4ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38CBCAB1745CF9C0074C554 /* SwitcherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = SwitcherViewController.h; path = Classes/SwitcherViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		D38CBCAC1745CF9C0074C554 /* SwitcherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = SwitcherViewController.m; path = Classes/SwitcherViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		D38CBCAD1745CF9C0074C554 /* SwitcherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SwitcherViewController.xib; path = Classes/SwitcherViewController.xib; sourceTree = "<group>"; };
+		D38CBCAC1745CF9C0074C554 /* SwitcherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = SwitcherViewController.m; path = Classes/SwitcherViewController.m; sourceTree = "<group>"; };
 		D511B052177E4FE3009DC4A4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		D511B053177E4FE3009DC4A4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		D511B056177E559F009DC4A4 /* nds4ios@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nds4ios@2x.png"; sourceTree = "<group>"; };
 		D511B057177E559F009DC4A4 /* nds4ios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nds4ios.png; sourceTree = "<group>"; };
+		D58A9113178100B900B80182 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Classes/SettingsViewController.xib; sourceTree = "<group>"; };
+		D59451AA17810CD000C83157 /* SwitcherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SwitcherViewController.xib; path = Classes/SwitcherViewController.xib; sourceTree = "<group>"; };
 		D5BE18961773F00E0029E61F /* SwitcherBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwitcherBackground@2x.png"; sourceTree = "<group>"; };
 		D5BE18981773F0510029E61F /* SwitcherBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwitcherBackground.png; sourceTree = "<group>"; };
+		D5EAC7361780FCB50096D56B /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		D5EAC7371780FCB50096D56B /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -737,9 +742,9 @@
 		D338B2FD17470D1B00932C39 /* switcher */ = {
 			isa = PBXGroup;
 			children = (
+				D59451AA17810CD000C83157 /* SwitcherViewController.xib */,
 				D38CBCAB1745CF9C0074C554 /* SwitcherViewController.h */,
 				D38CBCAC1745CF9C0074C554 /* SwitcherViewController.m */,
-				D38CBCAD1745CF9C0074C554 /* SwitcherViewController.xib */,
 			);
 			name = switcher;
 			sourceTree = "<group>";
@@ -747,6 +752,9 @@
 		D338B2FE17470D2800932C39 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				D5EAC7361780FCB50096D56B /* SettingsViewController.h */,
+				D5EAC7371780FCB50096D56B /* SettingsViewController.m */,
+				D58A9113178100B900B80182 /* SettingsViewController.xib */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -855,6 +863,7 @@
 				D511B059177E559F009DC4A4 /* nds4ios.png in Resources */,
 				28E43300177CA70500A146E5 /* DPad.png in Resources */,
 				8B733CD9177FEB5F00CBB41F /* Icon-Spotlight.png in Resources */,
+				D59451AB17810CD000C83157 /* SwitcherViewController.xib in Resources */,
 				D5BE18971773F00E0029E61F /* SwitcherBackground@2x.png in Resources */,
 				D511B054177E4FE3009DC4A4 /* Icon.png in Resources */,
 				28E43301177CA70500A146E5 /* DPad@2x.png in Resources */,
@@ -863,10 +872,10 @@
 				8B4EF09C177D80C80013D660 /* ABXYPad@2x.png in Resources */,
 				D511B055177E4FE3009DC4A4 /* Icon@2x.png in Resources */,
 				D5BE18991773F0510029E61F /* SwitcherBackground.png in Resources */,
-				D38CBCB11745CF9C0074C554 /* SwitcherViewController.xib in Resources */,
 				BF0E1D701763F9B800528BA5 /* Default-568h@2x.png in Resources */,
 				8B4EF09B177D80C80013D660 /* ABXYPad.png in Resources */,
 				D511B058177E559F009DC4A4 /* nds4ios@2x.png in Resources */,
+				D58A9114178100B900B80182 /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -898,6 +907,7 @@
 				CE2EE631173F6DB600786468 /* decrypt.cpp in Sources */,
 				CE2EE632173F6DB600786468 /* header.cpp in Sources */,
 				CE2EE649173F6DF900786468 /* cache.cpp in Sources */,
+				D5EAC7391780FCB50096D56B /* SettingsViewController.m in Sources */,
 				CE2EE64A173F6DF900786468 /* directory.cpp in Sources */,
 				CE2EE64B173F6DF900786468 /* disc.cpp in Sources */,
 				CE2EE64C173F6DF900786468 /* fatdir.cpp in Sources */,
