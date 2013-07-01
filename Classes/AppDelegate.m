@@ -49,7 +49,7 @@
     }
     else
     {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard7" bundle:nil];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
             
         UIViewController *mainViewController = [storyboard instantiateInitialViewController];
             
