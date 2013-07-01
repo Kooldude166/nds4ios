@@ -19,9 +19,6 @@
 		8B4EF08A177D75520013D660 /* ButtonPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF089177D75520013D660 /* ButtonPad.m */; };
 		8B4EF08D177D75710013D660 /* MBPullDownController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF08C177D75710013D660 /* MBPullDownController.m */; };
 		8B4EF090177D75940013D660 /* UIScreen+Widescreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF08F177D75940013D660 /* UIScreen+Widescreen.m */; };
-		8B733CD6177FEB0800CBB41F /* Icon-Multitasker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B733CD5177FEB0800CBB41F /* Icon-Multitasker@2x.png */; };
-		8B733CD9177FEB5F00CBB41F /* Icon-Spotlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B733CD7177FEB5F00CBB41F /* Icon-Spotlight.png */; };
-		8B733CDA177FEB5F00CBB41F /* Icon-Spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B733CD8177FEB5F00CBB41F /* Icon-Spotlight@2x.png */; };
 		8BCE527C17822C530034278E /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE527817822C530034278E /* Gear.png */; };
 		8BCE527D17822C530034278E /* Gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE527917822C530034278E /* Gear@2x.png */; };
 		8BCE527E17822C530034278E /* SwitcherBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE527A17822C530034278E /* SwitcherBackground.png */; };
@@ -31,7 +28,12 @@
 		8BCE528617822C6D0034278E /* DPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE528217822C6D0034278E /* DPad.png */; };
 		8BCE528717822C6D0034278E /* DPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE528317822C6D0034278E /* DPad@2x.png */; };
 		8BCE528A17822CA30034278E /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCE528917822CA30034278E /* SettingsViewController.m */; };
-		BF0E1D701763F9B800528BA5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0E1D6F1763F9B800528BA5 /* Default-568h@2x.png */; };
+		8BCE529017822D900034278E /* Icon-Multitasker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE528B17822D900034278E /* Icon-Multitasker@2x.png */; };
+		8BCE529117822D900034278E /* Icon-Spotlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE528C17822D900034278E /* Icon-Spotlight.png */; };
+		8BCE529217822D900034278E /* Icon-Spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE528D17822D900034278E /* Icon-Spotlight@2x.png */; };
+		8BCE529317822D900034278E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE528E17822D900034278E /* Icon.png */; };
+		8BCE529417822D900034278E /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE528F17822D900034278E /* Icon@2x.png */; };
+		8BCE529617822DA10034278E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE529517822DA10034278E /* Default-568h@2x.png */; };
 		CE2EE5EE173F663B00786468 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE5EC173F663B00786468 /* main.m */; };
 		CE2EE5FD173F66E300786468 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE5F6173F66E300786468 /* AppDelegate.m */; };
 		CE2EE5FE173F66E300786468 /* emu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE5F7173F66E300786468 /* emu.cpp */; };
@@ -135,8 +137,6 @@
 		CEB43C45173FD25A00055F91 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB43C43173FD25900055F91 /* GLKit.framework */; };
 		CEB43C46173FD25A00055F91 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB43C44173FD25900055F91 /* OpenGLES.framework */; };
 		D38CBCB01745CF9C0074C554 /* SwitcherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D38CBCAC1745CF9C0074C554 /* SwitcherViewController.m */; };
-		D511B054177E4FE3009DC4A4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D511B052177E4FE3009DC4A4 /* Icon.png */; };
-		D511B055177E4FE3009DC4A4 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D511B053177E4FE3009DC4A4 /* Icon@2x.png */; };
 		D511B058177E559F009DC4A4 /* nds4ios@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D511B056177E559F009DC4A4 /* nds4ios@2x.png */; };
 		D511B059177E559F009DC4A4 /* nds4ios.png in Resources */ = {isa = PBXBuildFile; fileRef = D511B057177E559F009DC4A4 /* nds4ios.png */; };
 		D58A9114178100B900B80182 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58A9113178100B900B80182 /* SettingsViewController.xib */; };
@@ -167,9 +167,6 @@
 		8B4EF08C177D75710013D660 /* MBPullDownController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBPullDownController.m; path = Classes/MBPullDownController.m; sourceTree = "<group>"; };
 		8B4EF08E177D75940013D660 /* UIScreen+Widescreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScreen+Widescreen.h"; path = "Classes/UIScreen+Widescreen.h"; sourceTree = "<group>"; };
 		8B4EF08F177D75940013D660 /* UIScreen+Widescreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScreen+Widescreen.m"; path = "Classes/UIScreen+Widescreen.m"; sourceTree = "<group>"; };
-		8B733CD5177FEB0800CBB41F /* Icon-Multitasker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Multitasker@2x.png"; sourceTree = "<group>"; };
-		8B733CD7177FEB5F00CBB41F /* Icon-Spotlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight.png"; sourceTree = "<group>"; };
-		8B733CD8177FEB5F00CBB41F /* Icon-Spotlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight@2x.png"; sourceTree = "<group>"; };
 		8BCE527817822C530034278E /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gear.png; path = images/Gear.png; sourceTree = "<group>"; };
 		8BCE527917822C530034278E /* Gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Gear@2x.png"; path = "images/Gear@2x.png"; sourceTree = "<group>"; };
 		8BCE527A17822C530034278E /* SwitcherBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SwitcherBackground.png; path = images/SwitcherBackground.png; sourceTree = "<group>"; };
@@ -180,7 +177,12 @@
 		8BCE528317822C6D0034278E /* DPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DPad@2x.png"; path = "images/DPad@2x.png"; sourceTree = "<group>"; };
 		8BCE528817822CA30034278E /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Classes/SettingsViewController.h; sourceTree = "<group>"; };
 		8BCE528917822CA30034278E /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Classes/SettingsViewController.m; sourceTree = "<group>"; };
-		BF0E1D6F1763F9B800528BA5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8BCE528B17822D900034278E /* Icon-Multitasker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Multitasker@2x.png"; path = "images/required/Icon-Multitasker@2x.png"; sourceTree = "<group>"; };
+		8BCE528C17822D900034278E /* Icon-Spotlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight.png"; path = "images/required/Icon-Spotlight.png"; sourceTree = "<group>"; };
+		8BCE528D17822D900034278E /* Icon-Spotlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight@2x.png"; path = "images/required/Icon-Spotlight@2x.png"; sourceTree = "<group>"; };
+		8BCE528E17822D900034278E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = images/required/Icon.png; sourceTree = "<group>"; };
+		8BCE528F17822D900034278E /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "images/required/Icon@2x.png"; sourceTree = "<group>"; };
+		8BCE529517822DA10034278E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "images/required/Default-568h@2x.png"; sourceTree = "<group>"; };
 		CE2EE5EA173F661D00786468 /* nds4ios-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "nds4ios-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CE2EE5EC173F663B00786468 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Classes/main.m; sourceTree = SOURCE_ROOT; };
 		CE2EE5ED173F663B00786468 /* nds4ios-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "nds4ios-Prefix.pch"; path = "Classes/nds4ios-Prefix.pch"; sourceTree = SOURCE_ROOT; };
@@ -368,8 +370,6 @@
 		CEC742F916776248006D193E /* nds4ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nds4ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38CBCAB1745CF9C0074C554 /* SwitcherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = SwitcherViewController.h; path = Classes/SwitcherViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		D38CBCAC1745CF9C0074C554 /* SwitcherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = SwitcherViewController.m; path = Classes/SwitcherViewController.m; sourceTree = "<group>"; };
-		D511B052177E4FE3009DC4A4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		D511B053177E4FE3009DC4A4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		D511B056177E559F009DC4A4 /* nds4ios@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nds4ios@2x.png"; sourceTree = "<group>"; };
 		D511B057177E559F009DC4A4 /* nds4ios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nds4ios.png; sourceTree = "<group>"; };
 		D58A9113178100B900B80182 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Classes/SettingsViewController.xib; sourceTree = "<group>"; };
@@ -416,11 +416,11 @@
 		63BCB75A177BE020005F9641 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				D511B052177E4FE3009DC4A4 /* Icon.png */,
-				D511B053177E4FE3009DC4A4 /* Icon@2x.png */,
-				8B733CD5177FEB0800CBB41F /* Icon-Multitasker@2x.png */,
-				8B733CD7177FEB5F00CBB41F /* Icon-Spotlight.png */,
-				8B733CD8177FEB5F00CBB41F /* Icon-Spotlight@2x.png */,
+				8BCE528B17822D900034278E /* Icon-Multitasker@2x.png */,
+				8BCE528C17822D900034278E /* Icon-Spotlight.png */,
+				8BCE528D17822D900034278E /* Icon-Spotlight@2x.png */,
+				8BCE528E17822D900034278E /* Icon.png */,
+				8BCE528F17822D900034278E /* Icon@2x.png */,
 				D511B056177E559F009DC4A4 /* nds4ios@2x.png */,
 				D511B057177E559F009DC4A4 /* nds4ios.png */,
 			);
@@ -711,7 +711,6 @@
 		CEC742EE16776248006D193E = {
 			isa = PBXGroup;
 			children = (
-				BF0E1D6F1763F9B800528BA5 /* Default-568h@2x.png */,
 				D326847B17497DB1000D4ED6 /* UI */,
 				CE2EE60C173F6C1E00786468 /* nds4droid-code */,
 				CE2EE5F4173F66D100786468 /* Classes */,
@@ -744,6 +743,7 @@
 		D326847B17497DB1000D4ED6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8BCE529517822DA10034278E /* Default-568h@2x.png */,
 				63BCB75A177BE020005F9641 /* Icons */,
 				8BCE527817822C530034278E /* Gear.png */,
 				8BCE527917822C530034278E /* Gear@2x.png */,
@@ -879,24 +879,24 @@
 			files = (
 				8BCE528517822C6D0034278E /* ABXYPad@2x.png in Resources */,
 				D511B059177E559F009DC4A4 /* nds4ios.png in Resources */,
-				8B733CD9177FEB5F00CBB41F /* Icon-Spotlight.png in Resources */,
+				8BCE529217822D900034278E /* Icon-Spotlight@2x.png in Resources */,
+				8BCE529117822D900034278E /* Icon-Spotlight.png in Resources */,
 				D59451AB17810CD000C83157 /* SwitcherViewController.xib in Resources */,
-				D511B054177E4FE3009DC4A4 /* Icon.png in Resources */,
-				8B733CDA177FEB5F00CBB41F /* Icon-Spotlight@2x.png in Resources */,
 				8BCE527F17822C530034278E /* SwitcherBackground@2x.png in Resources */,
-				8B733CD6177FEB0800CBB41F /* Icon-Multitasker@2x.png in Resources */,
 				8BCE527E17822C530034278E /* SwitcherBackground.png in Resources */,
 				8BCE527C17822C530034278E /* Gear.png in Resources */,
 				8BCE528617822C6D0034278E /* DPad.png in Resources */,
-				D511B055177E4FE3009DC4A4 /* Icon@2x.png in Resources */,
-				BF0E1D701763F9B800528BA5 /* Default-568h@2x.png in Resources */,
+				8BCE529417822D900034278E /* Icon@2x.png in Resources */,
+				8BCE529317822D900034278E /* Icon.png in Resources */,
 				8BCE528717822C6D0034278E /* DPad@2x.png in Resources */,
 				8BCE527D17822C530034278E /* Gear@2x.png in Resources */,
+				8BCE529617822DA10034278E /* Default-568h@2x.png in Resources */,
 				D511B058177E559F009DC4A4 /* nds4ios@2x.png in Resources */,
 				8BCE528417822C6D0034278E /* ABXYPad.png in Resources */,
 				D58A9114178100B900B80182 /* SettingsViewController.xib in Resources */,
 				8B2EF6121781296300A24AC4 /* Settings.bundle in Resources */,
 				8B2EF61417812DC000A24AC4 /* Storyboard.storyboard in Resources */,
+				8BCE529017822D900034278E /* Icon-Multitasker@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
