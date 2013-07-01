@@ -6,6 +6,12 @@
 //  Copyright (c) 2012 Homebrew. All rights reserved.
 //
 
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
 #import "AppDelegate.h"
 
 #import "RomsViewController.h"
@@ -23,16 +29,48 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Set the application defaults
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *appDefaults = [NSDictionary dictionaryWithObject:@"NO" forKey:@"experimentalUI"];
+    [defaults registerDefaults:appDefaults];
+    [defaults synchronize];
     
-    SwitcherViewController *switcherViewController = [[SwitcherViewController alloc] init];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"experimentalUI"])
+    {
+        SwitcherViewController *switcherViewController = [[SwitcherViewController alloc] init];
+        
+        RomsViewController *romsViewController = [[RomsViewController alloc] init];
+        
+        MBPullDownController *pullDownController = [[MBPullDownController alloc] initWithFrontController:romsViewController backController:switcherViewController];
+        
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        [self.window setRootViewController:pullDownController];
+        [self.window makeKeyAndVisible];
+    }
+    else
+    {
+        if (SYSTEM_VERSION_LESS_THAN(@"7.0"))
+        {
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
+            
+            UIViewController *mainViewController = [storyboard instantiateInitialViewController];
+            
+            self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+            self.window.rootViewController = mainViewController;
+            [self.window makeKeyAndVisible];
+        }
+        else
+        {
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard7" bundle:nil];
+            
+            UIViewController *mainViewController = [storyboard instantiateInitialViewController];
+            
+            self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+            self.window.rootViewController = mainViewController;
+            [self.window makeKeyAndVisible];
+        }
+    }
     
-    RomsViewController *romsViewController = [[RomsViewController alloc] init];
-    
-    MBPullDownController *pullDownController = [[MBPullDownController alloc] initWithFrontController:romsViewController backController:switcherViewController];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [self.window setRootViewController:pullDownController];
-    [self.window makeKeyAndVisible];
     return YES;
 }
 

@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		28E43300177CA70500A146E5 /* DPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E432FE177CA70500A146E5 /* DPad.png */; };
 		28E43301177CA70500A146E5 /* DPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E432FF177CA70500A146E5 /* DPad@2x.png */; };
+		8B1EF0F717812F970046103D /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B1EF0F517812F960046103D /* Gear.png */; };
+		8B1EF0F817812F970046103D /* Gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B1EF0F617812F970046103D /* Gear@2x.png */; };
+		8B1EF0FD1781368A0046103D /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1EF0FC1781368A0046103D /* Settings.m */; };
+		8B2EF6121781296300A24AC4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8B2EF6111781296300A24AC4 /* Settings.bundle */; };
+		8B2EF61417812DC000A24AC4 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2EF61317812DC000A24AC4 /* Storyboard.storyboard */; };
+		8B2EF6161781330300A24AC4 /* Storyboard7.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2EF6151781330300A24AC4 /* Storyboard7.storyboard */; };
 		8B4EF076177D74D80013D660 /* DocWatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF075177D74D80013D660 /* DocWatchHelper.m */; };
 		8B4EF079177D74FA0013D660 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF078177D74FA0013D660 /* ZipArchive.mm */; };
 		8B4EF083177D751C0013D660 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF07B177D751C0013D660 /* ioapi.c */; };
@@ -141,6 +147,13 @@
 /* Begin PBXFileReference section */
 		28E432FE177CA70500A146E5 /* DPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DPad.png; sourceTree = "<group>"; };
 		28E432FF177CA70500A146E5 /* DPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DPad@2x.png"; sourceTree = "<group>"; };
+		8B1EF0F517812F960046103D /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gear.png; sourceTree = "<group>"; };
+		8B1EF0F617812F970046103D /* Gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gear@2x.png"; sourceTree = "<group>"; };
+		8B1EF0FB1781368A0046103D /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = Classes/Settings.h; sourceTree = "<group>"; };
+		8B1EF0FC1781368A0046103D /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Settings.m; path = Classes/Settings.m; sourceTree = "<group>"; };
+		8B2EF6111781296300A24AC4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		8B2EF61317812DC000A24AC4 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		8B2EF6151781330300A24AC4 /* Storyboard7.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard7.storyboard; sourceTree = "<group>"; };
 		8B4EF074177D74D80013D660 /* DocWatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocWatchHelper.h; path = Classes/DocWatchHelper.h; sourceTree = "<group>"; };
 		8B4EF075177D74D80013D660 /* DocWatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocWatchHelper.m; path = Classes/DocWatchHelper.m; sourceTree = "<group>"; };
 		8B4EF077177D74FA0013D660 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = Classes/ZipArchive.h; sourceTree = "<group>"; };
@@ -435,6 +448,8 @@
 		CE2EE5F4173F66D100786468 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8B2EF61317812DC000A24AC4 /* Storyboard.storyboard */,
+				8B2EF6151781330300A24AC4 /* Storyboard7.storyboard */,
 				8B4EF08E177D75940013D660 /* UIScreen+Widescreen.h */,
 				8B4EF08F177D75940013D660 /* UIScreen+Widescreen.m */,
 				CE34A132173F79F200C51EA1 /* throttle.cpp */,
@@ -735,6 +750,8 @@
 				63BCB75A177BE020005F9641 /* Icons */,
 				D5BE18961773F00E0029E61F /* SwitcherBackground@2x.png */,
 				D5BE18981773F0510029E61F /* SwitcherBackground.png */,
+				8B1EF0F517812F960046103D /* Gear.png */,
+				8B1EF0F617812F970046103D /* Gear@2x.png */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -752,6 +769,9 @@
 		D338B2FE17470D2800932C39 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				8B1EF0FB1781368A0046103D /* Settings.h */,
+				8B1EF0FC1781368A0046103D /* Settings.m */,
+				8B2EF6111781296300A24AC4 /* Settings.bundle */,
 				D5EAC7361780FCB50096D56B /* SettingsViewController.h */,
 				D5EAC7371780FCB50096D56B /* SettingsViewController.m */,
 				D58A9113178100B900B80182 /* SettingsViewController.xib */,
@@ -870,12 +890,17 @@
 				8B733CDA177FEB5F00CBB41F /* Icon-Spotlight@2x.png in Resources */,
 				8B733CD6177FEB0800CBB41F /* Icon-Multitasker@2x.png in Resources */,
 				8B4EF09C177D80C80013D660 /* ABXYPad@2x.png in Resources */,
+				8B1EF0F717812F970046103D /* Gear.png in Resources */,
 				D511B055177E4FE3009DC4A4 /* Icon@2x.png in Resources */,
 				D5BE18991773F0510029E61F /* SwitcherBackground.png in Resources */,
 				BF0E1D701763F9B800528BA5 /* Default-568h@2x.png in Resources */,
 				8B4EF09B177D80C80013D660 /* ABXYPad.png in Resources */,
 				D511B058177E559F009DC4A4 /* nds4ios@2x.png in Resources */,
 				D58A9114178100B900B80182 /* SettingsViewController.xib in Resources */,
+				8B2EF6121781296300A24AC4 /* Settings.bundle in Resources */,
+				8B2EF61417812DC000A24AC4 /* Storyboard.storyboard in Resources */,
+				8B1EF0F817812F970046103D /* Gear@2x.png in Resources */,
+				8B2EF6161781330300A24AC4 /* Storyboard7.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -891,6 +916,7 @@
 				CE2EE5FE173F66E300786468 /* emu.cpp in Sources */,
 				CE2EE5FF173F66E300786468 /* EmuViewController.mm in Sources */,
 				CE2EE600173F66E300786468 /* RomsViewController.m in Sources */,
+				8B1EF0FD1781368A0046103D /* Settings.m in Sources */,
 				CE2EE61C173F6D6300786468 /* slot1_none.cpp in Sources */,
 				CE2EE61D173F6D6300786468 /* slot1_r4.cpp in Sources */,
 				CE2EE61E173F6D6300786468 /* slot1_retail.cpp in Sources */,
