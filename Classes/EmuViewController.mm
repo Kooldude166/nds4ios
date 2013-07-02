@@ -141,6 +141,8 @@ typedef enum : NSInteger {
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [UIApplication sharedApplication].statusBarHidden = YES;
+    
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"shiftPad"])
         [self shiftButtons];
     else
@@ -150,6 +152,11 @@ typedef enum : NSInteger {
         [self hideControls];
     else
         [self showControls];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [UIApplication sharedApplication].statusBarHidden = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -430,13 +437,10 @@ typedef enum : NSInteger {
     if (buttonIndex == 0)
     {
         [self killCurrentGame];
-        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isBackgrounded"];
         [[AppDelegate sharedInstance] killVC:self];
         NSLog(@"killed");
         [self dismissViewControllerAnimated:YES completion:nil];
     } else if (buttonIndex == 1) {
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isBackgrounded"];
-        NSLog(@"%hhd",[[NSUserDefaults standardUserDefaults] boolForKey:@"isBackgrounded"]);
         NSLog(@"backgrounded");
         [self dismissViewControllerAnimated:YES completion:nil];
     }

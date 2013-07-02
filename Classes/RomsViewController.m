@@ -43,27 +43,7 @@
 {
     [super viewDidLoad];
     
-    // Set backgrounded to false on first load
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isBackgrounded"];
-    
-    // Display this only on Experimental UI
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"experimentalUI"])
-    {
-        self.title = @"nds4ios";
-    
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reloadRomList)];
-    }
-    else
-    {
-        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isBackgrounded"])
-        {
-            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(resumeGame)];
-        }
-        else
-        {
-           self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(getMoreROMs)]; 
-        }
-    }
+    [[NSUserDefaults standardUserDefaults] setObject:@"null" forKey:@"backgroundTitle"];
     
     BOOL isDir;
     NSString* batteryDir = [NSString stringWithFormat:@"%@/Battery",DOCUMENTS_PATH()];
@@ -129,6 +109,13 @@
     [self reloadRomList];
     [self.view becomeFirstResponder];
     
+    // Create toolbar to use if game is backgrounded
+    NSString *backgroundTitle = [[NSUserDefaults standardUserDefaults] objectForKey:@"backgroundTitle"];
+    UIBarButtonItem *buttonItem = [[ UIBarButtonItem alloc ] initWithTitle:[@"Resume: " stringByAppendingString:backgroundTitle] style:UIButtonTypeCustom target:self action:@selector(resumeGame)];
+    [buttonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont boldSystemFontOfSize:15], UITextAttributeFont,nil] forState:UIControlStateNormal];
+    
+    self.toolbarItems = [ NSArray arrayWithObject: buttonItem ];
+    
     // Display this only on Experimental UI
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"experimentalUI"])
     {
@@ -138,15 +125,16 @@
     }
     else
     {
-        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isBackgrounded"])
-        {
-            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(resumeGame)];
-        }
+        if ([AppDelegate sharedInstance].hasGame)
+            self.navigationController.toolbarHidden = NO;
         else
         {
+            self.navigationController.toolbarHidden = YES;
+            
             self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(getMoreROMs)];
         }
     }
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -253,9 +241,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [UIApplication sharedApplication].statusBarHidden = YES;
-    
+    // Load selected ROM and save game name.
     NSString* rom = [[self.romDictionary objectForKey:[self.romSections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+    [[NSUserDefaults standardUserDefaults] setObject:[rom stringByDeletingPathExtension] forKey:@"backgroundTitle"];
     [[AppDelegate sharedInstance] initRomsVCWithRom:rom];
     [AppDelegate sharedInstance].hasGame = YES;
 }
