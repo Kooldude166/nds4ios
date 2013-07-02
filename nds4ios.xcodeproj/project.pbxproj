@@ -1133,6 +1133,7 @@
 					"-fvariable-expansion-in-unroller",
 					"-DCOMPRESS_MT",
 					"-DIOS",
+					"-DHAVE_NEON=1",
 					"-DHAVE_LIBZ",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
