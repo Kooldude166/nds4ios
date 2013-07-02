@@ -141,6 +141,8 @@ typedef enum : NSInteger {
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [UIApplication sharedApplication].statusBarHidden = YES;
+    
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"shiftPad"])
         [self shiftButtons];
     else
@@ -150,6 +152,11 @@ typedef enum : NSInteger {
         [self hideControls];
     else
         [self showControls];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [UIApplication sharedApplication].statusBarHidden = NO;
 }
 
 - (void)didReceiveMemoryWarning

@@ -46,32 +46,12 @@
     // Set backgrounded to false on first load
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isBackgrounded"];
     
-    // Display this only on Experimental UI
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"experimentalUI"])
-    {
-        self.title = @"nds4ios";
-    
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reloadRomList)];
-    }
-    else
-    {
-        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isBackgrounded"])
-        {
-            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(resumeGame)];
-        }
-        else
-        {
-           self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(getMoreROMs)]; 
-        }
-    }
-    
     BOOL isDir;
     NSString* batteryDir = [NSString stringWithFormat:@"%@/Battery",DOCUMENTS_PATH()];
     NSFileManager* fm = [NSFileManager defaultManager];
     
-    if (![fm fileExistsAtPath:batteryDir isDirectory:&isDir]) {
+    if (![fm fileExistsAtPath:batteryDir isDirectory:&isDir])
         [fm createDirectoryAtPath:batteryDir withIntermediateDirectories:NO attributes:nil error:nil];
-    }
     
     [self reloadRomList];
     
@@ -80,36 +60,6 @@
     
     self.docWatchHelper = [DocWatchHelper watcherForPath:documentsDirectory];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadRomList) name:kDocumentChanged object:self.docWatchHelper];
-}
-
-- (void)resumeGame
-{
-    [[AppDelegate sharedInstance] bringBackEmuVC];
-}
-
-- (void)getMoreROMs
-{
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showedROMAlert"]) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
-    }
-    else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Hey You! Yes, You!", @"")
-                                                        message:NSLocalizedString(@"This opens Safari. Simply download the ROM you want, and then 'Open In...' nds4ios. Everything else will be taken care of. You should own the actual cartridge of any ROM you download!", @"")
-                                                       delegate:self
-                                              cancelButtonTitle:NSLocalizedString(@"Ok", @"")
-                                              otherButtonTitles:nil];
-        [alert show];
-        
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"showedROMAlert"];
-    }
-}
-
-#pragma mark - UIAlertView delegate
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex == 0) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
-    }
 }
 
 - (void)viewDidUnload
@@ -131,28 +81,25 @@
     
     // Display this only on Experimental UI
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"experimentalUI"])
-    {
         self.title = @"nds4ios";
-        
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reloadRomList)];
-    }
     else
-    {
-        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isBackgrounded"])
-        {
-            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(resumeGame)];
-        }
-        else
-        {
-            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(getMoreROMs)];
-        }
-    }
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(getMoreROMs)];
+    
+    // Show toolbar if backgrounded
+    NSString *backgroundTitle = [[NSUserDefaults standardUserDefaults] objectForKey:@"backgroundTitle"];    
+    UIBarButtonItem *buttonItem = [[ UIBarButtonItem alloc ] initWithTitle:[@"Resume: " stringByAppendingString:backgroundTitle] style:UIButtonTypeCustom target:self action:@selector(resumeGame)];
+    
+    self.toolbarItems = [ NSArray arrayWithObject: buttonItem ];
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isBackgrounded"])
+        self.navigationController.toolbar.hidden = NO;
+    else
+        self.navigationController.toolbar.hidden = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    //[self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
 - (void)reloadRomList
@@ -252,12 +199,46 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [UIApplication sharedApplication].statusBarHidden = YES;
+{    
+    // Save title of game playing.. in case it gets backgrounded.
+    NSString *filename = [[self.romDictionary objectForKey:[self.romSections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+    filename = [filename stringByDeletingPathExtension];
+    [[NSUserDefaults standardUserDefaults] setObject:filename forKey:@"backgroundTitle"];
     
+    // Load selected ROM
     NSString* rom = [[self.romDictionary objectForKey:[self.romSections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
     [[AppDelegate sharedInstance] initRomsVCWithRom:rom];
     [AppDelegate sharedInstance].hasGame = YES;
+}
+
+- (void)resumeGame
+{
+    [[AppDelegate sharedInstance] bringBackEmuVC];
+}
+
+- (void)getMoreROMs
+{
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showedROMAlert"]) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
+    }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Hey You! Yes, You!", @"")
+                                                        message:NSLocalizedString(@"This opens Safari. Simply download the ROM you want, and then 'Open In...' nds4ios. Everything else will be taken care of. You should own the actual cartridge of any ROM you download!", @"")
+                                                       delegate:self
+                                              cancelButtonTitle:NSLocalizedString(@"Ok", @"")
+                                              otherButtonTitles:nil];
+        [alert show];
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"showedROMAlert"];
+    }
+}
+
+#pragma mark - UIAlertView delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
+    }
 }
 
 @end
