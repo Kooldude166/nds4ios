@@ -55,7 +55,7 @@ How To Load ROMs
 ##### Since this apparently needs explaining
 
 ### Option 1 (Preferred Option)
-1. In nds4ios, press the + button in the upper right hand corner.
+1. In nds4ios, tap on the button in the upper right hand corner.
 2. Download a ROM package of a ROM that you own the actual game cartridge for from a site such as CoolROM. It will come in a zip file. You do not have to have any sort of download manager for this, Safari will download zip files.
 3. Tap the "Open in..." button in the top left hand corner, and select nds4ios.
 4. nds4ios will automatically unzip the file, delete the readme, and refresh itself. Your ROM should show up in the list. Magic!
