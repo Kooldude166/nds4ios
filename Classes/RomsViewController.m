@@ -186,6 +186,14 @@
     [self.tableView reloadData];
 }
 
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    NSMutableArray *sectionIndexTitles = nil;
+    if(self.romSections.count) {
+        sectionIndexTitles = [NSMutableArray arrayWithArray:[@"A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|#" componentsSeparatedByString:@"|"]];
+    }
+    return  sectionIndexTitles;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     NSInteger numberOfSections = self.romSections.count;
     return numberOfSections > 0 ? numberOfSections : 1;
