@@ -8,20 +8,7 @@
 
 #import "Settings.h"
 
-@interface Settings ()
-
-@end
-
 @implementation Settings
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -55,15 +42,16 @@
 
 - (IBAction)controlChanged:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if (sender == disableSound) {
+    if (sender == disableSound)
         [defaults setBool:disableSound.on forKey:@"disableSound"];
-    } else if (sender == controlOpacity) {
+    else if (sender == controlOpacity)
         [defaults setFloat:controlOpacity.value forKey:@"controlOpacity"];
-    } else if (sender == shiftPad) {
+    else if (sender == shiftPad)
         [defaults setBool:shiftPad.on forKey:@"shiftPad"];
-    } else if (sender == showFPS) {
+    else if (sender == showFPS)
         [defaults setBool:showFPS.on forKey:@"showFPS"];
-    } else if (sender == frameSkip) {
+    else if (sender == frameSkip)
+    {
         int val = frameSkip.selectedSegmentIndex + 1;
         if (val == 5) val = -1;
         [defaults setInteger:val forKey:@"frameSkip"];

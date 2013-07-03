@@ -16,7 +16,6 @@
 		8B2EF6121781296300A24AC4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8B2EF6111781296300A24AC4 /* Settings.bundle */; };
 		8B2EF61417812DC000A24AC4 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2EF61317812DC000A24AC4 /* Storyboard.storyboard */; };
 		8B4EF076177D74D80013D660 /* DocWatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF075177D74D80013D660 /* DocWatchHelper.m */; };
-		8B4EF079177D74FA0013D660 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF078177D74FA0013D660 /* ZipArchive.mm */; };
 		8B4EF083177D751C0013D660 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF07B177D751C0013D660 /* ioapi.c */; };
 		8B4EF084177D751C0013D660 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF07D177D751C0013D660 /* mztools.c */; };
 		8B4EF085177D751C0013D660 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF07F177D751C0013D660 /* unzip.c */; };
@@ -34,6 +33,7 @@
 		8B99E99F1784931B0022BB85 /* emu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B99E99B1784931B0022BB85 /* emu.cpp */; };
 		8B99E9A01784931B0022BB85 /* sndcoreaudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8B99E99E1784931B0022BB85 /* sndcoreaudio.mm */; };
 		8B99E9A51784933A0022BB85 /* throttle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B99E9A31784933A0022BB85 /* throttle.cpp */; };
+		8B99E9A81784A5980022BB85 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B99E9A71784A5980022BB85 /* SSZipArchive.m */; };
 		8BCE527C17822C530034278E /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE527817822C530034278E /* Gear.png */; };
 		8BCE527D17822C530034278E /* Gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE527917822C530034278E /* Gear@2x.png */; };
 		8BCE527E17822C530034278E /* SwitcherBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE527A17822C530034278E /* SwitcherBackground.png */; };
@@ -163,8 +163,6 @@
 		8B2EF61317812DC000A24AC4 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		8B4EF074177D74D80013D660 /* DocWatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocWatchHelper.h; path = Classes/DocWatchHelper.h; sourceTree = "<group>"; };
 		8B4EF075177D74D80013D660 /* DocWatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocWatchHelper.m; path = Classes/DocWatchHelper.m; sourceTree = "<group>"; };
-		8B4EF077177D74FA0013D660 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = Classes/ZipArchive.h; sourceTree = "<group>"; };
-		8B4EF078177D74FA0013D660 /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ZipArchive.mm; path = Classes/ZipArchive.mm; sourceTree = "<group>"; };
 		8B4EF07A177D751C0013D660 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = Classes/minizip/crypt.h; sourceTree = "<group>"; };
 		8B4EF07B177D751C0013D660 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ioapi.c; path = Classes/minizip/ioapi.c; sourceTree = "<group>"; };
 		8B4EF07C177D751C0013D660 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ioapi.h; path = Classes/minizip/ioapi.h; sourceTree = "<group>"; };
@@ -199,6 +197,8 @@
 		8B99E9A21784933A0022BB85 /* nullJit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nullJit.h; path = Classes/core/nullJit.h; sourceTree = "<group>"; };
 		8B99E9A31784933A0022BB85 /* throttle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = throttle.cpp; path = Classes/core/throttle.cpp; sourceTree = "<group>"; };
 		8B99E9A41784933A0022BB85 /* throttle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = throttle.h; path = Classes/core/throttle.h; sourceTree = "<group>"; };
+		8B99E9A61784A5980022BB85 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSZipArchive.h; path = Classes/SSZipArchive.h; sourceTree = "<group>"; };
+		8B99E9A71784A5980022BB85 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = Classes/SSZipArchive.m; sourceTree = "<group>"; };
 		8BCE527817822C530034278E /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gear.png; path = images/Gear.png; sourceTree = "<group>"; };
 		8BCE527917822C530034278E /* Gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Gear@2x.png"; path = "images/Gear@2x.png"; sourceTree = "<group>"; };
 		8BCE527A17822C530034278E /* SwitcherBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SwitcherBackground.png; path = images/SwitcherBackground.png; sourceTree = "<group>"; };
@@ -434,8 +434,8 @@
 			isa = PBXGroup;
 			children = (
 				8B4EF087177D75290013D660 /* minizip */,
-				8B4EF077177D74FA0013D660 /* ZipArchive.h */,
-				8B4EF078177D74FA0013D660 /* ZipArchive.mm */,
+				8B99E9A61784A5980022BB85 /* SSZipArchive.h */,
+				8B99E9A71784A5980022BB85 /* SSZipArchive.m */,
 			);
 			name = Unzip;
 			sourceTree = "<group>";
@@ -991,7 +991,6 @@
 				8B1EF0FD1781368A0046103D /* Settings.m in Sources */,
 				8BCE528A17822CA30034278E /* SettingsViewController.m in Sources */,
 				8B4EF076177D74D80013D660 /* DocWatchHelper.m in Sources */,
-				8B4EF079177D74FA0013D660 /* ZipArchive.mm in Sources */,
 				8B4EF086177D751C0013D660 /* zip.c in Sources */,
 				8B4EF08A177D75520013D660 /* ButtonPad.m in Sources */,
 				8B4EF090177D75940013D660 /* UIScreen+Widescreen.m in Sources */,
@@ -1094,6 +1093,7 @@
 				8B99E99F1784931B0022BB85 /* emu.cpp in Sources */,
 				8B99E9A01784931B0022BB85 /* sndcoreaudio.mm in Sources */,
 				8B99E9A51784933A0022BB85 /* throttle.cpp in Sources */,
+				8B99E9A81784A5980022BB85 /* SSZipArchive.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

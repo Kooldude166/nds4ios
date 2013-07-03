@@ -12,10 +12,6 @@
 
 #define DOCUMENTS_PATH() [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 
-@interface ROMs ()
-
-@end
-
 @implementation ROMs
 
 - (void)viewDidLoad

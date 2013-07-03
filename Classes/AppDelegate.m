@@ -12,7 +12,7 @@
 #import "SwitcherViewController.h"
 #import "EmuViewController.h"
 #import "MBPullDownController.h"
-#import "ZipArchive.h"
+#import "SSZipArchive.h"
 
 #define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
 
@@ -67,16 +67,7 @@
         NSString *zipFilePath = importedPath;
         NSString *output = documentsDirectory;
         
-        ZipArchive* za = [[ZipArchive alloc] init];
-        
-        if( [za UnzipOpenFile:zipFilePath] ) {
-            if( [za UnzipFileTo:output overWrite:YES] != NO ) {
-                //unzip data success
-                //do something
-            }
-            
-            [za UnzipCloseFile];
-        }
+        [SSZipArchive unzipFileAtPath:zipFilePath toDestination:output];
         
         NSFileManager *fileManager = [[NSFileManager alloc] init];
         [fileManager removeItemAtPath:[documentsDirectory stringByAppendingPathComponent:@"Inbox"] error:NULL];
