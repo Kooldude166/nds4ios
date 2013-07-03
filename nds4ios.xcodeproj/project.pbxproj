@@ -11,7 +11,6 @@
 		28AF917517840B1C0094513F /* math_sqrtf.c in Sources */ = {isa = PBXBuildFile; fileRef = 28AF917417840B1C0094513F /* math_sqrtf.c */; };
 		28AF917717840B330094513F /* math_mat4.c in Sources */ = {isa = PBXBuildFile; fileRef = 28AF917617840B330094513F /* math_mat4.c */; };
 		4C3418D81784A17300EE29FF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C3418D71784A17300EE29FF /* Default@2x.png */; };
-		4C3418DA1784A1A400EE29FF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C3418D91784A1A400EE29FF /* Default.png */; };
 		8B1EF0FD1781368A0046103D /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1EF0FC1781368A0046103D /* Settings.m */; };
 		8B2EF6121781296300A24AC4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8B2EF6111781296300A24AC4 /* Settings.bundle */; };
 		8B2EF61417812DC000A24AC4 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2EF61317812DC000A24AC4 /* Storyboard.storyboard */; };
@@ -34,6 +33,7 @@
 		8B99E9A01784931B0022BB85 /* sndcoreaudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8B99E99E1784931B0022BB85 /* sndcoreaudio.mm */; };
 		8B99E9A51784933A0022BB85 /* throttle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B99E9A31784933A0022BB85 /* throttle.cpp */; };
 		8B99E9A81784A5980022BB85 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B99E9A71784A5980022BB85 /* SSZipArchive.m */; };
+		8B99E9AA1784AD500022BB85 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B99E9A91784AD500022BB85 /* Default.png */; };
 		8BCE527C17822C530034278E /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE527817822C530034278E /* Gear.png */; };
 		8BCE527D17822C530034278E /* Gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE527917822C530034278E /* Gear@2x.png */; };
 		8BCE527E17822C530034278E /* SwitcherBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE527A17822C530034278E /* SwitcherBackground.png */; };
@@ -156,7 +156,6 @@
 		28AF917417840B1C0094513F /* math_sqrtf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = math_sqrtf.c; sourceTree = "<group>"; };
 		28AF917617840B330094513F /* math_mat4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = math_mat4.c; sourceTree = "<group>"; };
 		4C3418D71784A17300EE29FF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "images/required/Default@2x.png"; sourceTree = "<group>"; };
-		4C3418D91784A1A400EE29FF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = /Users/Michael/GitHub/nds4ios/images/required/Default.png; sourceTree = "<absolute>"; };
 		8B1EF0FB1781368A0046103D /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = Classes/Settings.h; sourceTree = "<group>"; };
 		8B1EF0FC1781368A0046103D /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Settings.m; path = Classes/Settings.m; sourceTree = "<group>"; };
 		8B2EF6111781296300A24AC4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -199,6 +198,7 @@
 		8B99E9A41784933A0022BB85 /* throttle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = throttle.h; path = Classes/core/throttle.h; sourceTree = "<group>"; };
 		8B99E9A61784A5980022BB85 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSZipArchive.h; path = Classes/SSZipArchive.h; sourceTree = "<group>"; };
 		8B99E9A71784A5980022BB85 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = Classes/SSZipArchive.m; sourceTree = "<group>"; };
+		8B99E9A91784AD500022BB85 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = images/required/Default.png; sourceTree = "<group>"; };
 		8BCE527817822C530034278E /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gear.png; path = images/Gear.png; sourceTree = "<group>"; };
 		8BCE527917822C530034278E /* Gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Gear@2x.png"; path = "images/Gear@2x.png"; sourceTree = "<group>"; };
 		8BCE527A17822C530034278E /* SwitcherBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SwitcherBackground.png; path = images/SwitcherBackground.png; sourceTree = "<group>"; };
@@ -809,7 +809,7 @@
 		D326847B17497DB1000D4ED6 /* UI Images */ = {
 			isa = PBXGroup;
 			children = (
-				4C3418D91784A1A400EE29FF /* Default.png */,
+				8B99E9A91784AD500022BB85 /* Default.png */,
 				4C3418D71784A17300EE29FF /* Default@2x.png */,
 				8BCE529517822DA10034278E /* Default-568h@2x.png */,
 				63BCB75A177BE020005F9641 /* Icons */,
@@ -974,7 +974,7 @@
 				8B99E98217848FA70022BB85 /* RomsCollectionViewCell.xib in Resources */,
 				8B99E98417848FA70022BB85 /* RomsCollectionViewController.xib in Resources */,
 				4C3418D81784A17300EE29FF /* Default@2x.png in Resources */,
-				4C3418DA1784A1A400EE29FF /* Default.png in Resources */,
+				8B99E9AA1784AD500022BB85 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
