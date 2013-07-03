@@ -155,8 +155,8 @@
 		28AF914017840A140094513F /* math_neon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = math_neon.h; sourceTree = "<group>"; };
 		28AF917417840B1C0094513F /* math_sqrtf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = math_sqrtf.c; sourceTree = "<group>"; };
 		28AF917617840B330094513F /* math_mat4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = math_mat4.c; sourceTree = "<group>"; };
-		4C3418D71784A17300EE29FF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		4C3418D91784A1A400EE29FF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4C3418D71784A17300EE29FF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "images/required/Default@2x.png"; sourceTree = "<group>"; };
+		4C3418D91784A1A400EE29FF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = /Users/Michael/GitHub/nds4ios/images/required/Default.png; sourceTree = "<absolute>"; };
 		8B1EF0FB1781368A0046103D /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = Classes/Settings.h; sourceTree = "<group>"; };
 		8B1EF0FC1781368A0046103D /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Settings.m; path = Classes/Settings.m; sourceTree = "<group>"; };
 		8B2EF6111781296300A24AC4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
