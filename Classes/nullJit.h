@@ -11,7 +11,7 @@
 
 #include "CpuBase.h"
 
-template<unsigned int PROCNUM> u32 cpuExecute()
+/*template<unsigned int PROCNUM> u32 cpuExecute()
 {
 	return 0;
 }
@@ -19,6 +19,6 @@ template<unsigned int PROCNUM> u32 cpuExecute()
 template<unsigned int PROCNUM> u32 cpuExecuteCJIT()
 {
 	return 0;
-}
+}*/
 
 #endif // __NULLJIT_H__
