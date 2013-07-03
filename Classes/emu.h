@@ -41,6 +41,7 @@ void EMU_setFrameSkip(int skip);
 void EMU_runCore();
 int EMU_runOther();
 void EMU_copyMasterBuffer();
+void EMU_pause(bool pause);
 
 void EMU_touchScreenTouch(int x, int y);
 void EMU_touchScreenRelease();

@@ -274,6 +274,12 @@ void NDS_UnPause(bool showMsg)
 	}
 }
 
+void EMU_pause(bool pause)
+{
+    if (pause) NDS_Pause();
+    else NDS_UnPause();
+}
+
 void EMU_change3D(int type)
 {
 	NDS_3D_ChangeCore(cur3DCore = type);

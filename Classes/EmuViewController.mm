@@ -119,6 +119,32 @@ typedef enum : NSInteger {
     EMU_setFrameSkip([defaults integerForKey:@"frameSkip"]);
 }
 
+- (void)pauseEmulation
+{
+    if (!execute) return;
+    // save snapshot of screen
+    snapshotView = [[UIImageView alloc] initWithFrame:self.glkView.frame];
+    snapshotView.image = self.glkView.snapshot;
+    [self.view insertSubview:snapshotView aboveSubview:self.glkView];
+    
+    // pause emulation
+    EMU_pause(true);
+    [self shutdownGL];
+}
+
+- (void)resumeEmulation
+{
+    if (execute) return;
+    // remove snapshot
+    [snapshotView removeFromSuperview];
+    snapshotView = nil;
+    
+    // resume emulation
+    [self initGL];
+    EMU_pause(false);
+    [self performSelector:@selector(emuLoop) withObject:nil];
+}
+
 - (void)killCurrentGame
 {
     EMU_closeRom();
@@ -240,6 +266,8 @@ typedef enum : NSInteger {
     glDeleteTextures(1, &texHandle);
     self.context = nil;
     self.program = nil;
+    [self.glkView removeFromSuperview];
+    self.glkView = nil;
     [EAGLContext setCurrentContext:nil];
 }
 

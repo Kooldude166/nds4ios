@@ -18,8 +18,12 @@
     UIButton* buttonExit;
     UIButton *buttonLT;
     UIButton *buttonRT;
+    
+    UIImageView *snapshotView;
 }
 
 - (id)initWithRom:(NSString*)rom;
+- (void)pauseEmulation;
+- (void)resumeEmulation;
 
 @end
