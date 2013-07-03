@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RomsViewController.h"
+#import "RomsCollectionViewController.h"
 #import "SwitcherViewController.h"
 #import "EmuViewController.h"
 #import "MBPullDownController.h"
@@ -28,11 +29,11 @@
     [defaults registerDefaults:appDefaults];
     [defaults synchronize];
     
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"experimentalUI"])
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"experimentalUI"]/* && SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"6.0")*/)
     {
         SwitcherViewController *switcherViewController = [[SwitcherViewController alloc] init];
         
-        RomsViewController *romsViewController = [[RomsViewController alloc] init];
+        RomsCollectionViewController *romsViewController = [[RomsCollectionViewController alloc] init];
         
         MBPullDownController *pullDownController = [[MBPullDownController alloc] initWithFrontController:romsViewController backController:switcherViewController];
         
@@ -121,7 +122,7 @@
 {
     if (!emuVC || !_hasGame)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Game Running!" message:@"There is currently no game running! Please select a game from the ROM list to run it." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Game Running!" message:@"There is currently no game running! Please select a game from the ROM list to run it." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     } else {
         [self.window.rootViewController presentViewController:emuVC animated:YES completion:nil];   
@@ -137,6 +138,14 @@
 - (BOOL *)hideControls
 {
     return YES;
+}
+
+#pragma mark - UIAlertVIew delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"backToOne" object:nil];
+    }
 }
 
 @end

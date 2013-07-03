@@ -10,8 +10,10 @@
 #import "SwitcherViewController.h"
 #import "SettingsViewController.h"
 #import "RomsViewController.h"
+#import "RomsCollectionViewController.h"
 #import "EmuViewController.h"
 #import "MBPullDownController.h"
+#import "SVSegmentedControl.h"
 
 @interface SwitcherViewController ()
 
@@ -33,12 +35,41 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     open = false;
+    _segmentedControl = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"Resume", @"ROMs", @"Settings", nil]];
+    _segmentedControl.changeHandler = ^(NSUInteger newIndex) {
+        if (newIndex == 0)
+        {
+            [[AppDelegate sharedInstance] bringBackEmuVC];
+        } else if (newIndex == 1)
+        {
+            RomsCollectionViewController *romsVC = [[RomsCollectionViewController alloc] init];
+            [self.pullDownController setFrontController:romsVC];
+        } else if (newIndex == 2)
+        {
+            //SettingsViewController *settingsVC = [[SettingsViewController alloc] init];
+            //[self.pullDownController setFrontController:settingsVC];
+            settingsAlert = [[UIAlertView alloc] initWithTitle:@"You There!" message:@"Settings hasn't been enabled here yet! Switch back to default UI to change them." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [settingsAlert show];
+        }
+    };
+    
+    [_segmentedControl setSelectedSegmentIndex:1 animated:YES];
+    _segmentedControl.center = CGPointMake(self.view.frame.size.width / 2, 85);
+    [self.view addSubview:_segmentedControl];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setBackToOne) name:@"backToOne" object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     titleLabel.font = [UIFont systemFontOfSize:23];
     addButton.titleLabel.font = [UIFont systemFontOfSize:25];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+}
+
+- (void)setBackToOne
+{
+    [_segmentedControl setSelectedSegmentIndex:1 animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,35 +78,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)switcher:(id)sender
-{
-    if (switcher.selectedSegmentIndex == 0)
-    {
-        [[AppDelegate sharedInstance] bringBackEmuVC];
-        switcher.selectedSegmentIndex = 1;
-    } else if (switcher.selectedSegmentIndex == 1) {
-        RomsViewController *romsVC = [[RomsViewController alloc] init];
-        [self.pullDownController setFrontController:romsVC];
-    } else if (switcher.selectedSegmentIndex == 2) {
-        SettingsViewController *settingsVC = [[SettingsViewController alloc] init];
-        [self presentViewController:settingsVC animated:YES completion:^{
-            switcher.selectedSegmentIndex = 1;
-        }];
-    }
-}
-
 - (IBAction)add:(id)sender
 {
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showedROMAlert"]) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
     }
     else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Hey You! Yes, You!", @"")
+        addAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Hey You! Yes, You!", @"")
                                                         message:NSLocalizedString(@"This opens Safari. Simply download the ROM you want, and then 'Open In...' nds4ios. Everything else will be taken care of. You should own the actual cartridge of any ROM you download!", @"")
                                                        delegate:self
                                               cancelButtonTitle:NSLocalizedString(@"Ok", @"")
                                               otherButtonTitles:nil];
-        [alert show];
+        [addAlert show];
         
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"showedROMAlert"];
     }
@@ -84,8 +98,16 @@
 #pragma mark - UIAlertView delegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (buttonIndex == 0) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
+    if (alertView == settingsAlert)
+    {
+        if (buttonIndex == 0) {
+            [self setBackToOne];
+        }
+    } else if (alertView == addAlert)
+    {
+        if (buttonIndex == 0) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
+        }
     }
 }
 

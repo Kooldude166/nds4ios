@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SVSegmentedControl.h"
 
 @interface SwitcherViewController : UIViewController <UIAlertViewDelegate>
 {
@@ -15,6 +16,10 @@
     IBOutlet UILabel *titleLabel;
     IBOutlet UIButton *addButton;
     BOOL open;
+    
+    UIAlertView *settingsAlert, *addAlert;
 }
+
+@property (strong, nonatomic) SVSegmentedControl *segmentedControl;
 
 @end

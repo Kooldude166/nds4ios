@@ -138,6 +138,11 @@
 		CEB43C42173FCA3F00055F91 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB43C41173FCA3F00055F91 /* GLProgram.m */; };
 		CEB43C45173FD25A00055F91 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB43C43173FD25900055F91 /* GLKit.framework */; };
 		CEB43C46173FD25A00055F91 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB43C44173FD25900055F91 /* OpenGLES.framework */; };
+		D3630E3A17841F760068BEEA /* SVSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D3630E3717841F760068BEEA /* SVSegmentedControl.m */; };
+		D3630E3B17841F770068BEEA /* SVSegmentedThumb.m in Sources */ = {isa = PBXBuildFile; fileRef = D3630E3917841F760068BEEA /* SVSegmentedThumb.m */; };
+		D3630E4017841F8B0068BEEA /* RomsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3630E3C17841F8B0068BEEA /* RomsCollectionViewCell.xib */; };
+		D3630E4117841F8B0068BEEA /* RomsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3630E3E17841F8B0068BEEA /* RomsCollectionViewController.m */; };
+		D3630E4217841F8B0068BEEA /* RomsCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3630E3F17841F8B0068BEEA /* RomsCollectionViewController.xib */; };
 		D38CBCB01745CF9C0074C554 /* SwitcherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D38CBCAC1745CF9C0074C554 /* SwitcherViewController.m */; };
 		D58A9114178100B900B80182 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58A9113178100B900B80182 /* SettingsViewController.xib */; };
 		D59451AB17810CD000C83157 /* SwitcherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D59451AA17810CD000C83157 /* SwitcherViewController.xib */; };
@@ -377,6 +382,14 @@
 		CEB43C43173FD25900055F91 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		CEB43C44173FD25900055F91 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		CEC742F916776248006D193E /* nds4ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nds4ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3630E3617841F760068BEEA /* SVSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedControl.h; sourceTree = "<group>"; };
+		D3630E3717841F760068BEEA /* SVSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSegmentedControl.m; sourceTree = "<group>"; };
+		D3630E3817841F760068BEEA /* SVSegmentedThumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedThumb.h; sourceTree = "<group>"; };
+		D3630E3917841F760068BEEA /* SVSegmentedThumb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSegmentedThumb.m; sourceTree = "<group>"; };
+		D3630E3C17841F8B0068BEEA /* RomsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RomsCollectionViewCell.xib; sourceTree = "<group>"; };
+		D3630E3D17841F8B0068BEEA /* RomsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RomsCollectionViewController.h; sourceTree = "<group>"; };
+		D3630E3E17841F8B0068BEEA /* RomsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RomsCollectionViewController.m; sourceTree = "<group>"; };
+		D3630E3F17841F8B0068BEEA /* RomsCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RomsCollectionViewController.xib; sourceTree = "<group>"; };
 		D38CBCAB1745CF9C0074C554 /* SwitcherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = SwitcherViewController.h; path = Classes/SwitcherViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		D38CBCAC1745CF9C0074C554 /* SwitcherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = SwitcherViewController.m; path = Classes/SwitcherViewController.m; sourceTree = "<group>"; };
 		D58A9113178100B900B80182 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Classes/SettingsViewController.xib; sourceTree = "<group>"; };
@@ -625,6 +638,7 @@
 				D338B2FE17470D2800932C39 /* Settings */,
 				D338B2FD17470D1B00932C39 /* switcher */,
 				D55C4E821773ED65001E13F2 /* pulldown */,
+				D3630E3517841F760068BEEA /* SVSegmentedControl */,
 				6341965E177969E900103F34 /* Auto Update */,
 				63027F18177951B700CB0BB4 /* Unzip */,
 			);
@@ -822,6 +836,10 @@
 			children = (
 				CE2EE5FB173F66E300786468 /* RomsViewController.h */,
 				CE2EE5FC173F66E300786468 /* RomsViewController.m */,
+				D3630E3C17841F8B0068BEEA /* RomsCollectionViewCell.xib */,
+				D3630E3D17841F8B0068BEEA /* RomsCollectionViewController.h */,
+				D3630E3E17841F8B0068BEEA /* RomsCollectionViewController.m */,
+				D3630E3F17841F8B0068BEEA /* RomsCollectionViewController.xib */,
 			);
 			name = "Roms List";
 			sourceTree = "<group>";
@@ -833,6 +851,17 @@
 				CEB43C41173FCA3F00055F91 /* GLProgram.m */,
 			);
 			name = GL;
+			sourceTree = "<group>";
+		};
+		D3630E3517841F760068BEEA /* SVSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				D3630E3617841F760068BEEA /* SVSegmentedControl.h */,
+				D3630E3717841F760068BEEA /* SVSegmentedControl.m */,
+				D3630E3817841F760068BEEA /* SVSegmentedThumb.h */,
+				D3630E3917841F760068BEEA /* SVSegmentedThumb.m */,
+			);
+			path = SVSegmentedControl;
 			sourceTree = "<group>";
 		};
 		D55C4E821773ED65001E13F2 /* pulldown */ = {
@@ -910,6 +939,7 @@
 			files = (
 				8BCE528517822C6D0034278E /* ABXYPad@2x.png in Resources */,
 				8BCE529217822D900034278E /* Icon-Spotlight@2x.png in Resources */,
+				D3630E4217841F8B0068BEEA /* RomsCollectionViewController.xib in Resources */,
 				8BCE529117822D900034278E /* Icon-Spotlight.png in Resources */,
 				D59451AB17810CD000C83157 /* SwitcherViewController.xib in Resources */,
 				8BCE527F17822C530034278E /* SwitcherBackground@2x.png in Resources */,
@@ -923,6 +953,7 @@
 				8BCE527D17822C530034278E /* Gear@2x.png in Resources */,
 				8BCE529617822DA10034278E /* Default-568h@2x.png in Resources */,
 				8BCE528417822C6D0034278E /* ABXYPad.png in Resources */,
+				D3630E4017841F8B0068BEEA /* RomsCollectionViewCell.xib in Resources */,
 				D58A9114178100B900B80182 /* SettingsViewController.xib in Resources */,
 				8B2EF6121781296300A24AC4 /* Settings.bundle in Resources */,
 				8B2EF61417812DC000A24AC4 /* Storyboard.storyboard in Resources */,
@@ -1005,6 +1036,7 @@
 				BF0F06581783EB2F000447DA /* slot1_retail.cpp in Sources */,
 				BF0F06591783EB2F000447DA /* slot2_expMemory.cpp in Sources */,
 				BF0F065A1783EB2F000447DA /* slot2_gbagame.cpp in Sources */,
+				D3630E4117841F8B0068BEEA /* RomsCollectionViewController.m in Sources */,
 				BF0F065B1783EB2F000447DA /* slot2_guitarGrip.cpp in Sources */,
 				BF0F065C1783EB2F000447DA /* slot2_mpcf.cpp in Sources */,
 				BF0F065D1783EB2F000447DA /* slot2_none.cpp in Sources */,
@@ -1013,8 +1045,10 @@
 				BF0F06601783EB2F000447DA /* slot2_rumblepak.cpp in Sources */,
 				BF0F06771783EB54000447DA /* ConvertUTF.c in Sources */,
 				BF0F06781783EB54000447DA /* datetime.cpp in Sources */,
+				D3630E3A17841F760068BEEA /* SVSegmentedControl.m in Sources */,
 				BF0F06791783EB54000447DA /* dlditool.cpp in Sources */,
 				BF0F067A1783EB54000447DA /* emufat.cpp in Sources */,
+				D3630E3B17841F770068BEEA /* SVSegmentedThumb.m in Sources */,
 				BF0F067B1783EB54000447DA /* FileMap.cpp in Sources */,
 				BF0F067C1783EB54000447DA /* guid.cpp in Sources */,
 				BF0F067D1783EB54000447DA /* md5.cpp in Sources */,
@@ -1119,7 +1153,7 @@
 					"$(SRCROOT)/nds4droid-code/jni/desmume/src/android",
 				);
 				INFOPLIST_FILE = "nds4ios-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = (
 					"-DANDROID",
 					"-fexceptions",
@@ -1152,7 +1186,7 @@
 					"$(SRCROOT)/nds4droid-code/jni/desmume/src/android",
 				);
 				INFOPLIST_FILE = "nds4ios-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"-DANDROID",
