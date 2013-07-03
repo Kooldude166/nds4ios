@@ -18,7 +18,7 @@
 #include "saves.h"
 //#include "video.h"
 #include "throttle.h"
-#include "sndopensl.h"
+#include "sndcoreaudio.h"
 #include "cheatSystem.h"
 #include "slot1.h"
 
@@ -40,7 +40,7 @@ GPU3DInterface *core3DList[] = {
 
 SoundInterface_struct *SNDCoreList[] = {
 	&SNDDummy,
-	//&SNDOpenSL,
+	&SNDCoreAudio,
 	NULL
 };
 
@@ -159,7 +159,7 @@ void EMU_init()
 	NDS_3D_ChangeCore(cur3DCore); //OpenGL
 	
 	LOG("Init sound core\n");
-	SPU_ChangeSoundCore(SNDCORE_DEFAULT, DESMUME_SAMPLE_RATE*8/60);
+	SPU_ChangeSoundCore(SNDCORE_COREAUDIO, DESMUME_SAMPLE_RATE*8/60);
 	
 	static const char* nickname = "emozilla";
 	fw_config.nickname_len = strlen(nickname);
@@ -287,6 +287,7 @@ void EMU_runCore()
 	NDS_beginProcessingInput();
 	NDS_endProcessingInput();
 	NDS_exec<false>();
+    SPU_Emulate_user(true);
 }
 
 void nds4droid_user()

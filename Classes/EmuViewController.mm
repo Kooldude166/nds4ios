@@ -182,7 +182,6 @@ typedef enum : NSInteger {
     EMU_init();
     EMU_loadRom([self.rom UTF8String]);
     EMU_change3D(1);
-    EMU_changeSound(0);
     
     [self initGL];
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2864EBD41783B0D20065D89D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2864EBD31783B0D20065D89D /* AudioToolbox.framework */; };
+		2864EBD71783CBE10065D89D /* sndcoreaudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2864EBD61783CBE10065D89D /* sndcoreaudio.mm */; };
 		8B1EF0FD1781368A0046103D /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1EF0FC1781368A0046103D /* Settings.m */; };
 		8B2EF6121781296300A24AC4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8B2EF6111781296300A24AC4 /* Settings.bundle */; };
 		8B2EF61417812DC000A24AC4 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2EF61317812DC000A24AC4 /* Storyboard.storyboard */; };
@@ -144,6 +146,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2864EBD31783B0D20065D89D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2864EBD51783CBE10065D89D /* sndcoreaudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sndcoreaudio.h; path = Classes/sndcoreaudio.h; sourceTree = "<group>"; };
+		2864EBD61783CBE10065D89D /* sndcoreaudio.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = sndcoreaudio.mm; path = Classes/sndcoreaudio.mm; sourceTree = "<group>"; };
 		8B1EF0FB1781368A0046103D /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = Classes/Settings.h; sourceTree = "<group>"; };
 		8B1EF0FC1781368A0046103D /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Settings.m; path = Classes/Settings.m; sourceTree = "<group>"; };
 		8B2EF6111781296300A24AC4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -381,6 +386,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2864EBD41783B0D20065D89D /* AudioToolbox.framework in Frameworks */,
 				CEB43C45173FD25A00055F91 /* GLKit.framework in Frameworks */,
 				CEB43C46173FD25A00055F91 /* OpenGLES.framework in Frameworks */,
 				CE34A124173F74C000C51EA1 /* libz.dylib in Frameworks */,
@@ -456,6 +462,8 @@
 				CE2EE5F6173F66E300786468 /* AppDelegate.m */,
 				CE2EE5F7173F66E300786468 /* emu.cpp */,
 				CE2EE5F8173F66E300786468 /* emu.h */,
+				2864EBD51783CBE10065D89D /* sndcoreaudio.h */,
+				2864EBD61783CBE10065D89D /* sndcoreaudio.mm */,
 				D338B30117470D4000932C39 /* Roms List */,
 				D338B30217470D4A00932C39 /* GL */,
 				D338B30017470D3A00932C39 /* Emu */,
@@ -471,6 +479,7 @@
 		CE2EE60B173F6C0D00786468 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				2864EBD31783B0D20065D89D /* AudioToolbox.framework */,
 				CEB43C43173FD25900055F91 /* GLKit.framework */,
 				CEB43C44173FD25900055F91 /* OpenGLES.framework */,
 				CE34A123173F74C000C51EA1 /* libz.dylib */,
@@ -918,6 +927,7 @@
 				CE2EE61E173F6D6300786468 /* slot1_retail.cpp in Sources */,
 				CE2EE61F173F6D6300786468 /* slot1_retail_nand.cpp in Sources */,
 				CE2EE620173F6D6300786468 /* slot2_expMemory.cpp in Sources */,
+				2864EBD71783CBE10065D89D /* sndcoreaudio.mm in Sources */,
 				CE2EE621173F6D6300786468 /* slot2_gbagame.cpp in Sources */,
 				CE2EE622173F6D6300786468 /* slot2_guitarGrip.cpp in Sources */,
 				CE2EE623173F6D6300786468 /* slot2_mpcf.cpp in Sources */,
