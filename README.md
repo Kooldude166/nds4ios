@@ -79,7 +79,6 @@ To-do
 ###### We'll get to these, really!
 * JIT/Dynarec (very hard to achieve this using the clang compiler, in progress)
 * OpenGL ES rendering
-* Sound
 * Fix loading game saves on some games
 * Ability to set the folder the rom chooser reads from
 * Native iPad UI
