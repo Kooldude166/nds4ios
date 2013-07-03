@@ -9,21 +9,14 @@
 #import "AppDelegate.h"
 #import "ROMs.h"
 #import "EmuViewController.h"
-#import "DocWatchHelper.h"
 
 #define DOCUMENTS_PATH() [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 
 @interface ROMs ()
 
-@property (strong, nonatomic) DocWatchHelper *docWatchHelper;
-@property (strong, nonatomic) NSMutableDictionary *romDictionary;
-@property (strong, nonatomic) NSArray *romSections;
-@property (nonatomic) NSInteger currentSection_;
-
 @end
 
 @implementation ROMs
-@synthesize romDictionary, romSections, currentSection_;
 
 - (void)viewDidLoad
 {
@@ -43,8 +36,8 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
     
-    self.docWatchHelper = [DocWatchHelper watcherForPath:documentsDirectory];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadRomList) name:kDocumentChanged object:self.docWatchHelper];
+    docWatchHelper = [DocWatchHelper watcherForPath:documentsDirectory];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadRomList) name:kDocumentChanged object:docWatchHelper];
 }
 
 - (void)viewDidUnload
@@ -97,13 +90,13 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectoryPath = [paths objectAtIndex:0];
     
-    [self.romDictionary removeAllObjects];
-    if (!self.romDictionary)
-        self.romDictionary = [[NSMutableDictionary alloc] init];
+    [romDictionary removeAllObjects];
+    if (!romDictionary)
+        romDictionary = [[NSMutableDictionary alloc] init];
     NSFileManager *fileManager = [[NSFileManager alloc] init];
     NSArray *contents = [fileManager contentsOfDirectoryAtPath:documentsDirectoryPath error:nil];
     
-    self.romSections = [NSArray arrayWithArray:[@"A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|#" componentsSeparatedByString:@"|"]];
+    romSections = [NSArray arrayWithArray:[@"A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|#" componentsSeparatedByString:@"|"]];
     
     for (int i = 0; i < contents.count; i++)
     {
@@ -113,9 +106,9 @@
             NSString* characterIndex = [filename substringWithRange:NSMakeRange(0,1)];
             
             BOOL matched = NO;
-            for (int i = 0; i < self.romSections.count && !matched; i++)
+            for (int i = 0; i < romSections.count && !matched; i++)
             {
-                NSString *section = [self.romSections objectAtIndex:i];
+                NSString *section = [romSections objectAtIndex:i];
                 if ([section isEqualToString:characterIndex])
                     matched = YES;
             }
@@ -123,11 +116,11 @@
             if (!matched)
                 characterIndex = @"#";
             
-            NSMutableArray *sectionArray = [self.romDictionary objectForKey:characterIndex];
+            NSMutableArray *sectionArray = [romDictionary objectForKey:characterIndex];
             if (sectionArray == nil)
                 sectionArray = [[NSMutableArray alloc] init];
             [sectionArray addObject:filename];
-            [self.romDictionary setObject:sectionArray forKey:characterIndex];
+            [romDictionary setObject:sectionArray forKey:characterIndex];
         }
     }
     
@@ -137,39 +130,39 @@
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
     NSMutableArray *sectionIndexTitles = nil;
-    if(self.romSections.count)
+    if(romSections.count)
         sectionIndexTitles = [NSMutableArray arrayWithArray:[@"A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|#" componentsSeparatedByString:@"|"]];
     return  sectionIndexTitles;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    NSInteger numberOfSections = self.romSections.count;
+    NSInteger numberOfSections = romSections.count;
     return numberOfSections > 0 ? numberOfSections : 1;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     NSString *sectionTitle = nil;
-    if(self.romSections.count)
+    if(romSections.count)
     {
         NSInteger numberOfRows = [self tableView:tableView numberOfRowsInSection:section];
         if (numberOfRows > 0)
-            sectionTitle = [self.romSections objectAtIndex:section];
+            sectionTitle = [romSections objectAtIndex:section];
     }
     return sectionTitle;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
-    self.currentSection_ = index;
+    currentSection_ = index;
     return index;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSInteger numberOfRows = self.romDictionary.count;
-    if(self.romSections.count)
-        numberOfRows = [[self.romDictionary objectForKey:[self.romSections objectAtIndex:section]] count];
+    NSInteger numberOfRows = romDictionary.count;
+    if(romSections.count)
+        numberOfRows = [[romDictionary objectForKey:[romSections objectAtIndex:section]] count];
     return numberOfRows;
 }
 
@@ -184,7 +177,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     
     cell.accessoryType = UITableViewCellAccessoryNone;
-    NSString *filename = [[self.romDictionary objectForKey:[self.romSections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+    NSString *filename = [[romDictionary objectForKey:[romSections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
     filename = [filename stringByDeletingPathExtension];
     cell.accessibilityIdentifier = filename;
     cell.textLabel.text = filename;
@@ -194,13 +187,13 @@
 
 - (NSString *)romPathAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [[self.romDictionary objectForKey:[self.romSections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+    return [[romDictionary objectForKey:[romSections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Load selected ROM and save game name.
-    NSString* rom = [[self.romDictionary objectForKey:[self.romSections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+    NSString* rom = [[romDictionary objectForKey:[romSections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
     [[NSUserDefaults standardUserDefaults] setObject:[rom stringByDeletingPathExtension] forKey:@"backgroundTitle"];
     [[AppDelegate sharedInstance] initRomsVCWithRom:rom];
     [AppDelegate sharedInstance].hasGame = YES;

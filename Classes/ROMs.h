@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DocWatchHelper.h"
 
 @interface ROMs : UITableViewController
+{
+    DocWatchHelper *docWatchHelper;
+    NSMutableDictionary *romDictionary;
+    NSArray *romSections;
+    NSInteger currentSection_;
+}
 
 @end

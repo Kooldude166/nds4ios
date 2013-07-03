@@ -24,6 +24,11 @@
 		8B4EF08D177D75710013D660 /* MBPullDownController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF08C177D75710013D660 /* MBPullDownController.m */; };
 		8B4EF090177D75940013D660 /* UIScreen+Widescreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF08F177D75940013D660 /* UIScreen+Widescreen.m */; };
 		8B7CF32917845AE00006CEC1 /* ROMs.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7CF32817845AE00006CEC1 /* ROMs.m */; };
+		8B99E98217848FA70022BB85 /* RomsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B99E97E17848FA70022BB85 /* RomsCollectionViewCell.xib */; };
+		8B99E98317848FA70022BB85 /* RomsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B99E98017848FA70022BB85 /* RomsCollectionViewController.m */; };
+		8B99E98417848FA70022BB85 /* RomsCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B99E98117848FA70022BB85 /* RomsCollectionViewController.xib */; };
+		8B99E995178491430022BB85 /* SVSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B99E992178491430022BB85 /* SVSegmentedControl.m */; };
+		8B99E996178491430022BB85 /* SVSegmentedThumb.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B99E994178491430022BB85 /* SVSegmentedThumb.m */; };
 		8BCE527C17822C530034278E /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE527817822C530034278E /* Gear.png */; };
 		8BCE527D17822C530034278E /* Gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE527917822C530034278E /* Gear@2x.png */; };
 		8BCE527E17822C530034278E /* SwitcherBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE527A17822C530034278E /* SwitcherBackground.png */; };
@@ -138,11 +143,6 @@
 		CEB43C42173FCA3F00055F91 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB43C41173FCA3F00055F91 /* GLProgram.m */; };
 		CEB43C45173FD25A00055F91 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB43C43173FD25900055F91 /* GLKit.framework */; };
 		CEB43C46173FD25A00055F91 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB43C44173FD25900055F91 /* OpenGLES.framework */; };
-		D3630E3A17841F760068BEEA /* SVSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D3630E3717841F760068BEEA /* SVSegmentedControl.m */; };
-		D3630E3B17841F770068BEEA /* SVSegmentedThumb.m in Sources */ = {isa = PBXBuildFile; fileRef = D3630E3917841F760068BEEA /* SVSegmentedThumb.m */; };
-		D3630E4017841F8B0068BEEA /* RomsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3630E3C17841F8B0068BEEA /* RomsCollectionViewCell.xib */; };
-		D3630E4117841F8B0068BEEA /* RomsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3630E3E17841F8B0068BEEA /* RomsCollectionViewController.m */; };
-		D3630E4217841F8B0068BEEA /* RomsCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3630E3F17841F8B0068BEEA /* RomsCollectionViewController.xib */; };
 		D38CBCB01745CF9C0074C554 /* SwitcherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D38CBCAC1745CF9C0074C554 /* SwitcherViewController.m */; };
 		D58A9114178100B900B80182 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58A9113178100B900B80182 /* SettingsViewController.xib */; };
 		D59451AB17810CD000C83157 /* SwitcherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D59451AA17810CD000C83157 /* SwitcherViewController.xib */; };
@@ -180,6 +180,14 @@
 		8B4EF08F177D75940013D660 /* UIScreen+Widescreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScreen+Widescreen.m"; path = "Classes/UIScreen+Widescreen.m"; sourceTree = "<group>"; };
 		8B7CF32717845AE00006CEC1 /* ROMs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ROMs.h; path = Classes/ROMs.h; sourceTree = "<group>"; };
 		8B7CF32817845AE00006CEC1 /* ROMs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ROMs.m; path = Classes/ROMs.m; sourceTree = "<group>"; };
+		8B99E97E17848FA70022BB85 /* RomsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RomsCollectionViewCell.xib; path = Classes/RomsCollectionViewCell.xib; sourceTree = "<group>"; };
+		8B99E97F17848FA70022BB85 /* RomsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RomsCollectionViewController.h; path = Classes/RomsCollectionViewController.h; sourceTree = "<group>"; };
+		8B99E98017848FA70022BB85 /* RomsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RomsCollectionViewController.m; path = Classes/RomsCollectionViewController.m; sourceTree = "<group>"; };
+		8B99E98117848FA70022BB85 /* RomsCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RomsCollectionViewController.xib; path = Classes/RomsCollectionViewController.xib; sourceTree = "<group>"; };
+		8B99E991178491430022BB85 /* SVSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVSegmentedControl.h; path = Classes/SVSegmentedControl/SVSegmentedControl.h; sourceTree = "<group>"; };
+		8B99E992178491430022BB85 /* SVSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVSegmentedControl.m; path = Classes/SVSegmentedControl/SVSegmentedControl.m; sourceTree = "<group>"; };
+		8B99E993178491430022BB85 /* SVSegmentedThumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVSegmentedThumb.h; path = Classes/SVSegmentedControl/SVSegmentedThumb.h; sourceTree = "<group>"; };
+		8B99E994178491430022BB85 /* SVSegmentedThumb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVSegmentedThumb.m; path = Classes/SVSegmentedControl/SVSegmentedThumb.m; sourceTree = "<group>"; };
 		8BCE527817822C530034278E /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gear.png; path = images/Gear.png; sourceTree = "<group>"; };
 		8BCE527917822C530034278E /* Gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Gear@2x.png"; path = "images/Gear@2x.png"; sourceTree = "<group>"; };
 		8BCE527A17822C530034278E /* SwitcherBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SwitcherBackground.png; path = images/SwitcherBackground.png; sourceTree = "<group>"; };
@@ -382,14 +390,6 @@
 		CEB43C43173FD25900055F91 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		CEB43C44173FD25900055F91 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		CEC742F916776248006D193E /* nds4ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nds4ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3630E3617841F760068BEEA /* SVSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedControl.h; sourceTree = "<group>"; };
-		D3630E3717841F760068BEEA /* SVSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSegmentedControl.m; sourceTree = "<group>"; };
-		D3630E3817841F760068BEEA /* SVSegmentedThumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedThumb.h; sourceTree = "<group>"; };
-		D3630E3917841F760068BEEA /* SVSegmentedThumb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSegmentedThumb.m; sourceTree = "<group>"; };
-		D3630E3C17841F8B0068BEEA /* RomsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RomsCollectionViewCell.xib; sourceTree = "<group>"; };
-		D3630E3D17841F8B0068BEEA /* RomsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RomsCollectionViewController.h; sourceTree = "<group>"; };
-		D3630E3E17841F8B0068BEEA /* RomsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RomsCollectionViewController.m; sourceTree = "<group>"; };
-		D3630E3F17841F8B0068BEEA /* RomsCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RomsCollectionViewController.xib; sourceTree = "<group>"; };
 		D38CBCAB1745CF9C0074C554 /* SwitcherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = SwitcherViewController.h; path = Classes/SwitcherViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		D38CBCAC1745CF9C0074C554 /* SwitcherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = SwitcherViewController.m; path = Classes/SwitcherViewController.m; sourceTree = "<group>"; };
 		D58A9113178100B900B80182 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Classes/SettingsViewController.xib; sourceTree = "<group>"; };
@@ -471,6 +471,17 @@
 				8B4EF082177D751C0013D660 /* zip.h */,
 			);
 			name = minizip;
+			sourceTree = "<group>";
+		};
+		8B99E997178491600022BB85 /* SVSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				8B99E991178491430022BB85 /* SVSegmentedControl.h */,
+				8B99E992178491430022BB85 /* SVSegmentedControl.m */,
+				8B99E993178491430022BB85 /* SVSegmentedThumb.h */,
+				8B99E994178491430022BB85 /* SVSegmentedThumb.m */,
+			);
+			name = SVSegmentedControl;
 			sourceTree = "<group>";
 		};
 		BF0F06401783EAF4000447DA /* JIT */ = {
@@ -638,7 +649,7 @@
 				D338B2FE17470D2800932C39 /* Settings */,
 				D338B2FD17470D1B00932C39 /* switcher */,
 				D55C4E821773ED65001E13F2 /* pulldown */,
-				D3630E3517841F760068BEEA /* SVSegmentedControl */,
+				8B99E997178491600022BB85 /* SVSegmentedControl */,
 				6341965E177969E900103F34 /* Auto Update */,
 				63027F18177951B700CB0BB4 /* Unzip */,
 			);
@@ -836,10 +847,10 @@
 			children = (
 				8B7CF32717845AE00006CEC1 /* ROMs.h */,
 				8B7CF32817845AE00006CEC1 /* ROMs.m */,
-				D3630E3C17841F8B0068BEEA /* RomsCollectionViewCell.xib */,
-				D3630E3D17841F8B0068BEEA /* RomsCollectionViewController.h */,
-				D3630E3E17841F8B0068BEEA /* RomsCollectionViewController.m */,
-				D3630E3F17841F8B0068BEEA /* RomsCollectionViewController.xib */,
+				8B99E97E17848FA70022BB85 /* RomsCollectionViewCell.xib */,
+				8B99E97F17848FA70022BB85 /* RomsCollectionViewController.h */,
+				8B99E98017848FA70022BB85 /* RomsCollectionViewController.m */,
+				8B99E98117848FA70022BB85 /* RomsCollectionViewController.xib */,
 			);
 			name = "Roms List";
 			sourceTree = "<group>";
@@ -851,17 +862,6 @@
 				CEB43C41173FCA3F00055F91 /* GLProgram.m */,
 			);
 			name = GL;
-			sourceTree = "<group>";
-		};
-		D3630E3517841F760068BEEA /* SVSegmentedControl */ = {
-			isa = PBXGroup;
-			children = (
-				D3630E3617841F760068BEEA /* SVSegmentedControl.h */,
-				D3630E3717841F760068BEEA /* SVSegmentedControl.m */,
-				D3630E3817841F760068BEEA /* SVSegmentedThumb.h */,
-				D3630E3917841F760068BEEA /* SVSegmentedThumb.m */,
-			);
-			path = SVSegmentedControl;
 			sourceTree = "<group>";
 		};
 		D55C4E821773ED65001E13F2 /* pulldown */ = {
@@ -939,7 +939,6 @@
 			files = (
 				8BCE528517822C6D0034278E /* ABXYPad@2x.png in Resources */,
 				8BCE529217822D900034278E /* Icon-Spotlight@2x.png in Resources */,
-				D3630E4217841F8B0068BEEA /* RomsCollectionViewController.xib in Resources */,
 				8BCE529117822D900034278E /* Icon-Spotlight.png in Resources */,
 				D59451AB17810CD000C83157 /* SwitcherViewController.xib in Resources */,
 				8BCE527F17822C530034278E /* SwitcherBackground@2x.png in Resources */,
@@ -953,12 +952,13 @@
 				8BCE527D17822C530034278E /* Gear@2x.png in Resources */,
 				8BCE529617822DA10034278E /* Default-568h@2x.png in Resources */,
 				8BCE528417822C6D0034278E /* ABXYPad.png in Resources */,
-				D3630E4017841F8B0068BEEA /* RomsCollectionViewCell.xib in Resources */,
 				D58A9114178100B900B80182 /* SettingsViewController.xib in Resources */,
 				8B2EF6121781296300A24AC4 /* Settings.bundle in Resources */,
 				8B2EF61417812DC000A24AC4 /* Storyboard.storyboard in Resources */,
 				8BCE529017822D900034278E /* Icon-Multitasker@2x.png in Resources */,
 				8BCE529A17822E0D0034278E /* nds4ios@2x.png in Resources */,
+				8B99E98217848FA70022BB85 /* RomsCollectionViewCell.xib in Resources */,
+				8B99E98417848FA70022BB85 /* RomsCollectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1035,7 +1035,6 @@
 				BF0F06581783EB2F000447DA /* slot1_retail.cpp in Sources */,
 				BF0F06591783EB2F000447DA /* slot2_expMemory.cpp in Sources */,
 				BF0F065A1783EB2F000447DA /* slot2_gbagame.cpp in Sources */,
-				D3630E4117841F8B0068BEEA /* RomsCollectionViewController.m in Sources */,
 				BF0F065B1783EB2F000447DA /* slot2_guitarGrip.cpp in Sources */,
 				BF0F065C1783EB2F000447DA /* slot2_mpcf.cpp in Sources */,
 				BF0F065D1783EB2F000447DA /* slot2_none.cpp in Sources */,
@@ -1044,10 +1043,8 @@
 				BF0F06601783EB2F000447DA /* slot2_rumblepak.cpp in Sources */,
 				BF0F06771783EB54000447DA /* ConvertUTF.c in Sources */,
 				BF0F06781783EB54000447DA /* datetime.cpp in Sources */,
-				D3630E3A17841F760068BEEA /* SVSegmentedControl.m in Sources */,
 				BF0F06791783EB54000447DA /* dlditool.cpp in Sources */,
 				BF0F067A1783EB54000447DA /* emufat.cpp in Sources */,
-				D3630E3B17841F770068BEEA /* SVSegmentedThumb.m in Sources */,
 				BF0F067B1783EB54000447DA /* FileMap.cpp in Sources */,
 				BF0F067C1783EB54000447DA /* guid.cpp in Sources */,
 				BF0F067D1783EB54000447DA /* md5.cpp in Sources */,
@@ -1078,6 +1075,9 @@
 				28AF917517840B1C0094513F /* math_sqrtf.c in Sources */,
 				28AF917717840B330094513F /* math_mat4.c in Sources */,
 				8B7CF32917845AE00006CEC1 /* ROMs.m in Sources */,
+				8B99E98317848FA70022BB85 /* RomsCollectionViewController.m in Sources */,
+				8B99E995178491430022BB85 /* SVSegmentedControl.m in Sources */,
+				8B99E996178491430022BB85 /* SVSegmentedThumb.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
