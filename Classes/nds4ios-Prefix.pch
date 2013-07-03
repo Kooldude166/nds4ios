@@ -27,6 +27,7 @@
     #define _MAIN_H
 #define HAVE_JIT
 #define HAVE_CJIT
+#define HAVE_NEON
 #define TARGET_DEFS_ONLY
 #define USE_EXOPHASEJIT
 

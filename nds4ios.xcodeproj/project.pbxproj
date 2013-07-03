@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2864EBD41783B0D20065D89D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2864EBD31783B0D20065D89D /* AudioToolbox.framework */; };
 		2864EBD71783CBE10065D89D /* sndcoreaudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2864EBD61783CBE10065D89D /* sndcoreaudio.mm */; };
+		28AF917517840B1C0094513F /* math_sqrtf.c in Sources */ = {isa = PBXBuildFile; fileRef = 28AF917417840B1C0094513F /* math_sqrtf.c */; };
+		28AF917717840B330094513F /* math_mat4.c in Sources */ = {isa = PBXBuildFile; fileRef = 28AF917617840B330094513F /* math_mat4.c */; };
 		8B1EF0FD1781368A0046103D /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1EF0FC1781368A0046103D /* Settings.m */; };
 		8B2EF6121781296300A24AC4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8B2EF6111781296300A24AC4 /* Settings.bundle */; };
 		8B2EF61417812DC000A24AC4 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2EF61317812DC000A24AC4 /* Storyboard.storyboard */; };
@@ -132,7 +134,6 @@
 		CE2EE608173F6BEA00786468 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2EE607173F6BEA00786468 /* QuartzCore.framework */; };
 		CE2EE60A173F6BFF00786468 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2EE609173F6BFF00786468 /* CoreGraphics.framework */; };
 		CE34A124173F74C000C51EA1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE34A123173F74C000C51EA1 /* libz.dylib */; };
-		CE34A131173F798200C51EA1 /* matrix_impl.c in Sources */ = {isa = PBXBuildFile; fileRef = CE34A12F173F798200C51EA1 /* matrix_impl.c */; settings = {COMPILER_FLAGS = "-marm"; }; };
 		CE34A134173F79F200C51EA1 /* throttle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE34A132173F79F200C51EA1 /* throttle.cpp */; };
 		CEB43C42173FCA3F00055F91 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB43C41173FCA3F00055F91 /* GLProgram.m */; };
 		CEB43C45173FD25A00055F91 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB43C43173FD25900055F91 /* GLKit.framework */; };
@@ -146,6 +147,9 @@
 		2864EBD31783B0D20065D89D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2864EBD51783CBE10065D89D /* sndcoreaudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sndcoreaudio.h; path = Classes/sndcoreaudio.h; sourceTree = "<group>"; };
 		2864EBD61783CBE10065D89D /* sndcoreaudio.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = sndcoreaudio.mm; path = Classes/sndcoreaudio.mm; sourceTree = "<group>"; };
+		28AF914017840A140094513F /* math_neon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = math_neon.h; sourceTree = "<group>"; };
+		28AF917417840B1C0094513F /* math_sqrtf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = math_sqrtf.c; sourceTree = "<group>"; };
+		28AF917617840B330094513F /* math_mat4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = math_mat4.c; sourceTree = "<group>"; };
 		8B1EF0FB1781368A0046103D /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = Classes/Settings.h; sourceTree = "<group>"; };
 		8B1EF0FC1781368A0046103D /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Settings.m; path = Classes/Settings.m; sourceTree = "<group>"; };
 		8B2EF6111781296300A24AC4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -366,8 +370,6 @@
 		CE2EE609173F6BFF00786468 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CE34A123173F74C000C51EA1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		CE34A128173F769200C51EA1 /* nullJit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = nullJit.h; path = Classes/nullJit.h; sourceTree = SOURCE_ROOT; };
-		CE34A12F173F798200C51EA1 /* matrix_impl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = matrix_impl.c; path = Classes/matrix_impl.c; sourceTree = SOURCE_ROOT; };
-		CE34A130173F798200C51EA1 /* matrix_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = matrix_impl.h; path = Classes/matrix_impl.h; sourceTree = SOURCE_ROOT; };
 		CE34A132173F79F200C51EA1 /* throttle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = throttle.cpp; path = Classes/throttle.cpp; sourceTree = SOURCE_ROOT; };
 		CE34A133173F79F200C51EA1 /* throttle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = throttle.h; path = Classes/throttle.h; sourceTree = SOURCE_ROOT; };
 		CEB43C40173FCA3F00055F91 /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLProgram.h; path = Classes/GLProgram.h; sourceTree = "<group>"; };
@@ -400,6 +402,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28AF912817840A140094513F /* math-neon */ = {
+			isa = PBXGroup;
+			children = (
+				28AF917417840B1C0094513F /* math_sqrtf.c */,
+				28AF917617840B330094513F /* math_mat4.c */,
+				28AF914017840A140094513F /* math_neon.h */,
+			);
+			name = "math-neon";
+			path = "nds4droid-code/jni/desmume/src/android/math-neon";
+			sourceTree = "<group>";
+		};
 		63027F18177951B700CB0BB4 /* Unzip */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,8 +612,6 @@
 				8B4EF08F177D75940013D660 /* UIScreen+Widescreen.m */,
 				CE34A132173F79F200C51EA1 /* throttle.cpp */,
 				CE34A133173F79F200C51EA1 /* throttle.h */,
-				CE34A12F173F798200C51EA1 /* matrix_impl.c */,
-				CE34A130173F798200C51EA1 /* matrix_impl.h */,
 				CE34A128173F769200C51EA1 /* nullJit.h */,
 				CE2EE5F5173F66E300786468 /* AppDelegate.h */,
 				CE2EE5F6173F66E300786468 /* AppDelegate.m */,
@@ -638,6 +649,7 @@
 		CE2EE60C173F6C1E00786468 /* nds4droid-code */ = {
 			isa = PBXGroup;
 			children = (
+				28AF912817840A140094513F /* math-neon */,
 				BF0F06401783EAF4000447DA /* JIT */,
 				BF0F05C81783EAC7000447DA /* addons.cpp */,
 				BF0F05C91783EAC7000447DA /* addons.h */,
@@ -943,7 +955,6 @@
 				8B4EF083177D751C0013D660 /* ioapi.c in Sources */,
 				8B4EF084177D751C0013D660 /* mztools.c in Sources */,
 				8B4EF08D177D75710013D660 /* MBPullDownController.m in Sources */,
-				CE34A131173F798200C51EA1 /* matrix_impl.c in Sources */,
 				CE34A134173F79F200C51EA1 /* throttle.cpp in Sources */,
 				CEB43C42173FCA3F00055F91 /* GLProgram.m in Sources */,
 				D38CBCB01745CF9C0074C554 /* SwitcherViewController.m in Sources */,
@@ -1031,6 +1042,8 @@
 				BF0F06B71783EB9E000447DA /* tinyxmlparser.cpp in Sources */,
 				BF0F06BE1783EC58000447DA /* metaspu.cpp in Sources */,
 				BF0F06BF1783EC58000447DA /* SndOut.cpp in Sources */,
+				28AF917517840B1C0094513F /* math_sqrtf.c in Sources */,
+				28AF917717840B330094513F /* math_mat4.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1150,7 +1163,6 @@
 					"-fvariable-expansion-in-unroller",
 					"-DCOMPRESS_MT",
 					"-DIOS",
-					"-DHAVE_NEON=1",
 					"-DHAVE_LIBZ",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
