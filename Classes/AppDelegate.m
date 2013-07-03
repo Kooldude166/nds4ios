@@ -7,12 +7,14 @@
 //
 
 #import "AppDelegate.h"
-#import "RomsViewController.h"
+#import "ROMs.h"
 #import "RomsCollectionViewController.h"
 #import "SwitcherViewController.h"
 #import "EmuViewController.h"
 #import "MBPullDownController.h"
 #import "ZipArchive.h"
+
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
 
 @implementation AppDelegate
 
@@ -29,7 +31,7 @@
     [defaults registerDefaults:appDefaults];
     [defaults synchronize];
     
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"experimentalUI"]/* && SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"6.0")*/)
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"experimentalUI"] && SYSTEM_VERSION_GREATER_THAN(@"5.0"))
     {
         SwitcherViewController *switcherViewController = [[SwitcherViewController alloc] init];
         

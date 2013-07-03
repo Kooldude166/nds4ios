@@ -1,19 +1,19 @@
 //
-//  RomsViewController.m
+//  ROMs.m
 //  nds4ios
 //
-//  Created by rock88 on 20/12/2012.
-//  Copyright (c) 2012 Homebrew. All rights reserved.
+//  Created by David Chavez on 7/3/13.
+//  Copyright (c) 2013 Homebrew. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "RomsViewController.h"
+#import "ROMs.h"
 #import "EmuViewController.h"
 #import "DocWatchHelper.h"
 
 #define DOCUMENTS_PATH() [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 
-@interface RomsViewController ()
+@interface ROMs ()
 
 @property (strong, nonatomic) DocWatchHelper *docWatchHelper;
 @property (strong, nonatomic) NSMutableDictionary *romDictionary;
@@ -22,22 +22,8 @@
 
 @end
 
-@implementation RomsViewController
+@implementation ROMs
 @synthesize romDictionary, romSections, currentSection_;
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)dealloc
-{
-    [self viewDidUnload];
-}
 
 - (void)viewDidLoad
 {
@@ -49,9 +35,8 @@
     NSString* batteryDir = [NSString stringWithFormat:@"%@/Battery",DOCUMENTS_PATH()];
     NSFileManager* fm = [NSFileManager defaultManager];
     
-    if (![fm fileExistsAtPath:batteryDir isDirectory:&isDir]) {
+    if (![fm fileExistsAtPath:batteryDir isDirectory:&isDir])
         [fm createDirectoryAtPath:batteryDir withIntermediateDirectories:NO attributes:nil error:nil];
-    }
     
     [self reloadRomList];
     
@@ -60,36 +45,6 @@
     
     self.docWatchHelper = [DocWatchHelper watcherForPath:documentsDirectory];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadRomList) name:kDocumentChanged object:self.docWatchHelper];
-}
-
-- (void)resumeGame
-{
-    [[AppDelegate sharedInstance] bringBackEmuVC];
-}
-
-- (void)getMoreROMs
-{
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showedROMAlert"]) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
-    }
-    else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Hey You! Yes, You!", @"")
-                                                        message:NSLocalizedString(@"This opens Safari. Simply download the ROM you want, and then 'Open In...' nds4ios. Everything else will be taken care of. You should own the actual cartridge of any ROM you download!", @"")
-                                                       delegate:self
-                                              cancelButtonTitle:NSLocalizedString(@"Ok", @"")
-                                              otherButtonTitles:nil];
-        [alert show];
-        
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"showedROMAlert"];
-    }
-}
-
-#pragma mark - UIAlertView delegate
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex == 0) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
-    }
 }
 
 - (void)viewDidUnload
@@ -134,13 +89,7 @@
             self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(getMoreROMs)];
         }
     }
-
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    //[self.navigationController setNavigationBarHidden:YES animated:animated];
+    
 }
 
 - (void)reloadRomList
@@ -149,35 +98,34 @@
 	NSString *documentsDirectoryPath = [paths objectAtIndex:0];
     
     [self.romDictionary removeAllObjects];
-    if (!self.romDictionary) {
+    if (!self.romDictionary)
         self.romDictionary = [[NSMutableDictionary alloc] init];
-    }
     NSFileManager *fileManager = [[NSFileManager alloc] init];
     NSArray *contents = [fileManager contentsOfDirectoryAtPath:documentsDirectoryPath error:nil];
     
     self.romSections = [NSArray arrayWithArray:[@"A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|#" componentsSeparatedByString:@"|"]];
     
-    for (int i = 0; i < contents.count; i++) {
+    for (int i = 0; i < contents.count; i++)
+    {
         NSString *filename = [contents objectAtIndex:i];
-        if ([[filename lowercaseString] hasSuffix:@".nds"]) {
+        if ([[filename lowercaseString] hasSuffix:@".nds"])
+        {
             NSString* characterIndex = [filename substringWithRange:NSMakeRange(0,1)];
             
             BOOL matched = NO;
-            for (int i = 0; i < self.romSections.count && !matched; i++) {
+            for (int i = 0; i < self.romSections.count && !matched; i++)
+            {
                 NSString *section = [self.romSections objectAtIndex:i];
-                if ([section isEqualToString:characterIndex]) {
+                if ([section isEqualToString:characterIndex])
                     matched = YES;
-                }
             }
             
-            if (!matched) {
+            if (!matched)
                 characterIndex = @"#";
-            }
             
             NSMutableArray *sectionArray = [self.romDictionary objectForKey:characterIndex];
-            if (sectionArray == nil) {
+            if (sectionArray == nil)
                 sectionArray = [[NSMutableArray alloc] init];
-            }
             [sectionArray addObject:filename];
             [self.romDictionary setObject:sectionArray forKey:characterIndex];
         }
@@ -186,26 +134,28 @@
     [self.tableView reloadData];
 }
 
-- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
     NSMutableArray *sectionIndexTitles = nil;
-    if(self.romSections.count) {
+    if(self.romSections.count)
         sectionIndexTitles = [NSMutableArray arrayWithArray:[@"A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|#" componentsSeparatedByString:@"|"]];
-    }
     return  sectionIndexTitles;
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
     NSInteger numberOfSections = self.romSections.count;
     return numberOfSections > 0 ? numberOfSections : 1;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
     NSString *sectionTitle = nil;
-    if(self.romSections.count) {
+    if(self.romSections.count)
+    {
         NSInteger numberOfRows = [self tableView:tableView numberOfRowsInSection:section];
-        if (numberOfRows > 0) {
+        if (numberOfRows > 0)
             sectionTitle = [self.romSections objectAtIndex:section];
-        }
     }
     return sectionTitle;
 }
@@ -215,11 +165,11 @@
     return index;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     NSInteger numberOfRows = self.romDictionary.count;
-    if(self.romSections.count) {
+    if(self.romSections.count)
         numberOfRows = [[self.romDictionary objectForKey:[self.romSections objectAtIndex:section]] count];
-    }
     return numberOfRows;
 }
 
@@ -230,9 +180,8 @@
     UITableViewCell *cell = nil;
     
     cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
+    if (cell == nil)
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
     
     cell.accessoryType = UITableViewCellAccessoryNone;
     NSString *filename = [[self.romDictionary objectForKey:[self.romSections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
@@ -243,7 +192,8 @@
     return cell;
 }
 
-- (NSString *)romPathAtIndexPath:(NSIndexPath *)indexPath {
+- (NSString *)romPathAtIndexPath:(NSIndexPath *)indexPath
+{
     return [[self.romDictionary objectForKey:[self.romSections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
 }
 
@@ -254,6 +204,38 @@
     [[NSUserDefaults standardUserDefaults] setObject:[rom stringByDeletingPathExtension] forKey:@"backgroundTitle"];
     [[AppDelegate sharedInstance] initRomsVCWithRom:rom];
     [AppDelegate sharedInstance].hasGame = YES;
+}
+
+- (void)resumeGame
+{
+    [[AppDelegate sharedInstance] bringBackEmuVC];
+}
+
+#pragma mark - Non-UITableView functions
+
+- (void)getMoreROMs
+{
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showedROMAlert"]) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
+    }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Hey You! Yes, You!", @"")
+                                                        message:NSLocalizedString(@"This opens Safari. Simply download the ROM you want, and then 'Open In...' nds4ios. Everything else will be taken care of. You should own the actual cartridge of any ROM you download!", @"")
+                                                       delegate:self
+                                              cancelButtonTitle:NSLocalizedString(@"Ok", @"")
+                                              otherButtonTitles:nil];
+        [alert show];
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"showedROMAlert"];
+    }
+}
+
+#pragma mark - UIAlertView delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
+    }
 }
 
 @end

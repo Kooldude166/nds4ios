@@ -23,6 +23,7 @@
 		8B4EF08A177D75520013D660 /* ButtonPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF089177D75520013D660 /* ButtonPad.m */; };
 		8B4EF08D177D75710013D660 /* MBPullDownController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF08C177D75710013D660 /* MBPullDownController.m */; };
 		8B4EF090177D75940013D660 /* UIScreen+Widescreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF08F177D75940013D660 /* UIScreen+Widescreen.m */; };
+		8B7CF32917845AE00006CEC1 /* ROMs.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7CF32817845AE00006CEC1 /* ROMs.m */; };
 		8BCE527C17822C530034278E /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE527817822C530034278E /* Gear.png */; };
 		8BCE527D17822C530034278E /* Gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE527917822C530034278E /* Gear@2x.png */; };
 		8BCE527E17822C530034278E /* SwitcherBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE527A17822C530034278E /* SwitcherBackground.png */; };
@@ -128,7 +129,6 @@
 		CE2EE5FD173F66E300786468 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE5F6173F66E300786468 /* AppDelegate.m */; };
 		CE2EE5FE173F66E300786468 /* emu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE5F7173F66E300786468 /* emu.cpp */; };
 		CE2EE5FF173F66E300786468 /* EmuViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE5FA173F66E300786468 /* EmuViewController.mm */; };
-		CE2EE600173F66E300786468 /* RomsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE5FC173F66E300786468 /* RomsViewController.m */; };
 		CE2EE604173F6BBA00786468 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2EE603173F6BBA00786468 /* Foundation.framework */; };
 		CE2EE606173F6BC100786468 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2EE605173F6BC100786468 /* UIKit.framework */; };
 		CE2EE608173F6BEA00786468 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2EE607173F6BEA00786468 /* QuartzCore.framework */; };
@@ -178,6 +178,8 @@
 		8B4EF08C177D75710013D660 /* MBPullDownController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBPullDownController.m; path = Classes/MBPullDownController.m; sourceTree = "<group>"; };
 		8B4EF08E177D75940013D660 /* UIScreen+Widescreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScreen+Widescreen.h"; path = "Classes/UIScreen+Widescreen.h"; sourceTree = "<group>"; };
 		8B4EF08F177D75940013D660 /* UIScreen+Widescreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScreen+Widescreen.m"; path = "Classes/UIScreen+Widescreen.m"; sourceTree = "<group>"; };
+		8B7CF32717845AE00006CEC1 /* ROMs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ROMs.h; path = Classes/ROMs.h; sourceTree = "<group>"; };
+		8B7CF32817845AE00006CEC1 /* ROMs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ROMs.m; path = Classes/ROMs.m; sourceTree = "<group>"; };
 		8BCE527817822C530034278E /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gear.png; path = images/Gear.png; sourceTree = "<group>"; };
 		8BCE527917822C530034278E /* Gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Gear@2x.png"; path = "images/Gear@2x.png"; sourceTree = "<group>"; };
 		8BCE527A17822C530034278E /* SwitcherBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SwitcherBackground.png; path = images/SwitcherBackground.png; sourceTree = "<group>"; };
@@ -367,8 +369,6 @@
 		CE2EE5F8173F66E300786468 /* emu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = emu.h; path = Classes/emu.h; sourceTree = SOURCE_ROOT; };
 		CE2EE5F9173F66E300786468 /* EmuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = EmuViewController.h; path = Classes/EmuViewController.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		CE2EE5FA173F66E300786468 /* EmuViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; name = EmuViewController.mm; path = Classes/EmuViewController.mm; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		CE2EE5FB173F66E300786468 /* RomsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RomsViewController.h; path = Classes/RomsViewController.h; sourceTree = SOURCE_ROOT; };
-		CE2EE5FC173F66E300786468 /* RomsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RomsViewController.m; path = Classes/RomsViewController.m; sourceTree = SOURCE_ROOT; };
 		CE2EE603173F6BBA00786468 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE2EE605173F6BC100786468 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CE2EE607173F6BEA00786468 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -834,8 +834,8 @@
 		D338B30117470D4000932C39 /* Roms List */ = {
 			isa = PBXGroup;
 			children = (
-				CE2EE5FB173F66E300786468 /* RomsViewController.h */,
-				CE2EE5FC173F66E300786468 /* RomsViewController.m */,
+				8B7CF32717845AE00006CEC1 /* ROMs.h */,
+				8B7CF32817845AE00006CEC1 /* ROMs.m */,
 				D3630E3C17841F8B0068BEEA /* RomsCollectionViewCell.xib */,
 				D3630E3D17841F8B0068BEEA /* RomsCollectionViewController.h */,
 				D3630E3E17841F8B0068BEEA /* RomsCollectionViewController.m */,
@@ -973,7 +973,6 @@
 				CE2EE5FD173F66E300786468 /* AppDelegate.m in Sources */,
 				CE2EE5FE173F66E300786468 /* emu.cpp in Sources */,
 				CE2EE5FF173F66E300786468 /* EmuViewController.mm in Sources */,
-				CE2EE600173F66E300786468 /* RomsViewController.m in Sources */,
 				8B1EF0FD1781368A0046103D /* Settings.m in Sources */,
 				2864EBD71783CBE10065D89D /* sndcoreaudio.mm in Sources */,
 				8BCE528A17822CA30034278E /* SettingsViewController.m in Sources */,
@@ -1078,6 +1077,7 @@
 				BF0F06BF1783EC58000447DA /* SndOut.cpp in Sources */,
 				28AF917517840B1C0094513F /* math_sqrtf.c in Sources */,
 				28AF917717840B330094513F /* math_mat4.c in Sources */,
+				8B7CF32917845AE00006CEC1 /* ROMs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

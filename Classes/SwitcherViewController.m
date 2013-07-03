@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "SwitcherViewController.h"
 #import "SettingsViewController.h"
-#import "RomsViewController.h"
 #import "RomsCollectionViewController.h"
 #import "EmuViewController.h"
 #import "MBPullDownController.h"

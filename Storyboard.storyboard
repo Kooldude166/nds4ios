@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4457.9" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" initialViewController="fzk-j6-XHh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fzk-j6-XHh">
     <dependencies>
-        <deployment defaultVersion="1280" identifier="iOS"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3682.9"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Roms View Controller - ROMs-->
+        <!--Ms - ROMs-->
         <scene sceneID="fcx-gS-uW7">
             <objects>
-                <tableViewController id="V7f-Yx-SEq" customClass="RomsViewController" sceneMemberID="viewController">
+                <tableViewController id="V7f-Yx-SEq" customClass="ROMs" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3dW-Es-uWA">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +30,6 @@
                             <outlet property="delegate" destination="V7f-Yx-SEq" id="9f4-cY-CZN"/>
                         </connections>
                     </tableView>
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="ROMs" id="aaA-91-zWh">
                         <barButtonItem key="leftBarButtonItem" image="Gear.png" id="sfx-hQ-vNx">
                             <connections>
@@ -120,7 +119,7 @@
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control Opcaity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zHh-0L-zD2">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control Opacity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zHh-0L-zD2">
                                                     <rect key="frame" x="20" y="11" width="120" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -198,7 +197,6 @@
                             <outlet property="delegate" destination="CHc-kM-HGa" id="66q-AN-GJh"/>
                         </connections>
                     </tableView>
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Settings" id="cQN-YF-WLg">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="vN5-sd-VAs">
                             <connections>
@@ -222,7 +220,6 @@
         <scene sceneID="8ZQ-30-2id">
             <objects>
                 <navigationController id="fzk-j6-XHh" sceneMemberID="viewController">
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zFR-q6-rcx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -241,7 +238,6 @@
         <scene sceneID="Bc2-cR-csk">
             <objects>
                 <navigationController id="b7t-UQ-yre" sceneMemberID="viewController">
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QvR-WV-YmQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -261,14 +257,12 @@
         <image name="Gear.png" width="20" height="20"/>
     </resources>
     <classes>
-        <class className="RomsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RomsViewController.h"/>
+        <class className="ROMs" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ROMs.h"/>
         </class>
         <class className="Settings" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Settings.h"/>
             <relationships>
-                <relationship kind="action" name="closeWindow:"/>
-                <relationship kind="action" name="controlChanged:"/>
                 <relationship kind="outlet" name="controlOpacity" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="disableSound" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="frameSkip" candidateClass="UISegmentedControl"/>
