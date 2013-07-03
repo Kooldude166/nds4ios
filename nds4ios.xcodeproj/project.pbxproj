@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2864EBD41783B0D20065D89D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2864EBD31783B0D20065D89D /* AudioToolbox.framework */; };
-		2864EBD71783CBE10065D89D /* sndcoreaudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2864EBD61783CBE10065D89D /* sndcoreaudio.mm */; };
 		28AF917517840B1C0094513F /* math_sqrtf.c in Sources */ = {isa = PBXBuildFile; fileRef = 28AF917417840B1C0094513F /* math_sqrtf.c */; };
 		28AF917717840B330094513F /* math_mat4.c in Sources */ = {isa = PBXBuildFile; fileRef = 28AF917617840B330094513F /* math_mat4.c */; };
 		8B1EF0FD1781368A0046103D /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1EF0FC1781368A0046103D /* Settings.m */; };
@@ -29,6 +28,10 @@
 		8B99E98417848FA70022BB85 /* RomsCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B99E98117848FA70022BB85 /* RomsCollectionViewController.xib */; };
 		8B99E995178491430022BB85 /* SVSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B99E992178491430022BB85 /* SVSegmentedControl.m */; };
 		8B99E996178491430022BB85 /* SVSegmentedThumb.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B99E994178491430022BB85 /* SVSegmentedThumb.m */; };
+		8B99E99A178492F80022BB85 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B99E999178492F80022BB85 /* GLProgram.m */; };
+		8B99E99F1784931B0022BB85 /* emu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B99E99B1784931B0022BB85 /* emu.cpp */; };
+		8B99E9A01784931B0022BB85 /* sndcoreaudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8B99E99E1784931B0022BB85 /* sndcoreaudio.mm */; };
+		8B99E9A51784933A0022BB85 /* throttle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B99E9A31784933A0022BB85 /* throttle.cpp */; };
 		8BCE527C17822C530034278E /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE527817822C530034278E /* Gear.png */; };
 		8BCE527D17822C530034278E /* Gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE527917822C530034278E /* Gear@2x.png */; };
 		8BCE527E17822C530034278E /* SwitcherBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE527A17822C530034278E /* SwitcherBackground.png */; };
@@ -132,15 +135,12 @@
 		BF0F06BF1783EC58000447DA /* SndOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF0F06BB1783EC58000447DA /* SndOut.cpp */; };
 		CE2EE5EE173F663B00786468 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE5EC173F663B00786468 /* main.m */; };
 		CE2EE5FD173F66E300786468 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE5F6173F66E300786468 /* AppDelegate.m */; };
-		CE2EE5FE173F66E300786468 /* emu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE5F7173F66E300786468 /* emu.cpp */; };
 		CE2EE5FF173F66E300786468 /* EmuViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE2EE5FA173F66E300786468 /* EmuViewController.mm */; };
 		CE2EE604173F6BBA00786468 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2EE603173F6BBA00786468 /* Foundation.framework */; };
 		CE2EE606173F6BC100786468 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2EE605173F6BC100786468 /* UIKit.framework */; };
 		CE2EE608173F6BEA00786468 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2EE607173F6BEA00786468 /* QuartzCore.framework */; };
 		CE2EE60A173F6BFF00786468 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2EE609173F6BFF00786468 /* CoreGraphics.framework */; };
 		CE34A124173F74C000C51EA1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE34A123173F74C000C51EA1 /* libz.dylib */; };
-		CE34A134173F79F200C51EA1 /* throttle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE34A132173F79F200C51EA1 /* throttle.cpp */; };
-		CEB43C42173FCA3F00055F91 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB43C41173FCA3F00055F91 /* GLProgram.m */; };
 		CEB43C45173FD25A00055F91 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB43C43173FD25900055F91 /* GLKit.framework */; };
 		CEB43C46173FD25A00055F91 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB43C44173FD25900055F91 /* OpenGLES.framework */; };
 		D38CBCB01745CF9C0074C554 /* SwitcherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D38CBCAC1745CF9C0074C554 /* SwitcherViewController.m */; };
@@ -150,8 +150,6 @@
 
 /* Begin PBXFileReference section */
 		2864EBD31783B0D20065D89D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		2864EBD51783CBE10065D89D /* sndcoreaudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sndcoreaudio.h; path = Classes/sndcoreaudio.h; sourceTree = "<group>"; };
-		2864EBD61783CBE10065D89D /* sndcoreaudio.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = sndcoreaudio.mm; path = Classes/sndcoreaudio.mm; sourceTree = "<group>"; };
 		28AF914017840A140094513F /* math_neon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = math_neon.h; sourceTree = "<group>"; };
 		28AF917417840B1C0094513F /* math_sqrtf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = math_sqrtf.c; sourceTree = "<group>"; };
 		28AF917617840B330094513F /* math_mat4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = math_mat4.c; sourceTree = "<group>"; };
@@ -188,6 +186,15 @@
 		8B99E992178491430022BB85 /* SVSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVSegmentedControl.m; path = Classes/SVSegmentedControl/SVSegmentedControl.m; sourceTree = "<group>"; };
 		8B99E993178491430022BB85 /* SVSegmentedThumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVSegmentedThumb.h; path = Classes/SVSegmentedControl/SVSegmentedThumb.h; sourceTree = "<group>"; };
 		8B99E994178491430022BB85 /* SVSegmentedThumb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVSegmentedThumb.m; path = Classes/SVSegmentedControl/SVSegmentedThumb.m; sourceTree = "<group>"; };
+		8B99E998178492F80022BB85 /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLProgram.h; path = Classes/core/GLProgram.h; sourceTree = "<group>"; };
+		8B99E999178492F80022BB85 /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLProgram.m; path = Classes/core/GLProgram.m; sourceTree = "<group>"; };
+		8B99E99B1784931B0022BB85 /* emu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = emu.cpp; path = Classes/core/emu.cpp; sourceTree = "<group>"; };
+		8B99E99C1784931B0022BB85 /* emu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = emu.h; path = Classes/core/emu.h; sourceTree = "<group>"; };
+		8B99E99D1784931B0022BB85 /* sndcoreaudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sndcoreaudio.h; path = Classes/core/sndcoreaudio.h; sourceTree = "<group>"; };
+		8B99E99E1784931B0022BB85 /* sndcoreaudio.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = sndcoreaudio.mm; path = Classes/core/sndcoreaudio.mm; sourceTree = "<group>"; };
+		8B99E9A21784933A0022BB85 /* nullJit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nullJit.h; path = Classes/core/nullJit.h; sourceTree = "<group>"; };
+		8B99E9A31784933A0022BB85 /* throttle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = throttle.cpp; path = Classes/core/throttle.cpp; sourceTree = "<group>"; };
+		8B99E9A41784933A0022BB85 /* throttle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = throttle.h; path = Classes/core/throttle.h; sourceTree = "<group>"; };
 		8BCE527817822C530034278E /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gear.png; path = images/Gear.png; sourceTree = "<group>"; };
 		8BCE527917822C530034278E /* Gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Gear@2x.png"; path = "images/Gear@2x.png"; sourceTree = "<group>"; };
 		8BCE527A17822C530034278E /* SwitcherBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SwitcherBackground.png; path = images/SwitcherBackground.png; sourceTree = "<group>"; };
@@ -373,8 +380,6 @@
 		CE2EE5ED173F663B00786468 /* nds4ios-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "nds4ios-Prefix.pch"; path = "Classes/nds4ios-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		CE2EE5F5173F66E300786468 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		CE2EE5F6173F66E300786468 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		CE2EE5F7173F66E300786468 /* emu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = emu.cpp; path = Classes/emu.cpp; sourceTree = SOURCE_ROOT; };
-		CE2EE5F8173F66E300786468 /* emu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = emu.h; path = Classes/emu.h; sourceTree = SOURCE_ROOT; };
 		CE2EE5F9173F66E300786468 /* EmuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = EmuViewController.h; path = Classes/EmuViewController.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		CE2EE5FA173F66E300786468 /* EmuViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; name = EmuViewController.mm; path = Classes/EmuViewController.mm; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		CE2EE603173F6BBA00786468 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -382,11 +387,6 @@
 		CE2EE607173F6BEA00786468 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CE2EE609173F6BFF00786468 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CE34A123173F74C000C51EA1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		CE34A128173F769200C51EA1 /* nullJit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = nullJit.h; path = Classes/nullJit.h; sourceTree = SOURCE_ROOT; };
-		CE34A132173F79F200C51EA1 /* throttle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = throttle.cpp; path = Classes/throttle.cpp; sourceTree = SOURCE_ROOT; };
-		CE34A133173F79F200C51EA1 /* throttle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = throttle.h; path = Classes/throttle.h; sourceTree = SOURCE_ROOT; };
-		CEB43C40173FCA3F00055F91 /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLProgram.h; path = Classes/GLProgram.h; sourceTree = "<group>"; };
-		CEB43C41173FCA3F00055F91 /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLProgram.m; path = Classes/GLProgram.m; sourceTree = "<group>"; };
 		CEB43C43173FD25900055F91 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		CEB43C44173FD25900055F91 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		CEC742F916776248006D193E /* nds4ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nds4ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -482,6 +482,20 @@
 				8B99E994178491430022BB85 /* SVSegmentedThumb.m */,
 			);
 			name = SVSegmentedControl;
+			sourceTree = "<group>";
+		};
+		8B99E9A1178493220022BB85 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8B99E9A21784933A0022BB85 /* nullJit.h */,
+				8B99E9A31784933A0022BB85 /* throttle.cpp */,
+				8B99E9A41784933A0022BB85 /* throttle.h */,
+				8B99E99B1784931B0022BB85 /* emu.cpp */,
+				8B99E99C1784931B0022BB85 /* emu.h */,
+				8B99E99D1784931B0022BB85 /* sndcoreaudio.h */,
+				8B99E99E1784931B0022BB85 /* sndcoreaudio.mm */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 		BF0F06401783EAF4000447DA /* JIT */ = {
@@ -634,15 +648,8 @@
 				8B2EF61317812DC000A24AC4 /* Storyboard.storyboard */,
 				8B4EF08E177D75940013D660 /* UIScreen+Widescreen.h */,
 				8B4EF08F177D75940013D660 /* UIScreen+Widescreen.m */,
-				CE34A132173F79F200C51EA1 /* throttle.cpp */,
-				CE34A133173F79F200C51EA1 /* throttle.h */,
-				CE34A128173F769200C51EA1 /* nullJit.h */,
 				CE2EE5F5173F66E300786468 /* AppDelegate.h */,
 				CE2EE5F6173F66E300786468 /* AppDelegate.m */,
-				CE2EE5F7173F66E300786468 /* emu.cpp */,
-				CE2EE5F8173F66E300786468 /* emu.h */,
-				2864EBD51783CBE10065D89D /* sndcoreaudio.h */,
-				2864EBD61783CBE10065D89D /* sndcoreaudio.mm */,
 				D338B30117470D4000932C39 /* Roms List */,
 				D338B30217470D4A00932C39 /* GL */,
 				D338B30017470D3A00932C39 /* Emu */,
@@ -765,8 +772,9 @@
 		CEC742EE16776248006D193E = {
 			isa = PBXGroup;
 			children = (
-				D326847B17497DB1000D4ED6 /* UI */,
+				D326847B17497DB1000D4ED6 /* UI Images */,
 				CE2EE60C173F6C1E00786468 /* nds4droid-code */,
+				8B99E9A1178493220022BB85 /* Core */,
 				CE2EE5F4173F66D100786468 /* Classes */,
 				CEC7430416776248006D193E /* Supporting Files */,
 				CE2EE60B173F6C0D00786468 /* Framework */,
@@ -794,7 +802,7 @@
 			path = nds4ios;
 			sourceTree = "<group>";
 		};
-		D326847B17497DB1000D4ED6 /* UI */ = {
+		D326847B17497DB1000D4ED6 /* UI Images */ = {
 			isa = PBXGroup;
 			children = (
 				8BCE529517822DA10034278E /* Default-568h@2x.png */,
@@ -806,7 +814,7 @@
 				8BCE529717822E0D0034278E /* nds4ios.png */,
 				8BCE529817822E0D0034278E /* nds4ios@2x.png */,
 			);
-			name = UI;
+			name = "UI Images";
 			sourceTree = "<group>";
 		};
 		D338B2FD17470D1B00932C39 /* switcher */ = {
@@ -858,8 +866,8 @@
 		D338B30217470D4A00932C39 /* GL */ = {
 			isa = PBXGroup;
 			children = (
-				CEB43C40173FCA3F00055F91 /* GLProgram.h */,
-				CEB43C41173FCA3F00055F91 /* GLProgram.m */,
+				8B99E998178492F80022BB85 /* GLProgram.h */,
+				8B99E999178492F80022BB85 /* GLProgram.m */,
 			);
 			name = GL;
 			sourceTree = "<group>";
@@ -971,10 +979,8 @@
 			files = (
 				CE2EE5EE173F663B00786468 /* main.m in Sources */,
 				CE2EE5FD173F66E300786468 /* AppDelegate.m in Sources */,
-				CE2EE5FE173F66E300786468 /* emu.cpp in Sources */,
 				CE2EE5FF173F66E300786468 /* EmuViewController.mm in Sources */,
 				8B1EF0FD1781368A0046103D /* Settings.m in Sources */,
-				2864EBD71783CBE10065D89D /* sndcoreaudio.mm in Sources */,
 				8BCE528A17822CA30034278E /* SettingsViewController.m in Sources */,
 				8B4EF076177D74D80013D660 /* DocWatchHelper.m in Sources */,
 				8B4EF079177D74FA0013D660 /* ZipArchive.mm in Sources */,
@@ -985,8 +991,6 @@
 				8B4EF083177D751C0013D660 /* ioapi.c in Sources */,
 				8B4EF084177D751C0013D660 /* mztools.c in Sources */,
 				8B4EF08D177D75710013D660 /* MBPullDownController.m in Sources */,
-				CE34A134173F79F200C51EA1 /* throttle.cpp in Sources */,
-				CEB43C42173FCA3F00055F91 /* GLProgram.m in Sources */,
 				D38CBCB01745CF9C0074C554 /* SwitcherViewController.m in Sources */,
 				BF0F06171783EAC7000447DA /* ArmLJit.cpp in Sources */,
 				BF0F06181783EAC7000447DA /* addons.cpp in Sources */,
@@ -1078,6 +1082,10 @@
 				8B99E98317848FA70022BB85 /* RomsCollectionViewController.m in Sources */,
 				8B99E995178491430022BB85 /* SVSegmentedControl.m in Sources */,
 				8B99E996178491430022BB85 /* SVSegmentedThumb.m in Sources */,
+				8B99E99A178492F80022BB85 /* GLProgram.m in Sources */,
+				8B99E99F1784931B0022BB85 /* emu.cpp in Sources */,
+				8B99E9A01784931B0022BB85 /* sndcoreaudio.mm in Sources */,
+				8B99E9A51784933A0022BB85 /* throttle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

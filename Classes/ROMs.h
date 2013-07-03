@@ -14,7 +14,7 @@
     DocWatchHelper *docWatchHelper;
     NSMutableDictionary *romDictionary;
     NSArray *romSections;
-    NSInteger currentSection_;
+    NSInteger currentSection;
 }
 
 @end

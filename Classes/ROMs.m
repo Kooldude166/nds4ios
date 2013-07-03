@@ -33,10 +33,7 @@
     
     [self reloadRomList];
     
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
-    
-    docWatchHelper = [DocWatchHelper watcherForPath:documentsDirectory];
+    docWatchHelper = [DocWatchHelper watcherForPath:DOCUMENTS_PATH()];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadRomList) name:kDocumentChanged object:docWatchHelper];
 }
 
@@ -58,11 +55,11 @@
     [self.view becomeFirstResponder];
     
     // Create toolbar to use if game is backgrounded
-    NSString *backgroundTitle = [[NSUserDefaults standardUserDefaults] objectForKey:@"backgroundTitle"];
-    UIBarButtonItem *buttonItem = [[ UIBarButtonItem alloc ] initWithTitle:[@"Resume: " stringByAppendingString:backgroundTitle] style:UIButtonTypeCustom target:self action:@selector(resumeGame)];
-    [buttonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont boldSystemFontOfSize:15], UITextAttributeFont,nil] forState:UIControlStateNormal];
+    NSString *backgroundTitle = [@"Resume: " stringByAppendingString:[[NSUserDefaults standardUserDefaults] objectForKey:@"backgroundTitle"]];
+    UIBarButtonItem *buttonItem = [[ UIBarButtonItem alloc ] initWithTitle:backgroundTitle style:UIButtonTypeCustom target:self action:@selector(resumeGame)];
+    [buttonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont boldSystemFontOfSize:15], UITextAttributeFont, nil] forState:UIControlStateNormal];
     
-    self.toolbarItems = [ NSArray arrayWithObject: buttonItem ];
+    self.toolbarItems = [NSArray arrayWithObject: buttonItem];
     
     // Display this only on Experimental UI
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"experimentalUI"])
@@ -87,14 +84,11 @@
 
 - (void)reloadRomList
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString *documentsDirectoryPath = [paths objectAtIndex:0];
-    
     [romDictionary removeAllObjects];
     if (!romDictionary)
         romDictionary = [[NSMutableDictionary alloc] init];
     NSFileManager *fileManager = [[NSFileManager alloc] init];
-    NSArray *contents = [fileManager contentsOfDirectoryAtPath:documentsDirectoryPath error:nil];
+    NSArray *contents = [fileManager contentsOfDirectoryAtPath:DOCUMENTS_PATH() error:nil];
     
     romSections = [NSArray arrayWithArray:[@"A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|#" componentsSeparatedByString:@"|"]];
     
@@ -103,7 +97,7 @@
         NSString *filename = [contents objectAtIndex:i];
         if ([[filename lowercaseString] hasSuffix:@".nds"])
         {
-            NSString* characterIndex = [filename substringWithRange:NSMakeRange(0,1)];
+            NSString *characterIndex = [filename substringWithRange:NSMakeRange(0,1)];
             
             BOOL matched = NO;
             for (int i = 0; i < romSections.count && !matched; i++)
@@ -132,13 +126,12 @@
     NSMutableArray *sectionIndexTitles = nil;
     if(romSections.count)
         sectionIndexTitles = [NSMutableArray arrayWithArray:[@"A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|#" componentsSeparatedByString:@"|"]];
-    return  sectionIndexTitles;
+    return sectionIndexTitles;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    NSInteger numberOfSections = romSections.count;
-    return numberOfSections > 0 ? numberOfSections : 1;
+    return romSections.count > 0 ? romSections.count : 1;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -154,7 +147,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
-    currentSection_ = index;
+    currentSection = index;
     return index;
 }
 
@@ -193,7 +186,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Load selected ROM and save game name.
-    NSString* rom = [[romDictionary objectForKey:[romSections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+    NSString *rom = [[romDictionary objectForKey:[romSections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
     [[NSUserDefaults standardUserDefaults] setObject:[rom stringByDeletingPathExtension] forKey:@"backgroundTitle"];
     [[AppDelegate sharedInstance] initRomsVCWithRom:rom];
     [AppDelegate sharedInstance].hasGame = YES;
@@ -226,9 +219,8 @@
 #pragma mark - UIAlertView delegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (buttonIndex == 0) {
+    if (buttonIndex == 0)
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
-    }
 }
 
 @end
