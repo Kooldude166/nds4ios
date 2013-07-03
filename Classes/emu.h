@@ -37,6 +37,7 @@ bool EMU_loadRom(const char* path);
 void EMU_change3D(int type);
 void EMU_changeSound(int type);
 void EMU_runCore();
+void EMU_emulateUser();
 int EMU_runOther();
 void EMU_copyMasterBuffer();
 

@@ -124,14 +124,6 @@ typedef enum : NSInteger {
     
     self.view.multipleTouchEnabled = YES;
     
-    self.fpsLabel = [[UILabel alloc] initWithFrame:CGRectMake(6, 0, 100, 30)];
-    self.fpsLabel.backgroundColor = [UIColor clearColor];
-    self.fpsLabel.textColor = [UIColor greenColor];
-    self.fpsLabel.shadowColor = [UIColor blackColor];
-    self.fpsLabel.shadowOffset = CGSizeMake(1.0f, 1.0f);
-    self.fpsLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:18];
-    [self.view addSubview:self.fpsLabel];
-    
     [self addButtons];
     
     [self initRom];
@@ -152,6 +144,19 @@ typedef enum : NSInteger {
         [self hideControls];
     else
         [self showControls];
+    
+    // Show FPS if selected.
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showFPS"])
+    {
+        self.fpsLabel = [[UILabel alloc] initWithFrame:CGRectMake(6, 0, 100, 30)];
+        self.fpsLabel.backgroundColor = [UIColor clearColor];
+        self.fpsLabel.textColor = [UIColor greenColor];
+        self.fpsLabel.shadowColor = [UIColor blackColor];
+        self.fpsLabel.shadowOffset = CGSizeMake(1.0f, 1.0f);
+        self.fpsLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:18];
+        [self.view addSubview:self.fpsLabel];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -241,6 +246,8 @@ typedef enum : NSInteger {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         while (execute) {
             EMU_runCore();
+            if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disableSound"])
+                EMU_emulateUser();
             fps = EMU_runOther();
             EMU_copyMasterBuffer();
             

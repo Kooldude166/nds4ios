@@ -26,16 +26,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Check if 'Disable Sound' is enabled.
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"disableSound"])
+        disableSound.on = true;
+    else
+        disableSound.on = false;
 
+    // Check if 'Hide Controls' is enabled.
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"hideControls"])
+        hideControls.on = true;
+    else
+        hideControls.on = false;
+    
+    // Check if 'Shift Pad Down' is enabled.
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"shiftPad"])
         shiftPad.on = true;
     else
         shiftPad.on = false;
     
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"hideControls"])
-        hideControls.on = true;
+    // Check if 'Show FPS' is enabled.
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showFPS"])
+        showFPS.on = true;
     else
-        hideControls.on = false;
+        showFPS.on = false;
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,27 +58,49 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)hideControlsPressed:(id)sender {
+
+- (IBAction)disableSoundPressed:(id)sender
+{
+    if (disableSound.on)
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"disableSound"];
+    else
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"disableSound"];
+}
+
+- (IBAction)hideControlsPressed:(id)sender
+{
     if (hideControls.on)
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hideControls"];
     else
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"hideControls"];
 }
 
-- (IBAction)shiftPadPressed:(id)sender {
+- (IBAction)shiftPadPressed:(id)sender
+{
     if (shiftPad.on)
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"shiftPad"];
     else
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"shiftPad"];
 }
 
-- (IBAction)closeWindow:(id)sender {
+- (IBAction)setFPS:(id)sender
+{
+    if (showFPS.on)
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"showFPS"];
+    else
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"showFPS"];
+}
+
+- (IBAction)closeWindow:(id)sender
+{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)viewDidUnload {
     hideControls = nil;
     shiftPad = nil;
+    disableSound = nil;
+    showFPS = nil;
     [super viewDidUnload];
 }
 @end

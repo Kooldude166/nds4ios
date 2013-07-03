@@ -10,8 +10,10 @@
 
 @interface Settings : UITableViewController
 {
+    IBOutlet UISwitch *disableSound;
     IBOutlet UISwitch *hideControls;
     IBOutlet UISwitch *shiftPad;
+    IBOutlet UISwitch *showFPS;
 }
 
 @end

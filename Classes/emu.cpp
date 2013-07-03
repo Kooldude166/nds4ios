@@ -287,6 +287,10 @@ void EMU_runCore()
 	NDS_beginProcessingInput();
 	NDS_endProcessingInput();
 	NDS_exec<false>();
+}
+
+void EMU_emulateUser()
+{
     SPU_Emulate_user(true);
 }
 
