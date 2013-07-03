@@ -83,6 +83,7 @@ int emu_paused = 0;
 volatile bool paused = false;
 bool enableMicrophone = false;
 volatile bool pausedByMinimize = false;
+volatile bool soundEnabled = true;
 
 static bool android_opengl_init() {
     LOGI("android_opengl_init");
@@ -210,6 +211,7 @@ void EMU_loadSettings()
 	CommonSettings.GFX3D_Zelda_Shadow_Depth_Hack = 0;
 	CommonSettings.wifi.mode = 0;
 	CommonSettings.wifi.infraBridgeAdapter = 0;
+    autoframeskipenab = true;
 	frameskiprate = 1;
 	CommonSettings.spuInterpolationMode = SPUInterpolation_None;
 	CommonSettings.GFX3D_HighResolutionInterpolateColor = 0;
@@ -282,16 +284,29 @@ void EMU_changeSound(int type)
 	SPU_ChangeSoundCore(type, DESMUME_SAMPLE_RATE*8/60);
 }
 
+void EMU_enableSound(bool enabled)
+{
+    soundEnabled = enabled;
+}
+
+void EMU_setFrameSkip(int skip)
+{
+    if (skip == -1) {
+        // auto
+        autoframeskipenab = true;
+        frameskiprate = 1;
+    } else {
+        autoframeskipenab = false;
+        frameskiprate = skip;
+    }
+}
+
 void EMU_runCore()
 {
 	NDS_beginProcessingInput();
 	NDS_endProcessingInput();
 	NDS_exec<false>();
-}
-
-void EMU_emulateUser()
-{
-    SPU_Emulate_user(true);
+    if (soundEnabled) SPU_Emulate_user(true);
 }
 
 void nds4droid_user()

@@ -26,30 +26,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    // Check if 'Disable Sound' is enabled.
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"disableSound"])
-        disableSound.on = true;
-    else
-        disableSound.on = false;
-
-    // Check if 'Hide Controls' is enabled.
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"hideControls"])
-        hideControls.on = true;
-    else
-        hideControls.on = false;
+    disableSound.on = [defaults boolForKey:@"disableSound"];
+    controlOpacity.value = [defaults floatForKey:@"controlOpacity"];
+    shiftPad.on = [defaults boolForKey:@"shiftPad"];
+    showFPS.on = [defaults boolForKey:@"showFPS"];
     
-    // Check if 'Shift Pad Down' is enabled.
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"shiftPad"])
-        shiftPad.on = true;
-    else
-        shiftPad.on = false;
-    
-    // Check if 'Show FPS' is enabled.
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showFPS"])
-        showFPS.on = true;
-    else
-        showFPS.on = false;
+    // adjust frame skip control
+    CGRect frm = frameSkip.frame;
+    frm.size.height = 27;
+    frm.origin.y = 8;
+    int frameSkipValue = [defaults integerForKey:@"frameSkip"];
+    if (frameSkipValue < 1) frameSkipValue = 5;
+    frameSkip.selectedSegmentIndex = frameSkipValue - 1;
+    frameSkip.frame = frm;
+    for (int i=0; i < 4; i++) {
+        [frameSkip setWidth:26 forSegmentAtIndex:i];
+    }
+    [frameSkip setWidth:56 forSegmentAtIndex:4];
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,37 +53,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-- (IBAction)disableSoundPressed:(id)sender
-{
-    if (disableSound.on)
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"disableSound"];
-    else
-        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"disableSound"];
-}
-
-- (IBAction)hideControlsPressed:(id)sender
-{
-    if (hideControls.on)
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hideControls"];
-    else
-        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"hideControls"];
-}
-
-- (IBAction)shiftPadPressed:(id)sender
-{
-    if (shiftPad.on)
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"shiftPad"];
-    else
-        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"shiftPad"];
-}
-
-- (IBAction)setFPS:(id)sender
-{
-    if (showFPS.on)
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"showFPS"];
-    else
-        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"showFPS"];
+- (IBAction)controlChanged:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (sender == disableSound) {
+        [defaults setBool:disableSound.on forKey:@"disableSound"];
+    } else if (sender == controlOpacity) {
+        [defaults setFloat:controlOpacity.value forKey:@"controlOpacity"];
+    } else if (sender == shiftPad) {
+        [defaults setBool:shiftPad.on forKey:@"shiftPad"];
+    } else if (sender == showFPS) {
+        [defaults setBool:showFPS.on forKey:@"showFPS"];
+    } else if (sender == frameSkip) {
+        int val = frameSkip.selectedSegmentIndex + 1;
+        if (val == 5) val = -1;
+        [defaults setInteger:val forKey:@"frameSkip"];
+    }
 }
 
 - (IBAction)closeWindow:(id)sender
@@ -97,10 +76,12 @@
 }
 
 - (void)viewDidUnload {
-    hideControls = nil;
+    controlOpacity = nil;
     shiftPad = nil;
     disableSound = nil;
     showFPS = nil;
+    frameSkip = nil;
     [super viewDidUnload];
 }
+
 @end

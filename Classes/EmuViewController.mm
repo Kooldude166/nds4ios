@@ -107,6 +107,18 @@ typedef enum : NSInteger {
     return self;
 }
 
+- (void)defaultsChanged:(NSNotification*)aNotification
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [self shiftButtons:[defaults boolForKey:@"shiftPad"]];
+    
+    [self setControlAlpha:[defaults floatForKey:@"controlOpacity"]];
+    EMU_enableSound(![defaults boolForKey:@"disableSound"]);
+    self.fpsLabel.hidden = ![defaults boolForKey:@"showFPS"];
+    
+    EMU_setFrameSkip([defaults integerForKey:@"frameSkip"]);
+}
+
 - (void)killCurrentGame
 {
     EMU_closeRom();
@@ -124,6 +136,18 @@ typedef enum : NSInteger {
     
     self.view.multipleTouchEnabled = YES;
     
+    // observe for changes in defaults
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(defaultsChanged:) name:NSUserDefaultsDidChangeNotification object:nil];
+    
+    // add FPS label
+    self.fpsLabel = [[UILabel alloc] initWithFrame:CGRectMake(6, 0, 100, 30)];
+    self.fpsLabel.backgroundColor = [UIColor clearColor];
+    self.fpsLabel.textColor = [UIColor greenColor];
+    self.fpsLabel.shadowColor = [UIColor blackColor];
+    self.fpsLabel.shadowOffset = CGSizeMake(1.0f, 1.0f);
+    self.fpsLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:18];
+    [self.view addSubview:self.fpsLabel];
+    
     [self addButtons];
     
     [self initRom];
@@ -134,29 +158,7 @@ typedef enum : NSInteger {
 - (void)viewWillAppear:(BOOL)animated
 {
     [UIApplication sharedApplication].statusBarHidden = YES;
-    
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"shiftPad"])
-        [self shiftButtons];
-    else
-        [self unshiftButtons];
-    
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"hideControls"])
-        [self hideControls];
-    else
-        [self showControls];
-    
-    // Show FPS if selected.
-    
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showFPS"])
-    {
-        self.fpsLabel = [[UILabel alloc] initWithFrame:CGRectMake(6, 0, 100, 30)];
-        self.fpsLabel.backgroundColor = [UIColor clearColor];
-        self.fpsLabel.textColor = [UIColor greenColor];
-        self.fpsLabel.shadowColor = [UIColor blackColor];
-        self.fpsLabel.shadowOffset = CGSizeMake(1.0f, 1.0f);
-        self.fpsLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:18];
-        [self.view addSubview:self.fpsLabel];
-    }
+    [self defaultsChanged:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -246,8 +248,6 @@ typedef enum : NSInteger {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         while (execute) {
             EMU_runCore();
-            if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disableSound"])
-                EMU_emulateUser();
             fps = EMU_runOther();
             EMU_copyMasterBuffer();
             
@@ -280,17 +280,11 @@ typedef enum : NSInteger {
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 }
 
-- (void)showControls
+- (void)setControlAlpha:(float)alpha;
 {
+    if (alpha < 0.1) alpha = 0.1;
     for (UIControl *button in buttonsArray) {
-        button.alpha = 1;
-    }
-}
-
-- (void)hideControls
-{
-    for (UIControl *button in buttonsArray) {
-        button.alpha = .1;
+        button.alpha = alpha;
     }
 }
 
@@ -409,23 +403,13 @@ typedef enum : NSInteger {
     EMU_touchScreenRelease();
 }
 
-- (void)unshiftButtons
-{
-    buttonSelect.center = CGPointMake(buttonSelect.center.x, 228);
-    buttonStart.center = CGPointMake(buttonStart.center.x, 228);
-    buttonRT.center = CGPointMake(buttonRT.center.x, 70);
-    buttonLT.center = CGPointMake(buttonLT.center.x, 70);
-    buttonDPad.center = CGPointMake(buttonDPad.center.x, 112+60);
-    buttonABXYPad.center = CGPointMake(buttonABXYPad.center.x, 112+60);
-}
-
-- (void)shiftButtons
+- (void)shiftButtons:(BOOL)shift
 {
     BOOL isWidescreen = [[UIScreen mainScreen] isWidescreen];
     for (UIControl *button in buttonsArray) {
-        if (button.center.y < 240.0f) {
+        if (button.center.y < 240.0f && shift) {
             button.center = CGPointMake(button.center.x, button.center.y + 240.0f + (88.0f * isWidescreen));
-        } else {
+        } else if (button.center.y > 240.0f && !shift) {
             button.center = CGPointMake(button.center.x, button.center.y - 240.0f - (88.0f * isWidescreen));
         }
     }

@@ -11,9 +11,10 @@
 @interface Settings : UITableViewController
 {
     IBOutlet UISwitch *disableSound;
-    IBOutlet UISwitch *hideControls;
+    IBOutlet UISlider *controlOpacity;
     IBOutlet UISwitch *shiftPad;
     IBOutlet UISwitch *showFPS;
+    IBOutlet UISegmentedControl *frameSkip;
 }
 
 @end
