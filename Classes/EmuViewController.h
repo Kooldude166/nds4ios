@@ -20,6 +20,8 @@
     UIButton *buttonRT;
     
     UIImageView *snapshotView;
+    
+    NSLock *emuLoopLock;
 }
 
 - (id)initWithRom:(NSString*)rom;

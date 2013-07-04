@@ -164,6 +164,8 @@ typedef enum : NSInteger {
     
     // pause emulation
     EMU_pause(true);
+    [emuLoopLock lock]; // make sure the emulation thread is finished
+    [emuLoopLock unlock];
     [self shutdownGL];
 }
 
@@ -213,7 +215,9 @@ typedef enum : NSInteger {
     
     [self initRom];
     
-    [self performSelector:@selector(emuLoop) withObject:nil];    
+    emuLoopLock = [NSLock new];
+    
+    [self performSelector:@selector(emuLoop) withObject:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -299,6 +303,7 @@ typedef enum : NSInteger {
 - (void)shutdownGL
 {
     glDeleteTextures(1, &texHandle);
+    texHandle = 0;
     self.context = nil;
     self.program = nil;
     [self.glkView removeFromSuperview];
@@ -309,6 +314,7 @@ typedef enum : NSInteger {
 - (void)emuLoop
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [emuLoopLock lock];
         while (execute) {
             EMU_runCore();
             fps = EMU_runOther();
@@ -316,11 +322,13 @@ typedef enum : NSInteger {
             
             [self updateDisplay];
         }
+        [emuLoopLock unlock];
     });
 }
 
 - (void)updateDisplay
 {
+    if (texHandle == 0) return;
     dispatch_async(dispatch_get_main_queue(), ^{
         self.fpsLabel.text = [NSString stringWithFormat:@"FPS: %d",fps];
     });
