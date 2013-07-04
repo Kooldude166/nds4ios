@@ -18,18 +18,15 @@ IMPORTANT: Make sure your working directory is devoid of spaces. Otherwise, bad 
 ### Option 1
 
 
-1.  Open Terminal and go to your working directory;
+1.  Open Terminal and go to your working directory.
 
 2.  Do
 <code>git clone https://github.com/angelXwind/nds4ios.git</code>
 
 3.  then
-    <code>cd nds4ios</code>
+Navigate to the "nds4ios" in your working directory.
 
-4.  then
-    <code>git submodule update --init</code>
-
-5. Open "nds4ios.xcodeproj", connect your device, select it on Xcode and click the "Run" button (or Command + R). Don't build it for the iOS Simulator. IMPORTANT: Make sure you change your running scheme to Release first. Otherwise you will get errors on compile!
+4. Open "nds4ios.xcodeproj", connect your device, select it on Xcode and click the "Run" button (or Command + R). Don't build it for the iOS Simulator. IMPORTANT: Make sure you change your running scheme to Release first. Otherwise you will get errors on compile!
 
 #### Option 1a
 1. Alternatively, run
