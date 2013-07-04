@@ -41,7 +41,7 @@ Navigate to the "nds4ios" folder in your working directory.
 
 1. Click the button below to install it right on your device via HockeyApp. Please note that you may have to register and log in to HockeyApp to download and install.
 
-[Install App](https://rink.hockeyapp.net/recruit/85eb802da48e40fca3762f65676c1be3)
+[![Install App](http://northsocial.com/images/screen/apps-install-this-app-button.png)](https://rink.hockeyapp.net/recruit/85eb802da48e40fca3762f65676c1be3)
 
 ### Option 3
 
