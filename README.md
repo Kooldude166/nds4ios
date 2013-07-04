@@ -24,7 +24,7 @@ IMPORTANT: Make sure your working directory is devoid of spaces. Otherwise, bad 
 <code>git clone https://github.com/angelXwind/nds4ios.git</code>
 
 3.  then
-Navigate to the "nds4ios" in your working directory.
+Navigate to the "nds4ios" folder in your working directory.
 
 4. Open "nds4ios.xcodeproj", connect your device, select it on Xcode and click the "Run" button (or Command + R). Don't build it for the iOS Simulator. IMPORTANT: Make sure you change your running scheme to Release first. Otherwise you will get errors on compile!
 
