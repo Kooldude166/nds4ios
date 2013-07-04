@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fzk-j6-XHh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4457.9" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" initialViewController="fzk-j6-XHh">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3682.9"/>
     </dependencies>
     <scenes>
         <!--Ms - ROMs-->
@@ -30,6 +30,7 @@
                             <outlet property="delegate" destination="V7f-Yx-SEq" id="9f4-cY-CZN"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="ROMs" id="aaA-91-zWh">
                         <barButtonItem key="leftBarButtonItem" image="Gear.png" id="sfx-hQ-vNx">
                             <connections>
@@ -137,7 +138,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Ueb-Dz-xME">
-                                        <rect key="frame" x="0.0" y="227" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="227" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -160,12 +161,40 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="VYK-ei-uwI">
+                                        <rect key="frame" x="0.0" y="271" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-Pad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NHO-QK-Vix">
+                                                    <rect key="frame" x="20" y="11" width="119" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Usr-Sg-2yq">
+                                                    <rect key="frame" x="99" y="0.0" width="181" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <segments>
+                                                        <segment title="Regular"/>
+                                                        <segment title="Joystick"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="controlChanged:" destination="CHc-kM-HGa" eventType="valueChanged" id="EuM-zG-Bpc"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Development" id="4Pf-TJ-9sq">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="vhu-Mj-4P4">
-                                        <rect key="frame" x="0.0" y="318" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="362" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -197,6 +226,7 @@
                             <outlet property="delegate" destination="CHc-kM-HGa" id="66q-AN-GJh"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Settings" id="cQN-YF-WLg">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="vN5-sd-VAs">
                             <connections>
@@ -206,6 +236,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="controlOpacity" destination="mTq-Vi-fUq" id="c1E-tc-5LR"/>
+                        <outlet property="dPadType" destination="Usr-Sg-2yq" id="cNc-RG-zh8"/>
                         <outlet property="disableSound" destination="Yzy-h7-ldi" id="dZB-uR-Uzb"/>
                         <outlet property="frameSkip" destination="Foc-RE-wfZ" id="xcf-M1-gIh"/>
                         <outlet property="shiftPad" destination="ArK-3F-qre" id="Chh-cj-bje"/>
@@ -220,6 +251,7 @@
         <scene sceneID="8ZQ-30-2id">
             <objects>
                 <navigationController id="fzk-j6-XHh" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zFR-q6-rcx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -238,6 +270,7 @@
         <scene sceneID="Bc2-cR-csk">
             <objects>
                 <navigationController id="b7t-UQ-yre" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QvR-WV-YmQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -263,7 +296,10 @@
         <class className="Settings" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Settings.h"/>
             <relationships>
+                <relationship kind="action" name="closeWindow:"/>
+                <relationship kind="action" name="controlChanged:"/>
                 <relationship kind="outlet" name="controlOpacity" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="dPadType" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="disableSound" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="frameSkip" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="shiftPad" candidateClass="UISwitch"/>

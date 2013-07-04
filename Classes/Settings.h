@@ -15,6 +15,7 @@
     IBOutlet UISwitch *shiftPad;
     IBOutlet UISwitch *showFPS;
     IBOutlet UISegmentedControl *frameSkip;
+    IBOutlet UISegmentedControl *dPadType;
 }
 
 @end

@@ -32,6 +32,13 @@
         [frameSkip setWidth:26 forSegmentAtIndex:i];
     }
     [frameSkip setWidth:56 forSegmentAtIndex:4];
+    
+    // adjust d-pad type selector control
+    frm = dPadType.frame;
+    frm.size.height = 27;
+    frm.origin.y = 8;
+    dPadType.frame = frm;
+    dPadType.selectedSegmentIndex = [defaults boolForKey:@"useJoystick"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,6 +57,8 @@
         [defaults setBool:shiftPad.on forKey:@"shiftPad"];
     else if (sender == showFPS)
         [defaults setBool:showFPS.on forKey:@"showFPS"];
+    else if (sender == dPadType)
+        [defaults setBool:dPadType.selectedSegmentIndex == 1 forKey:@"useJoystick"];
     else if (sender == frameSkip)
     {
         int val = frameSkip.selectedSegmentIndex + 1;

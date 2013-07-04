@@ -11,7 +11,7 @@
 #import "EmuViewController.h"
 #import "UIScreen+Widescreen.h"
 #import "GLProgram.h"
-
+#import "Joystick.h"
 
 #import <GLKit/GLKit.h>
 #import <OpenGLES/ES2/gl.h>
@@ -117,6 +117,26 @@ typedef enum : NSInteger {
     self.fpsLabel.hidden = ![defaults boolForKey:@"showFPS"];
     
     EMU_setFrameSkip([defaults integerForKey:@"frameSkip"]);
+    
+    ButtonPad *newDPad = nil;
+    if ([buttonDPad isKindOfClass:[Joystick class]] && [defaults boolForKey:@"useJoystick"] == NO) {
+        // replace joystick with d-pad
+        newDPad = [[ButtonPad alloc] initWithFrame:buttonDPad.frame];
+        newDPad.image = [UIImage imageNamed:@"DPad"];
+    } else if ([defaults boolForKey:@"useJoystick"]) {
+        // replace d-pad with joystick
+        newDPad = [[Joystick alloc] initWithFrame:buttonDPad.frame];
+    }
+    if (newDPad) {
+        // set properties
+        newDPad.alpha = buttonDPad.alpha;
+        [self.view insertSubview:newDPad aboveSubview:buttonDPad];
+        [newDPad addTarget:self action:@selector(onDPad:) forControlEvents:UIControlEventValueChanged];
+        // remove old button
+        [buttonDPad removeTarget:self action:@selector(onDPad:) forControlEvents:UIControlEventValueChanged];
+        [buttonDPad removeFromSuperview];
+        buttonDPad = newDPad;
+    }
 }
 
 - (void)pauseEmulation
@@ -342,8 +362,13 @@ typedef enum : NSInteger {
 
 - (void)addButtons
 {
-    buttonDPad = [[ButtonPad alloc] initWithFrame:CGRectMake(0, 112, 120, 120)];
-    buttonDPad.image = [UIImage imageNamed:@"DPad"];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"useJoystick"]) {
+        buttonDPad = [[Joystick alloc] initWithFrame:CGRectMake(0, 112, 120, 120)];
+    } else {
+        buttonDPad = [[ButtonPad alloc] initWithFrame:CGRectMake(0, 112, 120, 120)];
+        buttonDPad.image = [UIImage imageNamed:@"DPad"];
+    }
+    
     [buttonDPad addTarget:self action:@selector(onDPad:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:buttonDPad];
     

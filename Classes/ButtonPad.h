@@ -19,6 +19,7 @@ typedef enum PadState {
 {
     UIControlState padState;
     UIImageView *backgroundView;
+    CGSize deadZone;
 }
 
 @property CGSize deadZone; // dead zone in the middle of the control
