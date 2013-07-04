@@ -28,6 +28,11 @@
 		8B4EF08D177D75710013D660 /* MBPullDownController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF08C177D75710013D660 /* MBPullDownController.m */; };
 		8B4EF090177D75940013D660 /* UIScreen+Widescreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EF08F177D75940013D660 /* UIScreen+Widescreen.m */; };
 		8B7CF32917845AE00006CEC1 /* ROMs.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7CF32817845AE00006CEC1 /* ROMs.m */; };
+		8B91047F1786316E00125579 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B91047B1786316E00125579 /* HockeySDK.framework */; };
+		8B9104801786316E00125579 /* HockeySDK.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8B91047D1786316E00125579 /* HockeySDK.xcconfig */; };
+		8B9104811786316E00125579 /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8B91047E1786316E00125579 /* HockeySDKResources.bundle */; };
+		8B9104831786318700125579 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9104821786318700125579 /* CoreText.framework */; };
+		8B910485178631A900125579 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B910484178631A900125579 /* SystemConfiguration.framework */; };
 		8B99E98217848FA70022BB85 /* RomsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B99E97E17848FA70022BB85 /* RomsCollectionViewCell.xib */; };
 		8B99E98317848FA70022BB85 /* RomsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B99E98017848FA70022BB85 /* RomsCollectionViewController.m */; };
 		8B99E98417848FA70022BB85 /* RomsCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B99E98117848FA70022BB85 /* RomsCollectionViewController.xib */; };
@@ -190,6 +195,11 @@
 		8B4EF08F177D75940013D660 /* UIScreen+Widescreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScreen+Widescreen.m"; path = "Classes/UIScreen+Widescreen.m"; sourceTree = "<group>"; };
 		8B7CF32717845AE00006CEC1 /* ROMs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ROMs.h; path = Classes/ROMs.h; sourceTree = "<group>"; };
 		8B7CF32817845AE00006CEC1 /* ROMs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ROMs.m; path = Classes/ROMs.m; sourceTree = "<group>"; };
+		8B91047B1786316E00125579 /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HockeySDK.framework; sourceTree = "<group>"; };
+		8B91047D1786316E00125579 /* HockeySDK.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = HockeySDK.xcconfig; sourceTree = "<group>"; };
+		8B91047E1786316E00125579 /* HockeySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HockeySDKResources.bundle; sourceTree = "<group>"; };
+		8B9104821786318700125579 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		8B910484178631A900125579 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8B99E97E17848FA70022BB85 /* RomsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RomsCollectionViewCell.xib; path = Classes/RomsCollectionViewCell.xib; sourceTree = "<group>"; };
 		8B99E97F17848FA70022BB85 /* RomsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RomsCollectionViewController.h; path = Classes/RomsCollectionViewController.h; sourceTree = "<group>"; };
 		8B99E98017848FA70022BB85 /* RomsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RomsCollectionViewController.m; path = Classes/RomsCollectionViewController.m; sourceTree = "<group>"; };
@@ -416,6 +426,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B910485178631A900125579 /* SystemConfiguration.framework in Frameworks */,
+				CE2EE604173F6BBA00786468 /* Foundation.framework in Frameworks */,
+				8B9104831786318700125579 /* CoreText.framework in Frameworks */,
 				2864EBD41783B0D20065D89D /* AudioToolbox.framework in Frameworks */,
 				CEB43C45173FD25A00055F91 /* GLKit.framework in Frameworks */,
 				CEB43C46173FD25A00055F91 /* OpenGLES.framework in Frameworks */,
@@ -423,7 +436,7 @@
 				CE2EE60A173F6BFF00786468 /* CoreGraphics.framework in Frameworks */,
 				CE2EE608173F6BEA00786468 /* QuartzCore.framework in Frameworks */,
 				CE2EE606173F6BC100786468 /* UIKit.framework in Frameworks */,
-				CE2EE604173F6BBA00786468 /* Foundation.framework in Frameworks */,
+				8B91047F1786316E00125579 /* HockeySDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +499,25 @@
 				8B4EF082177D751C0013D660 /* zip.h */,
 			);
 			name = minizip;
+			sourceTree = "<group>";
+		};
+		8B91047A1786316E00125579 /* HockeySDK.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				8B91047B1786316E00125579 /* HockeySDK.framework */,
+				8B91047C1786316E00125579 /* Resources */,
+			);
+			name = HockeySDK.embeddedframework;
+			path = frameworks/HockeySDK.embeddedframework;
+			sourceTree = "<group>";
+		};
+		8B91047C1786316E00125579 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8B91047D1786316E00125579 /* HockeySDK.xcconfig */,
+				8B91047E1786316E00125579 /* HockeySDKResources.bundle */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		8B99E997178491600022BB85 /* SVSegmentedControl */ = {
@@ -681,6 +713,7 @@
 		CE2EE60B173F6C0D00786468 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				8B91047A1786316E00125579 /* HockeySDK.embeddedframework */,
 				2864EBD31783B0D20065D89D /* AudioToolbox.framework */,
 				CEB43C43173FD25900055F91 /* GLKit.framework */,
 				CEB43C44173FD25900055F91 /* OpenGLES.framework */,
@@ -787,6 +820,8 @@
 		CEC742EE16776248006D193E = {
 			isa = PBXGroup;
 			children = (
+				8B910484178631A900125579 /* SystemConfiguration.framework */,
+				8B9104821786318700125579 /* CoreText.framework */,
 				D326847B17497DB1000D4ED6 /* UI Images */,
 				CE2EE60C173F6C1E00786468 /* nds4droid-code */,
 				8B99E9A1178493220022BB85 /* Core */,
@@ -996,6 +1031,8 @@
 				8B99E98417848FA70022BB85 /* RomsCollectionViewController.xib in Resources */,
 				4C3418D81784A17300EE29FF /* Default@2x.png in Resources */,
 				8B99E9AA1784AD500022BB85 /* Default.png in Resources */,
+				8B9104801786316E00125579 /* HockeySDK.xcconfig in Resources */,
+				8B9104811786316E00125579 /* HockeySDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1176,6 +1213,12 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: David Chavez (9PLWG8DGE5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: David Chavez (9PLWG8DGE5)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/frameworks/HockeySDK.embeddedframework\"",
+				);
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Classes/nds4ios-Prefix.pch";
@@ -1191,7 +1234,7 @@
 					"$(SRCROOT)/nds4droid-code/jni/desmume/src/android",
 				);
 				INFOPLIST_FILE = "nds4ios-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = (
 					"-DANDROID",
 					"-fexceptions",
@@ -1204,6 +1247,8 @@
 					"-DHAVE_LIBZ",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "D69E68EE-3A65-4606-A82A-F0394827B56C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D69E68EE-3A65-4606-A82A-F0394827B56C";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1215,6 +1260,12 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: David Chavez (9PLWG8DGE5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: David Chavez (9PLWG8DGE5)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/frameworks/HockeySDK.embeddedframework\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Classes/nds4ios-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1224,7 +1275,7 @@
 					"$(SRCROOT)/nds4droid-code/jni/desmume/src/android",
 				);
 				INFOPLIST_FILE = "nds4ios-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"-DANDROID",
@@ -1238,6 +1289,8 @@
 					"-DHAVE_LIBZ",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "D69E68EE-3A65-4606-A82A-F0394827B56C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D69E68EE-3A65-4606-A82A-F0394827B56C";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
