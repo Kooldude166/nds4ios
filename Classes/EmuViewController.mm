@@ -139,12 +139,27 @@ typedef enum : NSInteger {
     }
 }
 
+- (UIImage*)screenSnapshot
+{
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CFDataRef videoData = CFDataCreate(NULL, (UInt8*)video.buffer, video.size()*4);
+    CGDataProviderRef dataProvider = CGDataProviderCreateWithCFData(videoData);
+    CGImageRef screenImage = CGImageCreate(256, 384, 8, 32, 256*4, colorSpace, kCGBitmapByteOrderDefault, dataProvider, NULL, false, kCGRenderingIntentDefault);
+    CGColorSpaceRelease(colorSpace);
+    CGDataProviderRelease(dataProvider);
+    CFRelease(videoData);
+    
+    UIImage *image = [UIImage imageWithCGImage:screenImage];
+    CGImageRelease(screenImage);
+    return image;
+}
+
 - (void)pauseEmulation
 {
     if (!execute) return;
     // save snapshot of screen
     snapshotView = [[UIImageView alloc] initWithFrame:self.glkView.frame];
-    snapshotView.image = self.glkView.snapshot;
+    snapshotView.image = [self screenSnapshot];
     [self.view insertSubview:snapshotView aboveSubview:self.glkView];
     
     // pause emulation
