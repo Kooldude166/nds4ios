@@ -7,13 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "ROMs.h"
 #import "RomsCollectionViewController.h"
 #import "SwitcherViewController.h"
 #import "EmuViewController.h"
 #import "MBPullDownController.h"
 #import "SSZipArchive.h"
-#import <HockeySDK/HockeySDK.h>
 
 #define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
 
@@ -55,23 +53,15 @@
         [self.window makeKeyAndVisible];
     }
     
-    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"76d619e82c39c42e7a6d269437446f66" delegate:self];
-    [[BITHockeyManager sharedHockeyManager] startManager];
-    
     return YES;
 }
 
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    if (url != nil && [url isFileURL]) {\
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
-        
-        NSString *importedPath = [url path];
-        
-        NSString *zipFilePath = importedPath;
-        NSString *output = documentsDirectory;
-        
-        [SSZipArchive unzipFileAtPath:zipFilePath toDestination:output];
+    if (url != nil && [url isFileURL])
+    {
+        NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+                
+        [SSZipArchive unzipFileAtPath:[url path] toDestination:documentsDirectory];
         
         NSFileManager *fileManager = [[NSFileManager alloc] init];
         [fileManager removeItemAtPath:[documentsDirectory stringByAppendingPathComponent:@"Inbox"] error:NULL];
